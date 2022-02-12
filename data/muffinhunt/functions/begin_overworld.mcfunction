@@ -1,5 +1,5 @@
 execute as @a unless entity @s[tag=hunter] unless entity @s[tag=runner] run tag osfanbuff63 add hunter
-execute as @a unless entity @s[tag=hunter] unless entity @s[tag=runner] run tag M3FF1N add speedrunner
+execute as @a unless entity @s[tag=hunter] unless entity @s[tag=runner] run tag M3FF1N add runner
 team add hunter
 team modify hunter friendlyFire false
 team modify hunter displayName "Hunters"
