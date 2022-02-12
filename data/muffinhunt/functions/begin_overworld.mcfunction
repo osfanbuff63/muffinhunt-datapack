@@ -1,11 +1,23 @@
-execute as @a unless entity @s[tag=hunter] unless entity @s[tag=speedrunner] run tag osfanbuff63 add hunter
-execute as @a unless entity @s[tag=hunter] unless entity @s[tag=speedrunner] run tag M3FF1N add speedrunner
+execute as @a unless entity @s[tag=hunter] unless entity @s[tag=runner] run tag osfanbuff63 add hunter
+execute as @a unless entity @s[tag=hunter] unless entity @s[tag=runner] run tag M3FF1N add speedrunner
+team add hunter
+team modify hunter friendlyFire false
+team modify hunter displayName "Hunters"
+team modify hunter seeFriendlyInvisibles true
+team modify hunter color aqua
+team modify hunter prefix ["",{"text":"[","color":"aqua"},{"text":"HUNTER","color":"dark_aqua","bold":"true"},{"text":"] ","color":"aqua"}]
+team join hunter @a[tag=hunter]
+team add runner
+team modify runner displayName "Speedrunner"
+team modify runner color yellow
+team modify runner prefix [""{"text":"[","color":"yellow"},{"text":"SPEEDRUNNER","color":"gold","bold":"true"},{"text":"] ","color":"yellow"}]
+team join runner @a[tag=runner]
 give @a[tag=hunter] compass 1
 give @a[tag=hunter] iron_sword{Unbreakable:1} 1
 give @a[tag=hunter] diamond_pickaxe{Unbreakable:1} 1
-item replace entity @a[tag=speedrunner] weapon.offhand with shield{Unbreakable:1} 1 
-give @a[tag=speedrunner] netherite_pickaxe{Unbreakable:1} 1
-give @a[tag=speedrunner] anvil 1
+item replace entity @a[tag=runner] weapon.offhand with shield{Unbreakable:1} 1 
+give @a[tag=runner] netherite_pickaxe{Unbreakable:1} 1
+give @a[tag=runner] anvil 1
 item replace entity @a[tag=speedrunner] armor.chest with chainmail_chestplate{Unbreakable:1,Enchantments:[{id:protection,lvl:1}],HideFlags:1} 1
 give @a stone_axe{Unbreakable:1,Enchantments:[{id:efficiency,lvl:3}],display:{Name:'[{"text":"Power Chopper","italic":false}]'},AttributeModifiers:[{AttributeName:"generic.attack_damage",Amount:1,Name:"generic.attack_damage",UUID:[I;-122022,11846,8742,-23692]},{AttributeName:"generic.attack_speed",Amount:0.1,Name:"generic.attack_speed",UUID:[I;-122022,11946,8742,-23892]}],HideFlags:2} 
 give @a oak_planks 64
