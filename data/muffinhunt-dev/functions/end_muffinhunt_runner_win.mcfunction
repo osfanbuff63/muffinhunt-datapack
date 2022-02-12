@@ -1,11 +1,11 @@
-tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Speedrunner ","color":"yellow"},{"text":"has won! Thanks for playing, everyone! GG WP!","color":"gold"}]
-team empty hunter
-team empty runner
-team remove hunter
-team remove runner
-clear @a[tag=hunter]
-clear @a[tag=runner]
-effect clear @a[tag=hunter]
-effect clear @a[tag=runner]
-tag @a[tag=hunter] remove hunter
-tag @a[tag=runner] remove runner
+tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Speeddragon_ender ","color":"yellow"},{"text":"has won! Thanks for playing, everyone! GG WP!","color":"gold"}]
+team empty juggernaut
+team empty dragon_ender
+team remove juggernaut
+team remove dragon_ender
+clear @a[tag=juggernaut]
+clear @a[tag=dragon_ender]
+effect clear @a[tag=juggernaut]
+effect clear @a[tag=dragon_ender]
+tag @a[tag=juggernaut] remove juggernaut
+tag @a[tag=dragon_ender] remove dragon_ender

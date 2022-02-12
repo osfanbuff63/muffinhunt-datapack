@@ -1,2 +1,2 @@
-tag @a[tag=hunter] remove hunter
-tag @a[tag=runner] remove runner
+tag @a[tag=juggernaut] remove juggernaut
+tag @a[tag=dragon_ender] remove dragon_ender
