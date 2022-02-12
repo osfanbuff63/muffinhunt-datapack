@@ -10,7 +10,7 @@ team join hunter @a[tag=hunter]
 team add runner
 team modify runner displayName "Speedrunner"
 team modify runner color yellow
-team modify runner prefix [""{"text":"[","color":"yellow"},{"text":"SPEEDRUNNER","color":"gold","bold":"true"},{"text":"] ","color":"yellow"}]
+team modify runner prefix ["",{"text":"[","color":"yellow"},{"text":"SPEEDRUNNER","color":"gold","bold":"true"},{"text":"] ","color":"yellow"}]
 team join runner @a[tag=runner]
 give @a[tag=hunter] compass 1
 give @a[tag=hunter] iron_sword{Unbreakable:1} 1
