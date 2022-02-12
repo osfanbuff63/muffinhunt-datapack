@@ -11,14 +11,7 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 5,
-              "add": true,
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "count": 6
             }
           ]
         },
@@ -30,7 +23,21 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "minecraft:iron_pickaxe"
+          "name": "minecraft:iron_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:efficiency"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "minecraft:item",
@@ -39,8 +46,18 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 4,
-              "add": true,
+              "count": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2,
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -49,11 +66,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:diamond"
         }
       ]
     }
