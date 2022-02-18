@@ -3,8 +3,8 @@
     "icon": {
       "item": "minecraft:mossy_stone_bricks"
     },
-    "title": "And we begin...",
-    "description": "Start a muffinhunt by punching an osfan",
+    "title": "A jumpscare?",
+    "description": "Punch a muffin",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -16,7 +16,7 @@
       "conditions": {
         "player": {
           "type": "minecraft:player",
-          "team": "hunter"
+          "team": "juggernaut"
         },
         "entity": [
           {
@@ -24,7 +24,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:player",
-              "team": "runner"
+              "team": "dragon_ender"
             }
           }
         ]

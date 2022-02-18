@@ -22,7 +22,7 @@
             "entity": "direct_killer",
             "predicate": {
               "type": "minecraft:player",
-              "team": "hunter"
+              "team": "juggernaut"
             }
           }
         ],
@@ -32,7 +32,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:player",
-              "team": "runner"
+              "team": "dragon_ender"
             }
           }
         ],

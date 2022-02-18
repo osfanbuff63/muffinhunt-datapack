@@ -16,7 +16,7 @@
       "conditions": {
         "player": {
           "type": "minecraft:player",
-          "team": "runner"
+          "team": "dragon_ender"
         },
         "entity": [
           {
@@ -24,7 +24,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:player",
-              "team": "hunter"
+              "team": "juggernaut"
             }
           }
         ]
