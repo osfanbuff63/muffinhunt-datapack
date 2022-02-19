@@ -1,14 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:stone"
+      "item": "minecraft:end_stone"
     },
-    "title": "enter_end",
-    "description": "enter the end",
+    "title": "The End?",
+    "description": "Enter the end",
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": true
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
   },
   "criteria": {
     "requirement": {

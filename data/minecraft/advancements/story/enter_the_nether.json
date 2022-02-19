@@ -1,14 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:stone"
+      "item": "minecraft:flint_and_steel"
     },
-    "title": "enter_nether",
-    "description": "enter the nether",
+    "title": "We Need To Go Deeper",
+    "description": "Enter the nether",
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": true
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
   },
   "criteria": {
     "requirement": {
