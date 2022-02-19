@@ -7,5 +7,6 @@ clear @a[tag=juggernaut]
 clear @a[tag=dragon_ender]
 effect clear @a[tag=juggernaut]
 effect clear @a[tag=dragon_ender]
+tag @a[tag=muffinhunt] remove muffinhunt
 tag @a[tag=juggernaut] remove juggernaut
 tag @a[tag=dragon_ender] remove dragon_ender
