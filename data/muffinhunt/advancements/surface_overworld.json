@@ -3,12 +3,12 @@
     "icon": {
       "item": "minecraft:stone"
     },
-    "title": "surface_overworld",
-    "description": "come back to the overworld after the nether",
+    "title": "And back we go...",
+    "description": "Come back to the surface of the overworld after the nether",
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": true
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
   },
   "criteria": {
     "requirement": {
