@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stone"
+    },
+    "title": "enter_nether",
+    "description": "enter the nether",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "minecraft:the_nether"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "muffinhunt:enter_nether",
+    "experience": 50
+  }
+}
