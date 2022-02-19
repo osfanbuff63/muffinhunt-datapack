@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stone"
+    },
+    "title": "surface_overworld",
+    "description": "come back to the overworld after the nether",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "position": {
+            "y": {
+              "min": 65,
+              "max": 319
+            }
+          },
+          "dimension": "minecraft:overworld"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "muffinhunt:surface_overworld",
+    "experience": 50
+  }
+}
