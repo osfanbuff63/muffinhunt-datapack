@@ -1,4 +1,4 @@
-tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Speeddragon_ender ","color":"yellow"},{"text":"has won! Thanks for playing, everyone! GG WP!","color":"gold"}]
+tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Dragon Ender","color":"yellow"},{"text":"has won! Thanks for playing, everyone! GG WP!","color":"gold"}]
 team empty juggernaut
 team empty dragon_ender
 team remove juggernaut
