@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:stone"
+      "item": "minecraft:grass_block"
     },
     "title": "And back we go...",
     "description": "Come back to the surface of the overworld after the nether",
