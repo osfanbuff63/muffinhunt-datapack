@@ -12,5 +12,5 @@ jobs:
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Welcome to the repository! Make sure to read the CONTRIBUTING.md file before continuing, if you have not already!'
-        pr-message: 'Welcome to the repository! Make sure to read the CONTRIBUTING.md file before continuing, if you have not already! And thanks for helping out with a PR! It is very helpful sometimes :)'
+        issue-message: 'Welcome to the repository! Make sure to read the README.md specfically the Contributing section, before continuing, if you have not already!'
+        pr-message: 'Welcome to the repository! Make sure to read the README.md, specfically the Contributing section, before continuing, if you have not already! And thanks for helping out with a PR! It is very helpful sometimes :)'
