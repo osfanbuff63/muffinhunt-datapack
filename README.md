@@ -4,7 +4,8 @@ This is the muffinhunt datapack! You'll find features packed for muffinhunts!
 # How To Use
 You can use this by downloading the zip file that is on the main page of the github, via the Code dropdown. Unzip that file, and then go into the folder inside that. You can rezip the files, but it's not needed unless you are uploading to a server, which you probably are.
 Throw that in your Minecraft world (.minecraft/saves/[worldname]/datapacks by default) folder and you are good to go!
-You can trigger the functions included using the /function command. You'll find them under namespaces muffinhunt: and muffinhunt-dev:.
+You can trigger the functions included using the /function command. You'll find them under namespaces muffinhunt: and muffinhunt-dev:. 
+You will have to manually assign tags, however this is planned to be changed.
 
 # Contributing
 If you would like to contribute, fork this repo and send me a PR!
