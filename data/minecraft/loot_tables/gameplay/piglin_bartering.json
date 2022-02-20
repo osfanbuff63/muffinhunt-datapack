@@ -6,12 +6,47 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:glass_bottle"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:diamond_boots",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:golden_boots",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:soul_speed"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
           "weight": 3,
           "name": "minecraft:splash_potion",
           "functions": [
             {
               "function": "minecraft:set_potion",
               "id": "minecraft:fire_resistance"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.3
             }
           ]
         },
@@ -28,7 +63,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 4,
+          "weight": 5,
           "name": "minecraft:gold_ingot"
         },
         {
