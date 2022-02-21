@@ -32,4 +32,4 @@ item replace entity @a[tag=juggernaut] armor.chest with iron_chestplate{Unbreaka
 item replace entity @a[tag=juggernaut] armor.legs with iron_leggings{Unbreakable:1,display:{Name:'[{"text":"Emerald Leggings","italic":false}]'}} 1
 item replace entity @a[tag=juggernaut] armor.feet with iron_boots{Unbreakable:1,display:{Name:'[{"text":"Emerald Boots","italic":false}]'}} 1
 item replace entity @a[tag=juggernaut] armor.head with iron_helmet{Unbreakable:1,display:{Name:'[{"text":"Emerald Helmet","italic":false}]'}} 1
-tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please enter the /track <Dragon Ender username> command! Once that is complete, the muffinhunt can begin once the Dragon Ender hits the Juggernaut(s)!","color":"gold"}]
+tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please enter the /track <Dragon Ender username> command! Once that is complete, the MuffinHunt can begin once the Dragon Ender hits the Juggernaut(s)!","color":"gold"}]
