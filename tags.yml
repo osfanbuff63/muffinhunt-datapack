@@ -7,6 +7,7 @@ Dragon Ender: dragon_ender
 # Permanent tags
 Permanent Juggernaut: usual_juggernaut
 Permanent Dragon Ender: usual_dragon_ender
+No Carved Pumpkin: no_juggernaut_pumpkin
 
 # Standard teams
 Juggernaut: Juggernaut
@@ -14,4 +15,5 @@ Dragon Ender: dragon_ender
 
 # Universal tags
 MuffinHunt player: muffinhunt
+MuffinHunt ban: muffinhunt_ban
 

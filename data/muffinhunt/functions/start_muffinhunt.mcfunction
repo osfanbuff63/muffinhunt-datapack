@@ -1,5 +1,5 @@
-execute as @a unless entity @s[tag=juggernaut] unless entity @s[tag=dragon_ender] run tag @a[tag=usual_juggernaut] add juggernaut
-execute as @a unless entity @s[tag=juggernaut] unless entity @s[tag=dragon_ender] run tag @a[tag=usual_dragon_ender] add dragon_ender
+execute as @a unless entity @s[tag=juggernaut] unless entity @s[tag=dragon_ender] unless entity @s[tag=muffinhunt_ban] run tag @a[tag=usual_juggernaut] add juggernaut
+execute as @a unless entity @s[tag=juggernaut] unless entity @s[tag=dragon_ender] unless entity @s[tag=muffinhunt_ban] run tag @a[tag=usual_dragon_ender] add dragon_ender
 team add juggernaut
 execute as @a[tag=juggernaut] run tag @s add muffinhunt
 execute as @a[tag=dragon_ender] run tag @s add muffinhunt
@@ -32,4 +32,4 @@ item replace entity @a[tag=juggernaut] armor.chest with iron_chestplate{Unbreaka
 item replace entity @a[tag=juggernaut] armor.legs with iron_leggings{Unbreakable:1,display:{Name:'[{"text":"Emerald Leggings","italic":false}]'}} 1
 item replace entity @a[tag=juggernaut] armor.feet with iron_boots{Unbreakable:1,display:{Name:'[{"text":"Emerald Boots","italic":false}]'}} 1
 item replace entity @a[tag=juggernaut] armor.head with iron_helmet{Unbreakable:1,display:{Name:'[{"text":"Emerald Helmet","italic":false}]'}} 1
-tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please enter the /track <Dragon Ender username> command! Once that is complete, the MuffinHunt can begin once the Dragon Ender hits the Juggernaut(s)!","color":"gold"}]
+tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please enter the /track <Dragon Ender username> command! Once that is complete, the MuffinHunt can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]
