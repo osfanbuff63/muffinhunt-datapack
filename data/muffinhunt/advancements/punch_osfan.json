@@ -16,7 +16,7 @@
       "conditions": {
         "player": {
           "type": "minecraft:player",
-          "team": "dragon_ender"
+          "team": "juggernaut"
         },
         "entity": [
           {
@@ -24,11 +24,15 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:player",
-              "team": "juggernaut"
+              "team": "dragon_ender"
             }
           }
         ]
       }
     }
+  },
+  "rewards": {
+    "function": "muffinhunt:begin_overworld",
+    "experience": 50
   }
 }
