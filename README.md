@@ -7,11 +7,9 @@ Throw that in your Minecraft world (.minecraft/saves/[worldname]/datapacks by de
 You can trigger the functions included using the /function command. You'll find them under namespaces muffinhunt: and muffinhunt-dev:. 
 You will have to manually assign tags, however while a MuffinHunt is running, you can do /function muffinhunt-dev:assign_permanent_tags. This will assign tags that will not be removed on the end of the MuffinHunt.
 
-All tags/teams used by this datapack can be found in [tags.yml](tags.yml). If there is a conflict, I recommend changing the tags that conflict, as it is hard to change the tags in the datapack quickly (although I am looking into a solution for this.
+ the MuffinHunt.
 
-# Contributing
-If you would like to contribute, fork this repo and send me a PR!
-
+All tags/teams used by this datapack can be found in [tags.yml](tags.yml). If there is a conflict, I recommend changing the tags that conflict, as it is hard to change the tags in the datapack quickly (although I am looking into a solution for this). You can use this by downloading the zip file that is on the main page of the github, via the Code dropdown. Throw that in your Minecraft world (.minecraft/saves/[worldname]/datapacks by default) folder and you are good to go! You can trigger the functions included using the /function command. You'll find them under namespaces muffinhunt: and muffinhunt-dev:. WARNING: Cheats are required for this datapack to work as of version 0.6.0!
 # Found a bug?
 If you find a bug, feel free to create an issue or pull request if you know how to fix it! That's always appriciated around here.
 
