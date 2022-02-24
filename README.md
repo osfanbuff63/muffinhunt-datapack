@@ -2,8 +2,7 @@
 This is the muffinhunt datapack! You'll find features packed for muffinhunts!
 
 # How To Use
-You can use this by downloading the zip file that is on the main page of the github, via the Code dropdown. Throw that in your Minecraft world (.minecraft/saves/[worldname]/datapacks by default) folder and you are good to go!
-You can trigger the functions included using the /function command. You'll find them under namespaces muffinhunt:, fullmuffinhunt:, and muffinhunt-dev:.
+You can use this by downloading the zip file that is on the main page of the github, via the Code dropdown. Throw that in your Minecraft world (.minecraft/saves/[worldname]/datapacks by default) folder and you are good to go! You can trigger the functions included using the /function command. You'll find them under namespaces muffinhunt:, fullmuffinhunt:, and muffinhunt-dev:. WARNING: Cheats are required for this datapack to work as of version 0.6.0!
 
 # Found a bug?
 If you find a bug, feel free to create an issue or pull request if you know how to fix it! That's always appriciated around here.
