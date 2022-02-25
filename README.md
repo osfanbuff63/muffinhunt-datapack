@@ -8,13 +8,13 @@ You can trigger the functions included using the /function command. You'll find 
 You will have to manually assign tags, however while a MuffinHunt is running, you can do /function muffinhunt-dev:assign_permanent_tags. This will assign tags that will not be removed on the end of the MuffinHunt. WARNING: Cheats are required for this datapack to work as of version 0.6.0!
 
 
-All tags/teams used by this datapack can be found in [tags.yml](tags.yml). If there is a conflict, I recommend changing the tags that conflict, as it is hard to change the tags in the datapack quickly (although I am looking into a solution for this). 
+All tags/teams used by this datapack can be found in [tags.yml](docs/tags.yml). If there is a conflict, I recommend changing the tags that conflict, as it is hard to change the tags in the datapack quickly (although I am looking into a solution for this). 
 
 # Contributing
 If you want to contribute, feel free to fork this repo and send me a PR! 
 
 # Found a bug?
-If you find a bug, feel free to create an issue or pull request if you know how to fix it! That's always appriciated around here.
+If you find a bug, feel free to create an issue or pull request if you know how to fix it! That's always appreciated around here.
 
 # Dev stuff
 If you have more than one Juggernaut, I highly recommend using the set_worldborder_at_dragon_ender function instead of the set_worldborder_at_juggernaut. If you only have one, it doesn't matter. They are the same function. 
