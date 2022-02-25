@@ -21,4 +21,4 @@ If you have more than one hunter, I highly recommend using the set_worldborder_a
 If you only have one, it doesn't matter. 
 
 # License
-Licensed under the [MIT License](https://opensource.org/licenses/MIT). Please see the [LICENSE.md](LICENSE.md) file for more information.
+Licensed under the [GNU GPL v3.0](https://opensource.org/licenses/GPL-3.0) license. Please see the [LICENSE](LICENSE) file for more information.
