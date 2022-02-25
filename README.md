@@ -17,8 +17,7 @@ If you want to contribute, feel free to fork this repo and send me a PR!
 If you find a bug, feel free to create an issue or pull request if you know how to fix it! That's always appriciated around here.
 
 # Dev stuff
-If you have more than one hunter, I highly recommend using the set_worldborder_at_dragon_ender function instead of the set_worldborder_at_juggernaut. 
-If you only have one, it doesn't matter. 
+If you have more than one Juggernaut, I highly recommend using the set_worldborder_at_dragon_ender function instead of the set_worldborder_at_juggernaut. If you only have one, it doesn't matter. They are the same function. 
 
 # License
 Licensed under the [GNU GPL v3.0](https://opensource.org/licenses/GPL-3.0) license. Please see the [LICENSE](LICENSE) file for more information.
