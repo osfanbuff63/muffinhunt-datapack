@@ -11,7 +11,7 @@ team modify juggernaut prefix ["",{"text":"[","color":"aqua"},{"text":"JUGGERNAU
 team join juggernaut @a[tag=juggernaut]
 team add dragon_ender
 team modify dragon_ender displayName "Dragon Ender"
-team modify dragon_ender color yellow
+team modify dragon_ender color dark_purple
 team modify dragon_ender prefix ["",{"text":"[","color":"dark_purple"},{"text":"DRAGON ENDER","color":"light_purple","bold":"true"},{"text":"] ","color":"dark_purple"}]
 team join dragon_ender @a[tag=dragon_ender]
 advancement revoke @a[tag=muffinhunt] everything
@@ -32,4 +32,5 @@ item replace entity @a[tag=juggernaut] armor.chest with iron_chestplate{Unbreaka
 item replace entity @a[tag=juggernaut] armor.legs with iron_leggings{Unbreakable:1,display:{Name:'[{"text":"Emerald Leggings","italic":false}]'}} 1
 item replace entity @a[tag=juggernaut] armor.feet with iron_boots{Unbreakable:1,display:{Name:'[{"text":"Emerald Boots","italic":false}]'}} 1
 item replace entity @a[tag=juggernaut] armor.head with iron_helmet{Unbreakable:1,display:{Name:'[{"text":"Emerald Helmet","italic":false}]'}} 1
+give @a[tag=juggernaut] flint_and_steel 1
 tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please enter the /track <Dragon Ender username> command! Once that is complete, the MuffinHunt can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]
