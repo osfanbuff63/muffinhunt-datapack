@@ -1,2 +1,2 @@
-/scoreboard objectives add StartMuffinHunt trigger
-/scoreboard players set @a StartMuffinHunt 0
+scoreboard objectives add StartMuffinHunt trigger
+scoreboard players set @a StartMuffinHunt 0
