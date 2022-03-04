@@ -1,4 +1,4 @@
-`Warning! This page has a lot of info about MuffinHunts! If you want a shorter variant, check out the [README](README.md)`
+`Warning! This page has a lot of info about MuffinHunts! If you want a shorter variant, check out the` [README](README.md)
 
 # What is a MuffinHunt?
 
