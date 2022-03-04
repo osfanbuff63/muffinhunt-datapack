@@ -8,4 +8,4 @@ team add dragon_ender
 team modify dragon_ender displayName "Dragon Ender"
 team modify dragon_ender color yellow
 team modify dragon_ender prefix ["",{"text":"[","color":"dark_purple"},{"text":"DRAGON ENDER","color":"light_purple","bold":"true"},{"text":"] ","color":"dark_purple"}]
-tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua},{"text":"teams have been created! However, you still need to assign people to these teams."}]
+tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"teams have been created! However, you still need to assign people to these teams.","color":"gold"}]
