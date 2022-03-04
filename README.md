@@ -1,6 +1,11 @@
 # muffinhunt-datapack
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
+# What is a MuffinHunt?
+A MuffinHunt, in short, is a variation of a certain Speedrunner vs Hunter series on YouTube, with extra rules. As well, we have starting kits (which are mostly for balancing), automatically increasing kits, etc. You can find a full list of rules and explanations about the series [here](docs/WhatIsAMuffinHunt.md).
+
+
+
 # How To Use
 You can use this by downloading the zip file that is on the main page of the GitHub, via the Code dropdown. Unzip that file, and then go into the folder inside that. You can rezip the files, but it's not needed unless you are uploading to a server, which you probably are.
 Throw that in your Minecraft world (.minecraft/saves/[worldname]/datapacks by default) folder and you are good to go!
@@ -18,6 +23,7 @@ If you find a bug, feel free to create an issue or pull request if you know how 
 
 # Dev stuff
 If you have more than one Juggernaut, I highly recommend using the set_worldborder_at_dragon_ender function instead of the set_worldborder_at_juggernaut. If you only have one, it doesn't matter. They are the same function. 
+This is also made to work with Bukkit/Spigot/Paper servers, and specifically [this PlayerTracker plugin](https://www.spigotmc.org/resources/player-tracker-1-13x-1-17x.85818/)! It may work on vanilla servers, but some functionality - like tracking players - will be lost.
 
 # License
 Licensed under the [GNU GPL v3.0](https://opensource.org/licenses/GPL-3.0) license. Please see the [LICENSE](LICENSE) file for more information.

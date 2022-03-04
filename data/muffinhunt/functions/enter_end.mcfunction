@@ -1,6 +1,6 @@
 item replace entity @a[team=juggernaut,tag=!no_juggernaut_pumpkin] armor.head with carved_pumpkin{display:{Name:'[{"text":"Enderman Protector","italic":"false","color":"gold"}]'},Enchantments:[{id:protection,lvl:5}],HideFlags:1} 1
 item replace entity @a[team=juggernaut,tag=no_juggernaut_pumpkin] armor.head with diamond_helmet{Unbreakable:1,display:{Name:'[{"text":"Copper Helmet","italic":"false","color":"gold"}]'}
-item replace entity @a[team=juggernaut] armor.chest with diamond_chestplate{Unbreakable:1,display:{Name:'[{"text":"Copper Chestplate","italic":"false","color":"gold"}]'}}
+item replace entity @a[team=juggernaut] armor.chest with diamond_chestplate{Unbreakable:1,display:{Name:'[{"text":"Copper Chestplate","italic":"false","color":"gold"}]'},Enchantments:[{id:protection,lvl:1}]}
 item replace entity @a[team=juggernaut] armor.legs with diamond_leggings{Unbreakable:1,display:{Name:'[{"text":"Copper Leggings","italic":"false","color":"gold"}]'}}
 item replace entity @a[team=juggernaut] armor.feet with diamond_boots{Unbreakable:1,display:{Name:'[{"text":"Copper Boots","italic":"false","color":"gold"}]'}}
 item replace entity @a[team=juggernaut] container.2 with netherite_pickaxe{Unbreakable:1,Enchantments:[{id:efficency,lvl:2}]}
