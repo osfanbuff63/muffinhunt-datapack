@@ -2,7 +2,7 @@
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
 # What is a MuffinHunt?
-A MuffinHunt, in short, is a variation of a certain Speedrunner vs Hunter series on YouTube, with extra rules. As well, we have starting kits (which are mostly for balancing), automatically increasing kits, etc. You can find a full list of rules and explanations about the series [here](docs/WhatIsAMuffinHunt.md).
+A MuffinHunt, in short, is a variation of a certain Speedrunner vs Hunter series on YouTube, with extra rules. As well, we have starting kits (which are mostly for balancing), automatically increasing kits, etc. You can find a full list of rules and explanations about the series [here](docs/WhatIsAMuffinHunt.md) (however still WIP). 
 
 
 
