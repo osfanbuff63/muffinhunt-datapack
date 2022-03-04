@@ -1,4 +1,4 @@
-tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Dragon Ender","color":"yellow"},{"text":"has won! Thanks for playing, everyone! GG WP!","color":"gold"}]
+tellraw @a ["",{"text":"No one has won, since the ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":" was forcibly ended. Thanks for playing, everyone! GG WP!","color":"gold"}]
 clear @a[team=juggernaut]
 clear @a[tag=dragon_ender]
 effect clear @a[team=juggernaut]
