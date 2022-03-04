@@ -1,0 +1,55 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "A victory won...",
+    "description": "Kill the speedrunner",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "muffinhunt:punch_muffin",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "direct_killer",
+            "predicate": {
+              "type": "minecraft:player",
+              "team": "juggernaut"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player",
+              "team": "dragon_ender"
+            }
+          }
+        ],
+        "killing_blow": {
+          "is_explosion": false,
+          "is_fire": false,
+          "is_magic": false,
+          "is_projectile": true,
+          "is_lightning": false,
+          "bypasses_armor": false,
+          "bypasses_invulnerability": false,
+          "bypasses_magic": false
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "muffinhunt-dev:end_muffinhunt_hunter_win_confirmation"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "title": "We Need To Go Deeper",
+    "description": "Enter the nether",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "minecraft:the_nether"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "muffinhunt:enter_nether",
+    "experience": 50
+  }
+}
