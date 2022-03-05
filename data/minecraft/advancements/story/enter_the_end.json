@@ -10,6 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
+  "parent": "muffinhunt:surface_overworld",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:location",
