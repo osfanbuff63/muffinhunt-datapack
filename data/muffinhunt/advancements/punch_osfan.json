@@ -5,6 +5,7 @@
     },
     "title": "And we begin...",
     "description": "Start a muffinhunt by punching an osfan",
+    "background": "minecraft:warped_planks",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

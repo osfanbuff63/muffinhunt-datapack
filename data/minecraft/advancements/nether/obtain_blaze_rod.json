@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:ender_pearl"
+      "item": "minecraft:blaze_rod"
     },
-    "title": "Teleportation?...What?",
-    "description": "Obtain an Ender Pearl",
+    "title": "Into Fire",
+    "description": "Obtain a Blaze Rod",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -17,9 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:ender_pearl"
-            ]
+            "tag": "minecraft:blaze_rod"
           }
         ]
       }

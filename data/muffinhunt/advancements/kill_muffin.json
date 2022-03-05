@@ -50,6 +50,6 @@
     }
   },
   "rewards": {
-    "function": "muffinhunt-dev:end_muffinhunt_hunter_win_confirmation"
+    "function": "muffinhunt-dev:end_muffinhunt_juggernaut_win_confirmation"
   }
 }
