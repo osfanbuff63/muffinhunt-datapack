@@ -27,7 +27,7 @@ give @a[team=dragon_ender] netherite_pickaxe{Unbreakable:1} 1
 give @a[team=dragon_ender] anvil 1
 give @a[team=dragon_ender] cobbled_deepslate 64
 item replace entity @a[team=dragon_ender] armor.chest with chainmail_chestplate{Unbreakable:1,Enchantments:[{id:protection,lvl:1}],HideFlags:1} 1
-give @a[tag=muffinhunt] golden_axe{Unbreakable:1,Enchantments:[{id:efficiency,lvl:3}],display:{Name:'[{"text":"Power Chopper","italic":false}]'},HideFlags:2} 
+give @a[tag=muffinhunt] golden_axe{Unbreakable:1,Enchantments:[{id:efficiency,lvl:3}],display:{Name:'[{"text":"Power Chopper","italic":"false"}]'},HideFlags:2} 
 give @a[tag=muffinhunt] oak_planks 64
 give @a[tag=muffinhunt] water_bucket 1
 give @a[tag=muffinhunt] cooked_beef{display:{Name:'[{"text":"Burger","italic":"false","color":"red"}]'}} 64
@@ -38,4 +38,4 @@ item replace entity @a[team=juggernaut] armor.legs with iron_leggings{Unbreakabl
 item replace entity @a[team=juggernaut] armor.feet with iron_boots{Unbreakable:1,display:{Name:'[{"text":"Emerald Boots","italic":false}]'}} 1
 item replace entity @a[team=juggernaut] armor.head with iron_helmet{Unbreakable:1,display:{Name:'[{"text":"Emerald Helmet","italic":false}]'}} 1
 give @a[team=juggernaut] flint_and_steel 1
-tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please enter the /track <Dragon Ender username> command! Once that is complete, the ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]
+tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please begin tracking the ","color":"gold"},{"text":"Dragon Ender","color":"dark_purple"},{"text":"! Once that is complete, the ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]

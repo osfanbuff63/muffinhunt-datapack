@@ -1,4 +1,4 @@
-tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"has ended! The ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"have won! Thanks for playing, everyone! GG WP!","color":"gold"}]
+tellraw @a ["",{"text":"The ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"has ended! The ","color":"gold"},{"text":"Juggernaut(s) ","color":"dark_aqua"},{"text":"have won! Thanks for playing, everyone! GG WP!","color":"gold"}]
 scoreboard players set @a[team=dragon_ender] MuffinhuntRunnerLives 0
 clear @a[team=juggernaut]
 clear @a[team=dragon_ender]
