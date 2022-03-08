@@ -22,4 +22,4 @@ bows and arrows.
 
 If the Dragon Ender survives this long, they can find their way back down to the end portal, where they will enter the End.
 
-The End is arguably the most chaotic part of this. As the Dragon Ender attempts to destroy the Ender Dragon, while the Juggernaut is trying to take their last oppertunity to destroy them, can be very fun and chaotic.   
+The End is arguably the most chaotic part of this. As the Dragon Ender attempts to destroy the Ender Dragon, while the Juggernaut is trying to take their last opportunity to destroy them, can be very fun and chaotic.   
