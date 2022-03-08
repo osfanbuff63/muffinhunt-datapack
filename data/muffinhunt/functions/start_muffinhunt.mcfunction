@@ -17,6 +17,7 @@ team join dragon_ender @a[tag=dragon_ender]
 tag @a[team=juggernaut] remove juggernaut
 tag @a[team=dragon_ender] remove dragon_ender
 scoreboard players set @a[team=dragon_ender] MuffinHuntRunnerLives 0
+clear @a[tag=muffinhunt] 
 advancement revoke @a[tag=muffinhunt] everything
 give @a[team=juggernaut] compass 1
 give @a[team=juggernaut] iron_sword{Unbreakable:1} 1
