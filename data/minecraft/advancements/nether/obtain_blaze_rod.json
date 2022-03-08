@@ -17,10 +17,15 @@
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:blaze_rod"
+            "items": [
+              "minecraft:blaze_rod"
+            ]
           }
         ]
       }
     }
+  },
+  "rewards": {
+    "experience": 50
   }
 }
