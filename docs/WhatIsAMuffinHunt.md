@@ -1,4 +1,4 @@
-`Warning! This page has a lot of info about MuffinHunts! If you want a shorter variant, check out the` [README](README.md) `. As well, this page describes MuffinHunt as @osfanbuff63 and @M3FF1N have made it, you are free to adapt as needed.`
+_Warning! This page has a lot of info about MuffinHunts! If you want a shorter variant, check out the [README](README.md) . As well, this page describes MuffinHunt as @osfanbuff63 and @M3FF1N have made it, you are free to adapt as needed._
 
 # What is a MuffinHunt?
 
