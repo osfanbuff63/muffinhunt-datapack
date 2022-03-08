@@ -1,5 +1,5 @@
 {
 	"values": [
-		"muffinhunt-dev:check_trigger","compass_tracker:main"
+		"muffinhunt-dev:check_trigger","muffinhunt-dev:check_lifes"
 	]
 }
