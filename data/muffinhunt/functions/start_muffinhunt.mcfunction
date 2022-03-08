@@ -10,7 +10,7 @@ team modify juggernaut color aqua
 team modify juggernaut prefix ["",{"text":"[","color":"aqua"},{"text":"JUGGERNAUT","color":"dark_aqua","bold":"true"},{"text":"] ","color":"aqua"}]
 team join juggernaut @a[tag=juggernaut]
 team add dragon_ender
-team modify dragon_ender displayName ["",{"text":"Muffin","color":"yellow"},{"text":"Hunt","color":"dark_aqua"},{"text":"Dragon Ender","color":"dark_purple"}]
+team modify dragon_ender displayName ["",{"text":"Muffin","color":"yellow"},{"text":"Hunt","color":"dark_aqua"},{"text":" Dragon Ender","color":"dark_purple"}]
 team modify dragon_ender color dark_purple
 team modify dragon_ender prefix ["",{"text":"[","color":"dark_purple"},{"text":"DRAGON ENDER","color":"light_purple","bold":"true"},{"text":"] ","color":"dark_purple"}]
 team join dragon_ender @a[tag=dragon_ender]
