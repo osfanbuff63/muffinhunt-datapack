@@ -23,9 +23,15 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Device (please complete the following information):**
- - OS: [e.g. Windows]
- - Version [e.g. 10]
+**Device**
+OS: [e.g. Windows 10]
+Version of Minecraft: [e.g. 1.18.1]
+Modded? [Y/N]
+If yes:
+Which mod loader? [e.g. Fabric]
+ What mods and versions?
+  - List mods here 
+  - 
 
 **Additional context**
 Add any other context about the problem here.
