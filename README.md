@@ -1,4 +1,4 @@
-[![github-license-badge]](https://github.com/osfanmuffin/muffinhunt-datapack)
+[License](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack)
 
 # muffinhunt-datapack
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
