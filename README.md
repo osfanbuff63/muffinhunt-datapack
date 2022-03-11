@@ -1,4 +1,4 @@
-[![License: GPL v3.0](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack)](https://www.gnu.org/licenses/gpl-3.0) ![Language: mcfunction](https://img.shields.io/badge/language-mcfunction-red) ![Language: JSON](https://img.shields.io/badge/language-JSON-gray)
+[![License: GPL v3.0](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack)](https://www.gnu.org/licenses/gpl-3.0) ![Language: mcfunction](https://img.shields.io/badge/language-mcfunction-red) ![Language: JSON](https://img.shields.io/badge/language-JSON-lightgray)
 # muffinhunt-datapack
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
