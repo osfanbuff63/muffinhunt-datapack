@@ -9,7 +9,7 @@
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
   "parent": "muffinhunt:punch_muffin",
   "criteria": {
@@ -19,7 +19,7 @@
         "player": [
           {
             "condition": "minecraft:entity_properties",
-            "entity": "killer_player",
+            "entity": "killer",
             "predicate": {
               "type": "minecraft:player",
               "team": "juggernaut"
@@ -50,6 +50,6 @@
     }
   },
   "rewards": {
-    "function": "muffinhunt-dev:end_muffinhunt_juggernaut_win_confirmation"
+    "function": "muffinhunt:end_muffinhunt_juggernaut_win_confirmation"
   }
 }
