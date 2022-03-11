@@ -1,3 +1,5 @@
+[![github-license-badge]](https://github.com/osfanmuffin/muffinhunt-datapack)
+
 # muffinhunt-datapack
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
