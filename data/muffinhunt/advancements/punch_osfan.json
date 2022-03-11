@@ -7,7 +7,7 @@
     "description": "Start a muffinhunt by punching an osfan",
     "background": "minecraft:warped_planks",
     "frame": "task",
-	"parent": "muffinhunt:root"
+	"parent": "muffinhunt:root",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
