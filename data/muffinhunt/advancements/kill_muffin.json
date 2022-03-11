@@ -19,7 +19,7 @@
         "player": [
           {
             "condition": "minecraft:entity_properties",
-            "entity": "direct_killer",
+            "entity": "killer_player",
             "predicate": {
               "type": "minecraft:player",
               "team": "juggernaut"
