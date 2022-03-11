@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "minecraft:story/enter_the_nether",
+  "parent": "muffinhunt:obtain_ender_pearl",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

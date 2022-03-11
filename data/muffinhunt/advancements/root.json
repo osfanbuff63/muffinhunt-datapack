@@ -15,7 +15,7 @@
       }
     ],
     "description": "A challenge only the best can complete",
-    "background": "minecraft:assets/minecraft/textures/block/deepslate_bricks.png",
+    "background": "minecraft:textures/block/deepslate_bricks.png",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
