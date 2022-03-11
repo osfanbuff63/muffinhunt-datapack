@@ -1,0 +1,1 @@
+effect give @a[team=juggernaut] fire_resistance 40 0 true

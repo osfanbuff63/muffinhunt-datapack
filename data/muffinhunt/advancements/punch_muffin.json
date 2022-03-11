@@ -1,11 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:mossy_stone_bricks"
+      "item": "minecraft:gold_block"
     },
     "title": "A jumpscare?",
     "description": "Punch a muffin",
-    "background": "mossy_stone_bricks",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

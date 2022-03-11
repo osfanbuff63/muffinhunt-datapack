@@ -11,6 +11,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
+  "parent": "muffinhunt:root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:player_hurt_entity",
