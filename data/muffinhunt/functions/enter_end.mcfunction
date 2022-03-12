@@ -7,4 +7,5 @@ item replace entity @a[team=juggernaut] container.2 with netherite_pickaxe{Unbre
 item replace entity @a[team=dragon_ender] container.1 with netherite_pickaxe{Unbreakable:1,display:{Name:'[{"text":"Copper Pickaxe","color":"#FFA500","italic":"false"}]'},Enchantments:[{id:efficency,lvl:2}]}
 give @a[team=dragon_ender] spyglass{display:{Name:'[{"text":"Aha!","italic":false,"color":"gold"}]',Lore:['[{"text":"Look at the dragon! Just do it!"}]']}} 1
 give @a[team=juggernaut] spyglass{display:{Name:'[{"text":"Aha!","italic":false,"color":"gold"}]',Lore:['[{"text":"Look at the dragon! Just do it!"}]']}} 1
+tag @a[tag=muffinhunt] add muffinhunt_enter_end
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]
