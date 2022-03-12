@@ -16,10 +16,16 @@
     "requirement": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "player": {
-          "type": "minecraft:player",
-          "team": "juggernaut"
-        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "killer",
+            "predicate": {
+              "type": "minecraft:player",
+              "team": "juggernaut"
+            }
+          }
+        ],
         "entity": [
           {
             "condition": "minecraft:entity_properties",
@@ -34,7 +40,9 @@
     }
   },
   "rewards": {
-    "function": "muffinhunt:begin_overworld",
+    "recipes": [
+      "muffinhunt:saddle"
+    ],
     "experience": 50
   }
 }
