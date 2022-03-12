@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:blaze_rod"
+      "item": "minecraft:ender_eye",
+      "nbt": "{Enchantments:[{}]}"
     },
-    "title": "Into Fire",
-    "description": "Obtain a Blaze Rod",
-    "frame": "goal",
+    "title": "Eye Spy",
+    "description": "Obtain the eyes of a portal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "muffinhunt:obtain_ender_pearl",
+  "parent": "muffinhunt:surface_overworld",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "minecraft:blaze_rod"
+              "minecraft:ender_eye"
             ]
           }
         ]

@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "muffinhunt:surface_overworld",
+  "parent": "minecraft:story/follow_ender_eye",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:location",
