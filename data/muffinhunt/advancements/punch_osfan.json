@@ -1,11 +1,18 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:mossy_stone_bricks"
+      "item": "minecraft:stone_sword"
     },
     "title": "And we begin...",
-    "description": "Start a muffinhunt by punching an osfan",
-    "background": "minecraft:warped_planks",
+    "description": [
+      {
+        "text": "Start a muffinhunt by punching an "
+      },
+      {
+        "text": "osfan",
+        "color": "dark_aqua"
+      }
+    ],
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -16,26 +23,14 @@
     "requirement": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "killer",
-            "predicate": {
-              "type": "minecraft:player",
-              "team": "juggernaut"
-            }
-          }
-        ],
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:player",
-              "team": "dragon_ender"
-            }
-          }
-        ]
+        "player": {
+          "type": "minecraft:player",
+          "team": "dragon_ender"
+        },
+        "entity": {
+          "type": "minecraft:player",
+          "team": "juggernaut"
+        }
       }
     }
   },
