@@ -16,7 +16,8 @@ team modify dragon_ender prefix ["",{"text":"[","color":"dark_purple"},{"text":"
 team join dragon_ender @a[tag=dragon_ender]
 tag @a[team=juggernaut] remove juggernaut
 tag @a[team=dragon_ender] remove dragon_ender
-scoreboard players set @a[team=dragon_ender] MuffinHuntRunnerLives 0
+scoreboard players set @a MuffinHuntRunnerLives 0
+scoreboard objectives setdisplay MuffinHuntRunnerLives list
 clear @a[tag=muffinhunt] 
 advancement revoke @a[tag=muffinhunt] everything
 give @a[team=juggernaut] iron_sword{Unbreakable:1,display:{Name:'[{"text":"Emerald Sword","color":"green","italic":"false"}]'}} 1
