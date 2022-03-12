@@ -1,3 +1,4 @@
+[![License: GPL v3.0](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack)](https://www.gnu.org/licenses/gpl-3.0) ![Language: mcfunction](https://img.shields.io/badge/language-mcfunction-red) ![Language: JSON](https://img.shields.io/badge/language-JSON-lightgray)
 # muffinhunt-datapack
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
@@ -24,4 +25,4 @@ If you find a bug, feel free to create an issue or pull request if you know how 
 If you have more than one Juggernaut, I highly recommend using the set_worldborder_at_dragon_ender function instead of the set_worldborder_at_juggernaut. If you only have one, it doesn't matter. They are the same function. 
 
 # License
-Licensed under the [GNU GPL v3.0](https://opensource.org/licenses/GPL-3.0) license. Please see the [LICENSE](LICENSE) file for more information.
+Licensed under the [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0) license. Please see the [LICENSE](LICENSE) file for more information.

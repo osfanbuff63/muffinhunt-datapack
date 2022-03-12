@@ -22,7 +22,7 @@
     }
   },
   "rewards": {
-    "function": "muffinhunt:enter_nether",
+    "function": "muffinhunt-dev:enter_nether_check",
     "experience": 50
   }
 }
