@@ -1,9 +1,0 @@
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-      name: Run JSON Lint
-      env:
-        EXCLUDE_FILES: \.mcfunction
-        SHOW_ERRORS: true
-      run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/json-lint/master/pipeline.sh)
