@@ -12,9 +12,9 @@ updates:
       time: "09:00"
       timezone: "America/New_York"
     commit-message: 
-      prefix: "[Dependency]"
-      prefix-development: "[Development dependency]"
-    include: "scope"
+      prefix: "[Depend]"
+      prefix-development: "[Dev depend]"
+      include: "scope"
     labels: 
       - "github-actions"
       - "dependencies"
