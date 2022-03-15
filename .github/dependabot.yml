@@ -12,8 +12,8 @@ updates:
       time: "09:00"
       timezone: "America/New_York"
     commit-message: 
-      prefix: "[Depend]"
-      prefix-development: "[Dev depend]"
+      prefix: "[Depend] "
+      prefix-development: "[Dev depend] "
       include: "scope"
     labels: 
       - "github-actions"
