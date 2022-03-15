@@ -14,11 +14,11 @@ updates:
     commit-message: 
       prefix: "[Dependency]"
       prefix-development: "[Development dependency]"
-      include: "scope"
-      labels: 
-        - "github-actions"
-        - "dependencies"
-      assignees: 
-        - "osfanbuff63"
-      reviewers:
-        - "osfanbuff63"
+    include: "scope"
+    labels: 
+      - "github-actions"
+      - "dependencies"
+    assignees: 
+      - "osfanbuff63"
+    reviewers:
+      - "osfanbuff63"
