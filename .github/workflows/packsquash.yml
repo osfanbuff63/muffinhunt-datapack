@@ -1,4 +1,4 @@
-name: Optimize datapack pack
+name: Optimize datapack
 on: [push, pull_request]
 jobs:
    packsquash:
@@ -8,10 +8,9 @@ jobs:
      - name: Checkout repo
        uses: actions/checkout@v2
      - name: Setup Node.js  
-       uses: actions/setup-node@v2
+       uses: actions/setup-node@v3.0.0
        with:
-         node-version: '16'
-         run: npm install
+         node-version: '>=16.14.0'
      - name: Clone repository
        uses: actions/checkout@v2
        with:
