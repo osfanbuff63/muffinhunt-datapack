@@ -1,6 +1,16 @@
 name: Optimize resource pack
 on: [push]
 jobs:
+  npm:
+    name: Install NPM
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '17'
+    - run: npm install
+    - run: npm test
   packsquash:
     name: Optimize resource pack
     runs-on: ubuntu-latest
