@@ -1,27 +1,24 @@
-name: Optimize resource pack
-on: [push]
+name: Optimize datapack pack
+on: [push, pull_request]
 jobs:
-  npm:
-    name: Install NPM
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '17'
-    - run: npm install
-    - run: npm test
-  packsquash:
+   packsquash:
     name: Optimize resource pack
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v2
-        with:
+     - name: Install 
+     - uses: actions/checkout@v2
+     - uses: actions/setup-node@v2
+       with:
+         node-version: '17'
+     - run: npm install
+     - run: npm test
+     - name: Clone repository
+       uses: actions/checkout@v2
+       with:
           fetch-depth: 0
-      - name: Run PackSquash
-        uses: ComunidadAylas/PackSquash-action@v2
-        with:
+     - name: Run PackSquash
+       uses: ComunidadAylas/PackSquash-action@v2
+       with:
           path: ./
           repo_token: ${{ secrets.packsquash_token }}
           
