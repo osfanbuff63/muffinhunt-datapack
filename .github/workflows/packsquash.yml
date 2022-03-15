@@ -19,5 +19,10 @@ jobs:
        uses: ComunidadAylas/PackSquash-action@v2
        with:
           path: ./
-          repo_token: ${{ secrets.packsquash_token }}
+          token: ${{ secrets.packsquash_token }}
+          minify_json_files: true
+          validate_pack_metadata_file: true
+          allow_optifine_mod: true
+          delete_bloat_json_keys: true
+          
           
