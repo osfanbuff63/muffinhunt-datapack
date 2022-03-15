@@ -1,0 +1,17 @@
+name: Optimize resource pack
+on: [push]
+jobs:
+  packsquash:
+    name: Optimize resource pack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Run PackSquash
+        uses: ComunidadAylas/PackSquash-action@v2
+        with:
+          path: ./
+          repo_token: ${{ secrets.packsquash_token }}
+          
