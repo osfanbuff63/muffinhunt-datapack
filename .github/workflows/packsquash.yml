@@ -2,7 +2,7 @@ name: Optimize datapack
 on: [push, pull_request]
 jobs:
    packsquash:
-    name: Optimize resource pack
+    name: Optimize datapack
     runs-on: ubuntu-latest
     steps:
      - name: Checkout repo
