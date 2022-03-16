@@ -18,7 +18,5 @@ updates:
     labels: 
       - "github-actions"
       - "dependencies"
-    assignees: 
-      - "osfanbuff63"
     reviewers:
       - "osfanbuff63"
