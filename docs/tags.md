@@ -1,4 +1,4 @@
-# This is a list of all tags used by this datapack. Do not edit unless you change the tags elsewhere.
+# This is a list of all tags used by this datapack. Do not edit unless you change the tags elsewhere
 
 ## Standard tags, only used on start
 
