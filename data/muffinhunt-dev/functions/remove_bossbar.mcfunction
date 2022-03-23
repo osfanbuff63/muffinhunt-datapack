@@ -1,0 +1,3 @@
+bossbar set end_crystal_bossbar visible false
+bossbar set end_crystal_bossbar players
+bossbar remove end_crystal_bossbar

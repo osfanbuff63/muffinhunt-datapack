@@ -5,3 +5,6 @@ bossbar add end_crystal_bossbar "End Crystals"
 bossbar set end_crystal_bossbar color purple
 bossbar set end_crystal_bossbar visible true
 execute in minecraft:muffinhunt_the_end positioned 0 100 0 store result bossbar end_crystal_bossbar max run team list end_crystal_bossbar
+execute store result score EndCrystalBossbarMax EndCrystalBossbar run team list end_crystal_bossbar
+execute store result bossbar end_crystal_bossbar max run scoreboard players get EndCrystalBossbarMax EndCrystalBossbar
+scoreboard players set EndCrystalBossbarMin EndCrystalBossbar 0
