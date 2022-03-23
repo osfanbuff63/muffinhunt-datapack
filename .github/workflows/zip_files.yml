@@ -22,7 +22,7 @@ jobs:
          name: muffinhunt-datapack.zip
          path: ./
     - name: Create release
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@0.6.1
       with:
         artifacts: "muffinhunt-datapack.zip"
         prerelease: true
