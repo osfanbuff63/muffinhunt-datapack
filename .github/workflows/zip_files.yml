@@ -1,6 +1,8 @@
 name: Publish
 on:
  workflow_dispatch:
+ push:
+ pull_request:
 jobs:
   build:
     name: Publish binaries
@@ -8,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Archive Release
-      uses: thedoctor0/zip-release@master
+      uses: thedoctor0/zip-release@1
       with:
         type: 'zip'
         filename: 'muffinhunt-datapack.zip'
