@@ -1,8 +1,6 @@
 name: Publish
 on:
  workflow_dispatch:
- release:
-  published:
 jobs:
   build:
     name: Publish binaries
@@ -16,12 +14,8 @@ jobs:
         filename: 'muffinhunt-datapack.zip'
         directory: /target/release/muffinhunt-datapack
         path: ''
-    - name: Upload binaries to release
-      uses: svenstaro/upload-release-action@v2
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
       with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: target/release/muffinhunt-datapack
-        asset_name: muffinhunt-datapack
-        tag: ${{ github.ref }}
-        overwrite: true
-        body: "Latest release"
+         name: muffinhunt-datapack.zip
+         path: target/release/muffinhunt-datapack
