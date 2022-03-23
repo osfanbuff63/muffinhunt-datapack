@@ -16,6 +16,7 @@ jobs:
         filename: 'muffinhunt-datapack.zip'
         directory: './'
         path: './'
+        exclude: '*.git*'
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
