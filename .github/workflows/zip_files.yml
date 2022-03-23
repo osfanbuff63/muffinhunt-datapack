@@ -14,7 +14,8 @@ jobs:
       with:
         type: 'zip'
         filename: 'muffinhunt-datapack.zip'
-        exclusions: '*.git* /docs/*.md'
+        directory: /target/release/muffinhunt-datapack
+        path: ''
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
@@ -23,4 +24,4 @@ jobs:
         asset_name: muffinhunt-datapack
         tag: ${{ github.ref }}
         overwrite: true
-        body: "This is my release text"
+        body: "Latest release"
