@@ -26,6 +26,5 @@ jobs:
       with:
         artifacts: "muffinhunt-datapack.zip"
         prerelease: true
-        tag: muffinhunt-dev-build
         commit: master
         token: ${{ secrets.GITHUB_TOKEN }}
