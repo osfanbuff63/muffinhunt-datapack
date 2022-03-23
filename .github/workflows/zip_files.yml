@@ -12,7 +12,7 @@ jobs:
       with:
         type: 'zip'
         filename: 'muffinhunt-datapack.zip'
-        directory: /target/release/muffinhunt-datapack
+        directory: ''
         path: ''
     - name: Upload artifact
       uses: actions/upload-artifact@v3
