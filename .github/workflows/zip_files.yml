@@ -18,7 +18,7 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: ${{ secrets.zip_files }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: target/release/muffinhunt-datapack
         asset_name: muffinhunt-datapack
         tag: ${{ github.ref }}
