@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Archive Release
-      uses: thedoctor0/zip-release@1
+      uses: thedoctor0/zip-release@master
       with:
         type: 'zip'
         filename: 'muffinhunt-datapack.zip'
@@ -22,7 +22,7 @@ jobs:
          name: muffinhunt-datapack.zip
          path: ./
     - name: Create release
-      uses: ncipollo/release-action@0.6.1
+      uses: ncipollo/release-action@1
       with:
         artifacts: "muffinhunt-datapack.zip"
         prerelease: true
