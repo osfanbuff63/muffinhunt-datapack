@@ -19,3 +19,11 @@ jobs:
       with:
          name: muffinhunt-datapack.zip
          path: ./
+    - name: Create release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "muffinhunt-datapack.zip"
+        prerelease: true
+        tag: muffinhunt-dev-build
+        commit: master
+        token: ${{ secrets.GITHUB_TOKEN }}
