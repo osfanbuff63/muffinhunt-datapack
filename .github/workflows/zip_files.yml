@@ -1,9 +1,8 @@
 name: Publish
 on:
+ workflow_dispatch:
  release:
   published:
-
-
 jobs:
   build:
     name: Publish binaries
