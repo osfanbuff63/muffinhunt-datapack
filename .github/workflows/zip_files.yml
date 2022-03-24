@@ -31,3 +31,5 @@ jobs:
         generateReleaseNotes: true
         tag: muffinhunt-dev-build
         allowUpdates: true
+        replacesArtifacts: true
+        name: The latest MuffinHunt dev build
