@@ -1,4 +1,4 @@
-name: Publish
+name: Publish dev build
 on: 
  push:
   branches: master
@@ -29,4 +29,5 @@ jobs:
         commit: master
         token: ${{ secrets.GITHUB_TOKEN }}
         generateReleaseNotes: true
+        tag: muffinhunt-dev-build
         allowUpdates: true
