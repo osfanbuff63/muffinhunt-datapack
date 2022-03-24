@@ -15,12 +15,7 @@ jobs:
         filename: 'muffinhunt-datapack.zip'
         directory: './'
         path: './'
-        exclude: '*.git*'
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-         name: muffinhunt-datapack.zip
-         path: ./
+        exclude: '*.git*/'
     - name: Create release
       uses: ncipollo/release-action@v1
       with:
