@@ -5,12 +5,6 @@ jobs:
     name: Optimize datapack
     runs-on: ubuntu-latest
     steps:
-     - name: Checkout repo
-       uses: actions/checkout@v3
-     - name: Setup Node.js  
-       uses: actions/setup-node@v3.0.0
-       with:
-         node-version: '>=16.14.0'
      - name: Clone repository
        uses: actions/checkout@v3
        with:
@@ -24,5 +18,3 @@ jobs:
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
-          
-          
