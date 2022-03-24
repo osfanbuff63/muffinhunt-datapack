@@ -1,0 +1,30 @@
+name: Publish dev build
+on: 
+ push:
+  branches: master
+jobs:
+  zip-files:
+    name: Publish binaries
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        type: 'zip'
+        filename: 'muffinhunt-datapack.zip'
+        directory: './'
+        path: './'
+        exclude: '*.git*/'
+    - name: Create release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "muffinhunt-datapack.zip"
+        prerelease: true
+        commit: master
+        token: ${{ secrets.GITHUB_TOKEN }}
+        generateReleaseNotes: true
+        tag: muffinhunt-dev-build
+        allowUpdates: true
+        replacesArtifacts: true
+        name: The latest MuffinHunt dev build
