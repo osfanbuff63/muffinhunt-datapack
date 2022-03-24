@@ -1,0 +1,11 @@
+files:
+  - source: /data/muffinhunt/advancements/*.json
+    translation: /translations/%language%/%locale_with_underscore%/%original_path%/%original_file_name%
+  - source: /data/minecraft/advancements/story/*.json
+    translation: /translations/%language%/%locale_with_underscore%/%original_path%/%original_file_name%
+  - source: /data/minecraft/advancements/*.json
+    translation: /translations/%language%/%locale_with_underscore%/%original_path%/%original_file_name%
+  - source: /data/minecraft/advancements/adventure/*.json
+    translation: /translations/%language%/%locale_with_underscore%/%original_path%/%original_file_name%
+  - source: /data/minecraft/advancements/nether/*.json
+    translation: /translations/%language%/%locale_with_underscore%/%original_path%/%original_file_name%
