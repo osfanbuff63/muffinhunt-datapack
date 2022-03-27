@@ -9,4 +9,5 @@ give @a[team=dragon_ender] spyglass{display:{Name:'[{"text":"Aha!","italic":fals
 give @a[team=juggernaut] spyglass{display:{Name:'[{"text":"Aha!","italic":false,"color":"gold"}]',Lore:['[{"text":"Look at the dragon! Just do it!"}]']}} 1
 tag @a[tag=muffinhunt] add muffinhunt_enter_end
 function muffinhunt-dev:add_crystal_bossbar
+function muffinhunt-dev:add_enderdragon_health
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]

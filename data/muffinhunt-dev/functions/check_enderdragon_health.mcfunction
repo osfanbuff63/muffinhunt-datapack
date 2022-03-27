@@ -1,0 +1,2 @@
+execute store result score EnderDragonHealth EnderDragonHealth as @e[type=ender_dragon,limit=1] run scoreboard players get @s EnderDragonHealth
+execute if score EnderDragonHealth EnderDragonHealth = EnderDragonHalfHealth EnderDragonHealth in minecraft:muffinhunt_the_end positioned 0 50 0 run function muffinhunt-dev:dragon_half_health

@@ -6,4 +6,4 @@ item replace entity @a[team=dragon_ender] weapon.offhand with shield{Damage:73}
 item replace entity @a[team=juggernaut] armor.feet with diamond_boots{Unbreakable:1,display:{Name:'[{"text":"Copper Boots","color":"#FFA500","italic":false}]'}}
 item replace entity @a[team=juggernaut] container.0 with diamond_sword{Unbreakable:1,display:{Name:'[{"text":"Copper Sword","color":"#FFA500","italic":false}]'}}
 tag @a[tag=muffinhunt] add muffinhunt_surface_overworld
-tellraw @a ["",{"text":"Surface Overworld ","color":"green"},{"text":"items given! ","color":"gold"}]
+tellraw @a [{"text":"Surface Overworld ","color":"green"},{"text":"items given! ","color":"gold"}]
