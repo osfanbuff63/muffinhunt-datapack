@@ -1,3 +1,4 @@
+scoreboard players set EnderDragonHealthCheck EnderDragonHealth 1
 execute at @e[type=armor_stand,tag=DragonMidStand] run summon hoglin ~ ~ ~ {IsImmuneToZombification:1,ActiveEffects:[{Id:28,Duration:10000,ShowParticles:false}]}
 execute at @e[type=armor_stand,tag=DragonMidStand] run summon hoglin ~ ~ ~ {IsImmuneToZombification:1,ActiveEffects:[{Id:28,Duration:10000,ShowParticles:false}]}
 execute at @e[type=armor_stand,tag=DragonMidStand] run summon hoglin ~ ~ ~ {IsImmuneToZombification:1,ActiveEffects:[{Id:28,Duration:10000,ShowParticles:false}]}
