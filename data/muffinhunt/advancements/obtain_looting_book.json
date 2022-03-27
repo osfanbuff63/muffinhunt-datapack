@@ -1,0 +1,39 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:enchanted_book",
+        "nbt": "{Enchantments:[{}]}"
+      },
+      "title": "Knowledge is power",
+      "description": "Get a Looting 3 book",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "minecraft:story/enter_the_nether",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:enchanted_book"
+              ],
+              "enchantments": [
+                {
+                  "enchantment": "minecraft:looting",
+                  "levels": 3
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "experience": 50
+    }
+  }
+  
