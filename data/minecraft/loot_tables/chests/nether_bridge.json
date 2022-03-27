@@ -7,13 +7,7 @@
           {
             "type": "minecraft:item",
             "weight": 5,
-            "name": "minecraft:coal",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": 5
-              }
-            ]
+            "name": "minecraft:coal"
           },
           {
             "type": "minecraft:item",
@@ -29,35 +23,17 @@
           {
             "type": "minecraft:item",
             "weight": 3,
-            "name": "minecraft:ancient_debris",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": 1
-              }
-            ]
+            "name": "minecraft:ancient_debris"
           },
           {
             "type": "minecraft:item",
             "weight": 4,
-            "name": "minecraft:gold_ingot",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": 1
-              }
-            ]
+            "name": "minecraft:gold_ingot"
           },
           {
             "type": "minecraft:item",
             "weight": 4,
-            "name": "minecraft:iron_ingot",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": 1
-              }
-            ]
+            "name": "minecraft:iron_ingot"
           },
           {
             "type": "minecraft:item",
