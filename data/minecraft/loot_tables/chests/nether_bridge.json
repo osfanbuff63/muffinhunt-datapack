@@ -1,7 +1,7 @@
 {
     "pools": [
       {
-        "rolls": 3,
+        "rolls": 5,
         "bonus_rolls": 1,
         "entries": [
           {
@@ -13,6 +13,12 @@
             "type": "minecraft:item",
             "weight": 1,
             "name": "minecraft:netherite_ingot",
+            "conditions": [
+               {
+                "condition": "minecraft:random_chance",
+                "chance": 0.5
+               }
+            ],
             "functions": [
               {
                 "function": "minecraft:set_count",
