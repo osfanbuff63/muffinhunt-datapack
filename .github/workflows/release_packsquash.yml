@@ -1,9 +1,9 @@
 name: Upload optimized datapack
 on: 
- push:
-  tags:
-   - 'v*'
- workflow_dispatch:
+  push:
+    tags:
+    - 'v*'
+  workflow_dispatch:
 jobs:
    packsquash:
     name: Optimize datapack
@@ -23,9 +23,9 @@ jobs:
           allow_optifine_mod: true
           delete_bloat_json_keys: true
           artifact_name: 'optimized-muffinhunt-datapack.zip'
-      - name: Publish optimized datapack
-        uses: svenstaro/upload-release-action@v2
-        with: 
+     - name: Publish optimized datapack
+       uses: svenstaro/upload-release-action@v2
+       with: 
          repo_token: ${{ secrets.GITHUB_TOKEN }}
          tag: ${{ github.ref }}
          file: 'optimized_muffinhunt-datapack.zip'
