@@ -5,8 +5,8 @@ on:
     - 'v*'
   workflow_dispatch:
 jobs:
-   packsquash:
-    name: Optimize datapack
+   upload-optimized:
+    name: Create and optimize datapack
     runs-on: ubuntu-latest
     steps:
      - name: Clone repository
@@ -26,8 +26,8 @@ jobs:
      - name: Download optimized pack
        uses: actions/download-artifact@v3
        with:
-        name: optimized-muffinhunt-datapack.zip
-        path: ./
+         name: optimized-muffinhunt-datapack.zip
+         path: ./
      - name: Publish optimized datapack
        uses: svenstaro/upload-release-action@v2
        with: 
