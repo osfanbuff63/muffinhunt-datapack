@@ -4,18 +4,18 @@ on:
   branches: master
 jobs:
   zip-files:
-    name: Publish binaries
+    name: Publish dev build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Archive Release
+    - name: Archive build
       uses: thedoctor0/zip-release@master
       with:
         type: 'zip'
         filename: 'muffinhunt-datapack.zip'
         directory: './'
         path: './'
-        exclude: '*.git*/'
+        exclusions: '*.git*/'
     - name: Create release
       uses: ncipollo/release-action@v1
       with:

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:the_end",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": -767523286,
+    "settings": "muffinhunt:end_with_caves",
+    "biome_source": {
+      "type": "minecraft:the_end",
+      "seed": -767523286
+    }
+  }
+}
