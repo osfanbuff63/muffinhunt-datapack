@@ -17,12 +17,17 @@ jobs:
        uses: ComunidadAylas/PackSquash-action@master
        with:
           path: ./
-          token: ${{ secrets.packsquash_token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           minify_json_files: true
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
           artifact_name: 'optimized-muffinhunt-datapack.zip'
+     - name: Download optimized pack
+       uses: actions/download-artifact@v3
+       with:
+        name: optimized-muffinhunt-datapack.zip
+        path: ./
      - name: Publish optimized datapack
        uses: svenstaro/upload-release-action@v2
        with: 
