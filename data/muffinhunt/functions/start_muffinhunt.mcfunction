@@ -40,4 +40,8 @@ item replace entity @a[team=juggernaut] armor.feet with iron_boots{Unbreakable:1
 item replace entity @a[team=juggernaut] armor.head with iron_helmet{Unbreakable:1,display:{Name:'[{"text":"Emerald Helmet","italic":false,"color":"green"}]'}} 1
 give @a[team=juggernaut] compass{display:{Name:'[{"text":"Tracker Compass","color":"dark_aqua"}]'}} 1
 give @a[team=juggernaut] flint_and_steel 1
+scoreboard players set MuffinHuntLive2 MuffinHuntRunnerLives 4
+scoreboard players set MuffinHuntLive4 MuffinHuntRunnerLives 2
+scoreboard players set MuffinHuntLive3 MuffinHuntRunnerLives 3
+scoreboard players set MuffinHuntLive5 MuffinHuntRunnerLives 1
 tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please begin tracking the ","color":"gold"},{"text":"Dragon Ender","color":"dark_purple"},{"text":"! Once that is complete, the ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]
