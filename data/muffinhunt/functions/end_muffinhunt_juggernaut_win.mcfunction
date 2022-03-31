@@ -8,7 +8,7 @@ tag @a[tag=muffinhunt] remove muffinhunt
 tag @a[tag=juggernaut] remove juggernaut
 tag @a[tag=dragon_ender] remove dragon_ender
 tag @a[tag=muffinhunt_spectato] remove muffinhunt_spectato
-team empty juggernaut
+team empty juggernautc
 team empty dragon_ender
 team remove juggernaut
 team remove dragon_ender
