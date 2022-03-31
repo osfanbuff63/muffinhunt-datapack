@@ -10,4 +10,5 @@ give @a[team=juggernaut] spyglass{display:{Name:'[{"text":"Aha!","italic":false,
 tag @a[tag=muffinhunt] add muffinhunt_enter_end
 function muffinhunt-dev:add_crystal_bossbar
 function muffinhunt-dev:add_enderdragon_health
+execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives > MuffinHuntLive4 MuffinHuntRunnerLives run scoreboard players remove @s MuffinHuntRunnerLives 1
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]
