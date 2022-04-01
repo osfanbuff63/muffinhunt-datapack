@@ -6,27 +6,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:emerald_block",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 5
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.7
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "weight": 4,
           "name": "minecraft:crying_obsidian",
           "functions": [
