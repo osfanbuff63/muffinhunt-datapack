@@ -16,7 +16,7 @@
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "dimension": "minecraft:muffinhunt_the_end"
+          "dimension": "minecraft:the_end"
         }
       }
     }
