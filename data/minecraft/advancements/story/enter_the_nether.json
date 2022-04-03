@@ -16,7 +16,7 @@
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "dimension": "minecraft:muffinhunt_nether"
+          "dimension": "minecraft:the_nether"
         }
       }
     }

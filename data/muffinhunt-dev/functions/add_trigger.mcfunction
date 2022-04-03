@@ -11,5 +11,5 @@ scoreboard objectives add SetMuffinHuntGamerules trigger
 scoreboard players set @a SetMuffinHuntGamerules 0
 scoreboard players enable @a SetMuffinHuntGamerules
 scoreboard objectives add DragonEnderReLife trigger
-scoreboard players set DragonEnderReLife 0
+scoreboard players set @a DragonEnderReLife 0
 scoreboard players enable @a DragonEnderReLife

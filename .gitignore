@@ -1,6 +1,25 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,notepadpp,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,notepadpp,git
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### NotepadPP ###
+# Notepad++ backups #
+*.bak
 
 ### VisualStudioCode ###
 .vscode/*
@@ -49,4 +68,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,notepadpp,git
