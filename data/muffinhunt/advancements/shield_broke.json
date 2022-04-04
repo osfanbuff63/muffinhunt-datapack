@@ -1,28 +1,27 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:shield"
-      },
-      "title": "Where'd my shield go?",
-      "description": "I ate it (it broke)",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:shield"
     },
-    "parent": "muffinhunt:i_ate_it",
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:item_durability_changed",
-        "conditions": {
-          "durability": 0,
-          "item": {
-            "items": [
-              "minecraft:shield"
-            ],
-            "durability": 0
-          }
+    "title": "Where'd my shield go?",
+    "description": "I ate it (it broke)",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "muffinhunt:i_ate_it",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "durability": 0,
+        "item": {
+          "items": [
+            "minecraft:shield"
+          ],
+          "durability": 0
         }
       }
     }
   }
-  
+}
