@@ -7,7 +7,7 @@ jobs:
     name: Publish dev build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Archive build
       uses: thedoctor0/zip-release@master
       with:
