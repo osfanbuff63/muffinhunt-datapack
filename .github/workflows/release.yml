@@ -1,0 +1,114 @@
+name: Publish release
+on: 
+  push:
+    tags:
+    - 'v*'
+  workflow_dispatch:
+jobs:
+   create-release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+     - name: Create release
+       uses: ncipollo/release-action@v1.10.0
+       
+   upload-normal:
+    name: Create non-optimized datapack
+    runs-on: ubuntu-latest
+    steps:
+     - name: Clone repository
+       uses: actions/checkout@v3
+     - name: Zip files
+       uses: vimtor/action-zip@v1
+       with:
+        files: './'
+        dest: 'muffinhunt-datapack.zip'
+     - name: Upload to release
+       with:
+        tag: ${{ github.ref }}
+        generateReleaseNotes: true
+   upload-optimized-datapack:
+    name: Create and optimize datapack
+    runs-on: ubuntu-latest
+    steps:
+     - name: Clone repository
+       uses: actions/checkout@v3
+       with:
+          fetch-depth: 0
+     - name: Run PackSquash
+       uses: ComunidadAylas/PackSquash-action@master
+       with:
+          path: ./
+          token: ${{ secrets.GITHUB_TOKEN }}
+          minify_json_files: true
+          validate_pack_metadata_file: true
+          allow_optifine_mod: true
+          delete_bloat_json_keys: true
+          artifact_name: 'optimized-muffinhunt-datapack.zip'
+     - name: Download optimized pack
+       uses: actions/download-artifact@v3
+       with:
+         name: optimized-muffinhunt-datapack.zip
+         path: ./
+     - name: Publish optimized datapack
+       uses: svenstaro/upload-release-action@v2
+       with: 
+         repo_token: ${{ secrets.GITHUB_TOKEN }}
+         tag: ${{ github.ref }}
+         file: optimized-muffinhunt-datapack.zip
+   fetch-muffinhunt-resourcepack:
+    name: Fetch latest MuffinHunt resource pack changes
+    runs-on: ubuntu-latest
+    steps:
+     - name: Clone muffinhunt resource pack
+       uses: actions/checkout@v3
+       with: 
+        repository: osfanmuffin/muffinhunt-resourcepack
+        path: /resourcepack/
+     - name: Zip files
+       uses: vimtor/action-zip@v1
+       with:
+        files: /resourcepack/*
+        dest: 'muffinhunt-resourcepack.zip'
+     - name: Publish resource pack
+       uses: svenstaro/upload-release-action@v2
+       with: 
+         repo_token: ${{ secrets.GITHUB_TOKEN }}
+         tag: ${{ github.ref }}
+         file: muffinhunt-resourcepack.zip
+   optimize-muffinhunt-resourcepack:
+    name: Fetch and optimize MuffinHunt resourcepack
+    runs-on: ubuntu-latest
+    steps:
+     - name: Clone muffinhunt resource pack
+       uses: actions/checkout@v3
+       with: 
+        repository: osfanmuffin/muffinhunt-resourcepack
+        path: /resourcepack/
+     - name: Run PackSquash
+       uses: ComunidadAylas/PackSquash-action@master
+       with:
+          path: ./resourcepack/
+          token: ${{ secrets.GITHUB_TOKEN }}
+          minify_json_files: true
+          validate_pack_metadata_file: true
+          allow_optifine_mod: true
+          delete_bloat_json_keys: true
+          artifact_name: 'optimized-muffinhunt-resourcepack.zip'
+     - name: Download optimized pack
+       uses: actions/download-artifact@v3
+       with:
+         name: optimized-muffinhunt-resourcepack.zip
+         path: ./
+     - name: Publish resource pack
+       uses: svenstaro/upload-release-action@v2
+       with: 
+         repo_token: ${{ secrets.GITHUB_TOKEN }}
+         tag: ${{ github.ref }}
+         file: optimized-muffinhunt-resourcepack.zip
+     
+         
+   
+    
+
+
