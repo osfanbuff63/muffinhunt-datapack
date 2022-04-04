@@ -1,38 +1,37 @@
 {
-    "type": "minecraft:entity",
-    "pools": [
-      {
-        "rolls": 2,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 2,
-            "name": "minecraft:air"
-          },
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "name": "minecraft:cooked_porkchop",
-            "functions": [
-              {
-                "function": "minecraft:set_nbt",
-                "tag": "{CustomName:'[{\"text\":\"Voidchop\",\"color\":\"dark_purple\"}]'}"
-              }
-            ]
-          },
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "name": "minecraft:cooked_porkchop",
-            "functions": [
-              {
-                "function": "minecraft:set_nbt",
-                "tag": "{CustomName:'[{\"text\":\"Voidchop\",\"color\":\"dark_purple\"}]'}"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:air"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:cooked_porkchop",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomName:'[{\"text\":\"Voidchop\",\"color\":\"dark_purple\"}]'}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:cooked_porkchop",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomName:'[{\"text\":\"Voidchop\",\"color\":\"dark_purple\"}]'}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

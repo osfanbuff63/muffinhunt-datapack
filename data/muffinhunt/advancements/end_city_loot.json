@@ -1,23 +1,22 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:purpur_block"
-      },
-      "title": "The secret chest...",
-      "description": "Open a chest in an end city",
-      "frame": "goal",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:purpur_block"
     },
-    "parent": "minecraft:story/enter_the_end",
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:player_generates_container_loot",
-        "conditions": {
-          "loot_table": "minecraft:chests/end_city_treasure"
-        }
+    "title": "The secret chest...",
+    "description": "Open a chest in an end city",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:story/enter_the_end",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/end_city_treasure"
       }
     }
   }
-  
+}

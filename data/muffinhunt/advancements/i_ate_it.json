@@ -1,27 +1,26 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:cooked_beef",
-        "nbt": "{CustomName:'[{\"text\":\"Burger\"}]'}"
-      },
-      "title": "I ate it",
-      "description": "Eat a burger",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:cooked_beef",
+      "nbt": "{CustomName:'[{\"text\":\"Burger\"}]'}"
     },
-    "parent": "muffinhunt:infinite_amethyst",
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:consume_item",
-        "conditions": {
-          "item": {
-            "items": [
-              "minecraft:cooked_beef"
-            ]
-          }
+    "title": "I ate it",
+    "description": "Eat a burger",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "muffinhunt:infinite_amethyst",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_beef"
+          ]
         }
       }
     }
   }
-  
+}
