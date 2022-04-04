@@ -105,9 +105,3 @@ jobs:
          repo_token: ${{ secrets.GITHUB_TOKEN }}
          tag: ${{ github.ref }}
          file: optimized-muffinhunt-resourcepack.zip
-     
-         
-   
-    
-
-
