@@ -2,7 +2,7 @@ name: Publish release
 on: 
   push:
     tags:
-    - 'v*'
+     - '**'
   workflow_dispatch:
 jobs:
    create-release:
@@ -11,7 +11,6 @@ jobs:
     steps:
      - name: Create release
        uses: ncipollo/release-action@v1.10.0
-       
    upload-normal:
     name: Create non-optimized datapack
     runs-on: ubuntu-latest
