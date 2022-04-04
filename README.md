@@ -1,4 +1,11 @@
-![GitHub](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack?color=green) ![Language: mcfunction](https://img.shields.io/badge/language-mcfunction-red) ![Language: JSON](https://img.shields.io/badge/language-JSON-lightgray) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/osfanmuffin/muffinhunt-datapack) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/osfanmuffin/muffinhunt-datapack?color=orange&include_prereleases&label=pre-release) [![Crowdin](https://badges.crowdin.net/muffinhunt-datapack/localized.svg)](https://crowdin.com/project/muffinhunt-datapack)
+![GitHub](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack?color=green) 
+![Language: mcfunction](https://img.shields.io/badge/language-mcfunction-red) 
+![Language: JSON](https://img.shields.io/badge/language-JSON-lightgray) 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/osfanmuffin/muffinhunt-datapack) 
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/osfanmuffin/muffinhunt-datapack?color=orange&include_prereleases&label=pre-release) 
+[![Crowdin](https://badges.crowdin.net/muffinhunt-datapack/localized.svg)](https://crowdin.com/project/muffinhunt-datapack)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+
 # muffinhunt-datapack
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
