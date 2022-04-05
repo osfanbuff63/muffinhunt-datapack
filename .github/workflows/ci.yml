@@ -5,7 +5,7 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  build:
+  test-datapack:
     runs-on: {{ matrix.os }}
     strategy:
       matrix: 
@@ -16,14 +16,14 @@ jobs:
       - name: Zip files
         uses: vimtor/action-zip@v1
         with:
-         files: .
-         dest: muffinhunt-datapack.zip
+          files: .
+          dest: muffinhunt-datapack.zip
       - name: Create server.properties
         uses: 1arp/create-a-file-action@0.2
         with:
-         path: .
-         file: server.properties
-         content: |
+          path: .
+          file: server.properties
+          content: |
                Minecraft server properties
                #Wed Dec 01 19:36:35 UTC 2021
                enable-jmx-monitoring=false
@@ -84,7 +84,6 @@ jobs:
                      eula=true
           
       - name: Setup Minecraft
-        id: minecraft
         uses: mcenv/setup-minecraft@v1
         with:
           version: "1.18.2"
@@ -94,7 +93,7 @@ jobs:
           distribution: "temurin"
           java-version: "17"
       - name: Run Minecraft
-      - run: |
+        run: |
               java -jar minecraft/server.jar 
       - name: Move files to server folder
         run: |
