@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   test-datapack:
-    runs-on: {{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix: 
         os: [macos-latest,windows-latest,ubuntu-latest]
