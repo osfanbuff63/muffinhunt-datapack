@@ -97,9 +97,9 @@ jobs:
               java -jar minecraft/server.jar 
       - name: Move files to server folder
         run: |
-             mv -f muffinhunt-datapack.zip minecraft/world/datapacks/
-             mv -f eula.txt /minecraft/eula.txt
-             mv -f server.properties /minecraft/server.properties
+             mv muffinhunt-datapack.zip minecraft/world/datapacks/
+             mv eula.txt /minecraft/eula.txt
+             mv server.properties /minecraft/server.properties
       - name: Start server
         run: |
               java -jar minecraft/server.jar
