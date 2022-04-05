@@ -5,10 +5,10 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  test-datapack:
+  test-datapack-mac-linux:
     runs-on: ${{ matrix.os }}
     strategy:
-      matrix: 
+      matrix:
         os: [macos-latest,ubuntu-latest]
     steps:
       - name: Checkout repo
@@ -18,71 +18,6 @@ jobs:
         with:
           files: ./
           dest: muffinhunt-datapack.zip
-      - name: Create server.properties
-        uses: 1arp/create-a-file-action@0.2
-        with:
-          path: ./
-          file: server.properties
-          content: |
-               Minecraft server properties
-               #Wed Dec 01 19:36:35 UTC 2021
-               enable-jmx-monitoring=false
-               rcon.port=25575
-               gamemode=survival
-               enable-command-block=false
-               enable-query=false
-               level-name=world
-               motd=A Minecraft Server
-               query.port=25565
-               pvp=true
-               difficulty=easy
-               network-compression-threshold=256
-               require-resource-pack=false
-               max-tick-time=60000
-               use-native-transport=true
-               max-players=20
-               online-mode=true
-               enable-status=true
-               allow-flight=false
-               broadcast-rcon-to-ops=true
-               view-distance=10
-               server-ip=
-               resource-pack-prompt=
-               allow-nether=true
-               server-port=25565
-               enable-rcon=false
-               sync-chunk-writes=true
-               op-permission-level=4
-               prevent-proxy-connections=false
-               hide-online-players=false
-               resource-pack=
-               entity-broadcast-range-percentage=100
-               simulation-distance=10
-               rcon.password=
-               player-idle-timeout=0
-               debug=false
-               force-gamemode=false
-               rate-limit=0
-               hardcore=false
-               white-list=false
-               broadcast-console-to-ops=true
-               spawn-npcs=true
-               spawn-animals=true
-               function-permission-level=2
-               text-filtering-config=
-               spawn-monsters=true
-               enforce-whitelist=false
-               resource-pack-sha1=
-               spawn-protection=16
-               max-world-size=29999984
-      - name: Create eula.txt
-        uses: 1arp/create-a-file-action@0.2
-        with:
-          path: .
-          file: eula.txt
-          content: |
-                     eula=true
-          
       - name: Setup Minecraft
         uses: mcenv/setup-minecraft@v1
         with:
@@ -95,14 +30,19 @@ jobs:
       - name: Run Minecraft
         run: |
               java -jar minecraft/server.jar 
+              sleep 100
+              cd minecraft
+              stop
       - name: Move files to server folder
         run: |
+             cd ..
              mv muffinhunt-datapack.zip minecraft/world/datapacks/
-             mv eula.txt /minecraft/eula.txt
-             mv server.properties /minecraft/server.properties
       - name: Start server
         run: |
               java -jar minecraft/server.jar
+              sleep 100
+              cd minecraft
+              stop
               
   test-datapack-windows:
     runs-on: windows-latest
@@ -114,71 +54,6 @@ jobs:
         with:
           files: ./
           dest: muffinhunt-datapack.zip
-      - name: Create server.properties
-        uses: 1arp/create-a-file-action@0.2
-        with:
-          path: ./
-          file: server.properties
-          content: |
-               Minecraft server properties
-               #Wed Dec 01 19:36:35 UTC 2021
-               enable-jmx-monitoring=false
-               rcon.port=25575
-               gamemode=survival
-               enable-command-block=false
-               enable-query=false
-               level-name=world
-               motd=A Minecraft Server
-               query.port=25565
-               pvp=true
-               difficulty=easy
-               network-compression-threshold=256
-               require-resource-pack=false
-               max-tick-time=60000
-               use-native-transport=true
-               max-players=20
-               online-mode=true
-               enable-status=true
-               allow-flight=false
-               broadcast-rcon-to-ops=true
-               view-distance=10
-               server-ip=
-               resource-pack-prompt=
-               allow-nether=true
-               server-port=25565
-               enable-rcon=false
-               sync-chunk-writes=true
-               op-permission-level=4
-               prevent-proxy-connections=false
-               hide-online-players=false
-               resource-pack=
-               entity-broadcast-range-percentage=100
-               simulation-distance=10
-               rcon.password=
-               player-idle-timeout=0
-               debug=false
-               force-gamemode=false
-               rate-limit=0
-               hardcore=false
-               white-list=false
-               broadcast-console-to-ops=true
-               spawn-npcs=true
-               spawn-animals=true
-               function-permission-level=2
-               text-filtering-config=
-               spawn-monsters=true
-               enforce-whitelist=false
-               resource-pack-sha1=
-               spawn-protection=16
-               max-world-size=29999984
-      - name: Create eula.txt
-        uses: 1arp/create-a-file-action@0.2
-        with:
-          path: .
-          file: eula.txt
-          content: |
-                     eula=true
-          
       - name: Setup Minecraft
         uses: mcenv/setup-minecraft@v1
         with:
@@ -191,15 +66,20 @@ jobs:
       - name: Run Minecraft
         run: |
               java -jar minecraft/server.jar 
+              timeout /t 100
+              cd minecraft
+              stop
       - name: Move files to server folder
         run: |
+             cd ..
              move muffinhunt-datapack.zip minecraft/world/datapacks/
-             move eula.txt /minecraft/eula.txt
-             move server.properties /minecraft/server.properties
       - name: Start server
         run: |
               java -jar minecraft/server.jar
-      
+              timeout /t 100
+              cd minecraft
+              stop
+
       
       
 
