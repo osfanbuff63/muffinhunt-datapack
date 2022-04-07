@@ -93,6 +93,10 @@ jobs:
         with:
           distribution: "adopt"
           java-version: "17"
+      - name: Create world/datapacks folder
+        run: |
+              cd minecraft
+              mkdir -p /world/datapacks
       - name: Move files to server folder
         run: |
              cd ..
@@ -185,6 +189,10 @@ jobs:
         with:
           distribution: "adopt"
           java-version: "17"
+      - name: Create directory
+        run: |
+              cd minecraft
+              mkdir /world/datapacks
       - name: Move files to server folder
         run: |
              cd ..
