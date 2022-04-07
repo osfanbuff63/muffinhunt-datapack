@@ -1,6 +1,10 @@
 
 name: CI
 on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
   workflow_dispatch:
 jobs:
   test-datapack-mac-linux:
@@ -96,9 +100,7 @@ jobs:
       - name: Start server
         run: |
               java -jar minecraft/server.jar
-              sleep 100
-              cd minecraft
-              stop
+              end
               
   test-datapack-windows:
     runs-on: windows-latest
@@ -191,8 +193,7 @@ jobs:
         run: |
               java -jar minecraft/server.jar
               timeout /t 100
-              cd minecraft
-              stop
+              end
 
       
       
