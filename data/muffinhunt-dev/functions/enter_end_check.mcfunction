@@ -1,1 +1,0 @@
-execute if entity @a[tag=muffinhunt,tag=!muffinhunt_enter_end,limit=1] run function muffinhunt:enter_end
