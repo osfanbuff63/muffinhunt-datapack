@@ -10,7 +10,7 @@
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
 ## What is a MuffinHunt?
-A MuffinHunt, in short, is a variation of a certain Speedrunner vs Hunter series on YouTube, with extra rules. As well, we have starting kits (which are mostly for balancing), automatically increasing kits, etc. You can find a full list of rules and explanations about the series [here](https://osfanmuffin.github.io/muffinhunt-datapack/WhatIsAMuffinHunt) (however still WIP). 
+A MuffinHunt, in short, is a variation of a certain Speedrunner vs Hunter series on YouTube, with extra rules. As well, we have starting kits (which are mostly for balancing), automatically increasing kits, etc. You can find a full list of rules and explanations about the series [here](docs/WhatIsAMuffinHunt.md) (however still WIP). 
 
 
 ## How To Use
@@ -20,7 +20,7 @@ You can trigger the functions included using the /function command. You'll find 
 You will have to manually assign tags, however while a MuffinHunt is running, you can do /function muffinhunt-dev:assign_permanent_tags. This will assign tags that will not be removed on the end of the MuffinHunt. WARNING: Cheats are required for this datapack to work as of version 0.6.1!
 
 
-All tags/teams used by this datapack can be found in [tags.md](https://osfanmuffin.github.io/muffinhunt-datapack/tags). If there is a conflict, I recommend changing the tags that conflict, as it is hard to change the tags in the datapack quickly (although I am looking into a solution for this). 
+All tags/teams used by this datapack can be found in [tags.md](docs/tags.md). If there is a conflict, I recommend changing the tags that conflict, as it is hard to change the tags in the datapack quickly (although I am looking into a solution for this). 
 
 ## Contributing
 If you want to contribute, feel free to fork this repo and send me a PR! 
