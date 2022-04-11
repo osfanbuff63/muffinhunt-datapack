@@ -85,7 +85,7 @@ jobs:
            spawn-protection=16
            max-world-size=29999984
       - name: Setup Minecraft
-        uses: mcenv/setup-minecraft@v1
+        uses: mcenv/setup-minecraft@v2
         with:
           version: "1.18.2"
       - name: Setup Java 17
@@ -181,7 +181,7 @@ jobs:
            spawn-protection=16
            max-world-size=29999984
       - name: Setup Minecraft
-        uses: mcenv/setup-minecraft@v1
+        uses: mcenv/setup-minecraft@v2
         with:
           version: "1.18.2"
       - name: Setup Java 17
