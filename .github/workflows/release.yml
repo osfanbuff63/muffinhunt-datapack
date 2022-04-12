@@ -17,6 +17,8 @@ jobs:
     steps:
      - name: Clone repository
        uses: actions/checkout@v3
+       with:
+        fetch-depth: 0
      - name: Zip files
        uses: vimtor/action-zip@v1
        with:
@@ -65,6 +67,7 @@ jobs:
        with: 
         repository: osfanmuffin/muffinhunt-resourcepack
         path: /resourcepack/
+        fetch-depth: 0
      - name: Zip files
        uses: vimtor/action-zip@v1
        with:
