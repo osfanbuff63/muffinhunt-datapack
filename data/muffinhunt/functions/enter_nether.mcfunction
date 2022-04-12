@@ -6,5 +6,5 @@ item replace entity @a[team=juggernaut,tag=no_juggernaut_pumpkin] armor.head wit
 item replace entity @a[team=juggernaut] weapon.offhand with shield{Unbreakable:1}
 item replace entity @a[team=juggernaut] container.2 with diamond_pickaxe{Unbreakable:1,display:{Name:'[{"text":"Emerald Pickaxe","color":"green","italic":false}]'},Enchantments:[{id:"efficiency",lvl:5}]}
 tag @a[tag=muffinhunt] add muffinhunt_nether
-execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives > MuffinHuntLive2 MuffinHuntRunnerLives run scoreboard players remove @s MuffinHuntRunnerLives 1
+execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHuntLive2 MuffinHuntRunnerLives run scoreboard players set @s MuffinHuntRunnerLives 4
 tellraw @a [{"text":"Nether","color":"red"},{"text":" items given!","color":"gold"}]

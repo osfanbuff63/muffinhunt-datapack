@@ -7,3 +7,4 @@ execute at @e[type=armor_stand,tag=DragonMidStand] run summon phantom ~ ~ ~ {Per
 execute at @e[type=armor_stand,tag=DragonMidStand] run summon phantom ~ ~ ~ {PersistenceRequired:1,Size:10}
 execute at @e[type=armor_stand,tag=DragonMidStand] run summon phantom ~ ~ ~ {PersistenceRequired:1,Size:10}
 execute at @e[type=armor_stand,tag=DragonMidStand] as @e[type=phantom,distance=..10] at @s run spreadplayers ~ ~ 15 35 false @s
+execute as @a[team=dragon_ender,limit=1] run advancement grant @s only muffinhunt:all_crystals

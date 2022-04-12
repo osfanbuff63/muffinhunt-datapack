@@ -1,0 +1,32 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:cooked_beef",
+        "nbt": "{Enchantments:[{}]}"
+      },
+      "title": "I ate it all",
+      "description": "Eat 64 burgers",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "muffinhunt:i_ate_it",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:cooked_beef"
+              ],
+              "count": 0,
+              "nbt": "{display:{Name:'[{\"text\":\"Burger\",\"color\":\"#964B00\"}]'}}"
+            }
+          ]
+        }
+      }
+    }
+  }
+  
