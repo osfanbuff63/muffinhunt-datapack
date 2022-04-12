@@ -4,3 +4,5 @@ execute as @a if score @s MuffinHuntConfig matches 2 run function muffinhunt:con
 execute as @a if score @s MuffinHuntConfig matches 3 run function muffinhunt:config/ghast_off
 execute as @a if score @s MuffinHuntConfig matches 4 run function muffinhunt:config/piglin_brute_on
 execute as @a if score @s MuffinHuntConfig matches 5 run function muffinhunt:config/piglin_brute_off
+execute as @a if score @s MuffinHuntConfig matches 6 run function muffinhunt:config/silverfish_on
+execute as @a if score @s MuffinHuntConfig matches 7 run function muffinhunt:config/silverfish_off
