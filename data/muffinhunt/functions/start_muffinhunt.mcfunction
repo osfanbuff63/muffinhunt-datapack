@@ -44,4 +44,5 @@ scoreboard players set MuffinHuntLive2 MuffinHuntRunnerLives 4
 scoreboard players set MuffinHuntLive4 MuffinHuntRunnerLives 2
 scoreboard players set MuffinHuntLive3 MuffinHuntRunnerLives 3
 scoreboard players set MuffinHuntLive5 MuffinHuntRunnerLives 1
+execute as @a[tag=muffinhunt] at @s run spawnpoint @s ~ ~ ~ 
 tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please begin tracking the ","color":"gold"},{"text":"Dragon Ender","color":"dark_purple"},{"text":"! Once that is complete, the ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]
