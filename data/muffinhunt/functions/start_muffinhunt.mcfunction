@@ -30,15 +30,16 @@ give @a[team=dragon_ender] golden_axe{Unbreakable:1,Enchantments:[{id:"efficienc
 give @a[team=dragon_ender] anvil 1
 give @a[team=dragon_ender] cobbled_deepslate 64
 item replace entity @a[team=dragon_ender] armor.chest with chainmail_chestplate{Unbreakable:1,Enchantments:[{id:"protection",lvl:2}],HideFlags:1} 1
-give @a[tag=muffinhunt] water_bucket{display:{Name:'[{"text":"Water Bucket","color":"blue","italic":false}]'}} 1
 give @a[tag=muffinhunt] cooked_beef{display:{Name:'[{"text":"Burger","italic":false,"color":"#964B00"}]'}} 64
+give @a[tag=muffinhunt] water_bucket{display:{Name:'[{"text":"Water Bucket","color":"blue","italic":false}]'}} 1
+give @a[team=juggernaut] acacia_boat{display:{Lore:['{"text": "I should be removed!"}']}}
 give @a[tag=muffinhunt] oak_planks{display:{Name:'[{"text":"Oak Planks","color":"gold","italic":false}]'}} 64
+give @a[team=juggernaut] compass{display:{Name:'[{"text":"Tracker Compass","color":"dark_aqua","bold": false}]'}} 1
 give @a[tag=muffinhunt] coal{display:{Name:'[{"text":"Coal","color":"black","italic":false}]'}} 64
 item replace entity @a[team=juggernaut] armor.chest with iron_chestplate{Unbreakable:1,display:{Name:'[{"text":"Emerald Chestplate","italic":false,"color":"green"}]'}} 1
 item replace entity @a[team=juggernaut] armor.legs with iron_leggings{Unbreakable:1,display:{Name:'[{"text":"Emerald Leggings","italic":false,"color":"green"}]'}} 1
 item replace entity @a[team=juggernaut] armor.feet with iron_boots{Unbreakable:1,display:{Name:'[{"text":"Emerald Boots","italic":false,"color":"green"}]'}} 1
 item replace entity @a[team=juggernaut] armor.head with iron_helmet{Unbreakable:1,display:{Name:'[{"text":"Emerald Helmet","italic":false,"color":"green"}]'}} 1
-give @a[team=juggernaut] compass{display:{Name:'[{"text":"Tracker Compass","color":"dark_aqua"}]'}} 1
 give @a[team=juggernaut] flint_and_steel 1
 scoreboard players set MuffinHuntLive2 MuffinHuntRunnerLives 4
 scoreboard players set MuffinHuntLive4 MuffinHuntRunnerLives 2
