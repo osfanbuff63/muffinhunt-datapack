@@ -1,21 +1,20 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:end_crystal",
-        "nbt": "{Enchantments:[{}]}"
-      },
-      "title": "Defeat the Shiny Thing",
-      "description": "Defeat the End Crystals",
-      "frame": "goal",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:end_crystal",
+      "nbt": "{Enchantments:[{}]}"
     },
-    "parent": "minecraft:story/enter_the_end",
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:impossible"
-      }
+    "title": "Defeat the Shiny Thing",
+    "description": "Defeat the End Crystals",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:story/enter_the_end",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
     }
   }
-  
+}

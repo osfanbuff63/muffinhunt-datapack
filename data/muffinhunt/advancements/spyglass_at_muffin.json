@@ -20,10 +20,13 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
-                "looking_at": {
-                  "type": "minecraft:player",
-                  "team": "dragon_ender"
+              "type_specific": {
+                "type": "player",
+                "player": {
+                  "looking_at": {
+                    "type": "minecraft:player",
+                    "team": "dragon_ender"
+                  }
                 }
               }
             }
