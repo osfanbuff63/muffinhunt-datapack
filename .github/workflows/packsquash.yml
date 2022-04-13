@@ -10,7 +10,7 @@ jobs:
        with:
           fetch-depth: 0
      - name: Run PackSquash
-       uses: ComunidadAylas/PackSquash-action@master
+       uses: ComunidadAylas/PackSquash-action@e12b951
        with:
           path: ./
           token: ${{ secrets.packsquash_token }}
