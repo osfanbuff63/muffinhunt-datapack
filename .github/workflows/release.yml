@@ -89,7 +89,7 @@ jobs:
         repository: osfanmuffin/muffinhunt-resourcepack
         path: /resourcepack/
      - name: Run PackSquash
-       uses: ComunidadAylas/PackSquash-action@e12b951
+       uses: ComunidadAylas/PackSquash-action@e12b951df62760df07b6d7d2fe386cdaafd52272
        with:
           path: ./resourcepack/
           token: ${{ secrets.GITHUB_TOKEN }}
