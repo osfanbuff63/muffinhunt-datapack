@@ -1,211 +1,41 @@
-
 name: CI
 on:
-  # push:
-    # branches: ["master"]
-  # pull_request:
-    # branches: ["master"]
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
   workflow_dispatch:
 jobs:
-  test-datapack-mac-linux:
+  build-main:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest,ubuntu-latest]
+        os: [ubuntu-latest] # I know, this is useless, but see git log xD
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Zip files
-        uses: vimtor/action-zip@v1
+      - name: Check commands
+        uses: mcbeet/check-commands@v1.0.6
         with:
-          files: ./
-          dest: muffinhunt-datapack.zip
-      - name: Add eula.txt
-        uses: 1arp/create-a-file-action@0.2
-        with: 
-          path: ./
-          file: eula.txt
-          content: |
-                   eula=true
-      - name: Add server.properties
-        uses: 1arp/create-a-file-action@0.2
-        with:
-          path: ./
-          file: server.properties
-          content: |
-           Minecraft server properties
-           #Wed Dec 01 19:36:35 UTC 2021
-           enable-jmx-monitoring=false
-           rcon.port=25575
-           gamemode=survival
-           enable-command-block=false
-           enable-query=false
-           level-name=world
-           motd=A Minecraft Server
-           query.port=25565
-           pvp=true
-           difficulty=easy
-           network-compression-threshold=256
-           require-resource-pack=false
-           max-tick-time=60000
-           use-native-transport=true
-           max-players=20
-           online-mode=true
-           enable-status=true
-           allow-flight=false
-           broadcast-rcon-to-ops=true
-           view-distance=10
-           server-ip=
-           resource-pack-prompt=
-           allow-nether=true
-           server-port=25565
-           enable-rcon=false
-           sync-chunk-writes=true
-           op-permission-level=4
-           prevent-proxy-connections=false
-           hide-online-players=false
-           resource-pack=
-           entity-broadcast-range-percentage=100
-           simulation-distance=10
-           rcon.password=
-           player-idle-timeout=0
-           debug=false
-           force-gamemode=false
-           rate-limit=0
-           hardcore=false
-           white-list=false
-           broadcast-console-to-ops=true
-           spawn-npcs=true
-           spawn-animals=true
-           function-permission-level=2
-           text-filtering-config=
-           spawn-monsters=true
-           enforce-whitelist=false
-           resource-pack-sha1=
-           spawn-protection=16
-           max-world-size=29999984
-      - name: Setup Minecraft
-        uses: mcenv/setup-minecraft@v2
-        with:
-          version: "1.18.2"
-      - name: Setup Java 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: "adopt"
-          java-version: "17"
-      - name: Create world/datapacks folder
-        run: |
-              cd minecraft
-              mkdir -p /world/datapacks
-      - name: Move files to server folder
-        run: |
-             cd ..
-             mv muffinhunt-datapack.zip minecraft/world/datapacks/
-      - name: Start server
-        run: |
-              java -jar minecraft/server.jar
-              end
-              
-  test-datapack-windows:
-    runs-on: windows-latest
+          source: .
+          minecraft: 1.18
+      - name: Check JSON
+        uses: ocular-d/json-linter@0.0.2
+   
+  build-packsquash:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Zip files
-        uses: vimtor/action-zip@v1
         with:
-          files: ./
-          dest: muffinhunt-datapack.zip
-      - name: Add eula.txt
-        uses: 1arp/create-a-file-action@0.2
-        with: 
-          path: ./
-          file: eula.txt
-          content: |
-                   eula=true
-      - name: Add server.properties
-        uses: 1arp/create-a-file-action@0.2
+          fetch-depth: 0
+      - name: Run PackSquash
+        uses: ComunidadAylas/PackSquash-action@master
         with:
           path: ./
-          file: server.properties
-          content: |
-           Minecraft server properties
-           #Wed Dec 01 19:36:35 UTC 2021
-           enable-jmx-monitoring=false
-           rcon.port=25575
-           gamemode=survival
-           enable-command-block=false
-           enable-query=false
-           level-name=world
-           motd=A Minecraft Server
-           query.port=25565
-           pvp=true
-           difficulty=easy
-           network-compression-threshold=256
-           require-resource-pack=false
-           max-tick-time=60000
-           use-native-transport=true
-           max-players=20
-           online-mode=true
-           enable-status=true
-           allow-flight=false
-           broadcast-rcon-to-ops=true
-           view-distance=10
-           server-ip=
-           resource-pack-prompt=
-           allow-nether=true
-           server-port=25565
-           enable-rcon=false
-           sync-chunk-writes=true
-           op-permission-level=4
-           prevent-proxy-connections=false
-           hide-online-players=false
-           resource-pack=
-           entity-broadcast-range-percentage=100
-           simulation-distance=10
-           rcon.password=
-           player-idle-timeout=0
-           debug=false
-           force-gamemode=false
-           rate-limit=0
-           hardcore=false
-           white-list=false
-           broadcast-console-to-ops=true
-           spawn-npcs=true
-           spawn-animals=true
-           function-permission-level=2
-           text-filtering-config=
-           spawn-monsters=true
-           enforce-whitelist=false
-           resource-pack-sha1=
-           spawn-protection=16
-           max-world-size=29999984
-      - name: Setup Minecraft
-        uses: mcenv/setup-minecraft@v2
-        with:
-          version: "1.18.2"
-      - name: Setup Java 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: "adopt"
-          java-version: "17"
-      - name: Create directory
-        run: |
-              cd minecraft
-              mkdir /world/datapacks
-      - name: Move files to server folder
-        run: |
-             cd ..
-             move muffinhunt-datapack.zip minecraft/world/datapacks/
-      - name: Start server
-        run: |
-              java -jar minecraft/server.jar
-              timeout /t 100
-              end
-
-      
-      
-
-      
-      
-      
+          token: ${{ secrets.GITHUB_TOKEN }}
+          minify_json_files: true
+          validate_pack_metadata_file: true
+          allow_optifine_mod: true
+          delete_bloat_json_keys: true
+  
