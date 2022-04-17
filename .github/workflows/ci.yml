@@ -15,9 +15,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Check commands
-        uses: mcbeet/check-commands@v1
+        uses: mcbeet/check-commands@v1.0.6
         with:
           source: .
+          minecraft: 1.18.2
       - name: Check JSON
         uses: ocular-d/json-linter@0.0.2
    
@@ -26,6 +27,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Run PackSquash
         uses: ComunidadAylas/PackSquash-action@master
         with:
