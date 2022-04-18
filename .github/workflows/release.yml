@@ -33,12 +33,16 @@ jobs:
    upload-optimized-datapack:
     name: Create and optimize datapack
     runs-on: ubuntu-latest
-    needs: create-release
+    needs: [create-release,upload-normal]
     steps:
-     - name: Clone repository
-       uses: actions/checkout@v3
+     - name: Download normal pack
+       uses: actions/download-artifact@v3
        with:
-          fetch-depth: 0
+         name: muffinhunt-datapack.zip
+         path: ./
+     - name: Unzip file
+       run: |
+            unzip muffinhunt-datapack.zip
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@e12b951
        with:
@@ -85,13 +89,17 @@ jobs:
    optimize-muffinhunt-resourcepack:
     name: Fetch and optimize MuffinHunt resourcepack
     runs-on: ubuntu-latest
-    needs: create-release
+    needs: [create-release,fetch-muffinhunt-resourcepack]
     steps:
-     - name: Clone muffinhunt resource pack
-       uses: actions/checkout@v3
-       with: 
-         repository: osfanmuffin/muffinhunt-resourcepack
-         path: /resourcepack/
+     - name: Download regular pack
+       uses: actions/download-artifact@v3
+       with:
+         name: muffinhunt-resourcepack.zip
+         path: ./resourcepack/
+     - name: Unzip resource pack
+       run: |
+           cd resourcepack
+           unzip muffinhunt-resourcepack.zip
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@e12b951df62760df07b6d7d2fe386cdaafd52272
        with:
