@@ -40,9 +40,21 @@ MuffinHunts have a number of rules, listed here:
 - No tunnelling in the nether, unless a player tunnels for a very short amount of time
 - No breaking blaze/enderman spawners.
 - No enchantments allowed unless included with the datapack give/item commands.
-- No hitting people or mobs with default stone axes (they are too op) unless the only use is to disable a shield. In that case, wait 3 sec between hits. This has been patched for MuffinHunt Season 2 in datapack version 1.0.0.
+- No hitting people or mobs with default stone axes (they are too op) unless the only use is to disable a shield. In that case, wait 3 sec between hits. This has been patched for MuffinHunt Season 2 in datapack version v1.0.0.
 - No starting the muffinhunt until everyone is recording and ready.
 - No using beds. 
 - No using potions.
 - No using /invsee unless absolutely needed.
 - No using the /trigger spawnpoint command except at the very beginning of a MuffinHunt.
+  
+  
+## Config settings
+
+As of datapack version v1.6.0-beta1, osfanbuff63 added a config menu. Here's the configuration settings as of 4/18/2022:
+
+  
+| Setting     | Value       |
+| ----------- | ----------- |
+| Ghast Protection     | On       |
+| Piglin Brute Protection   | On        |
+| Silverfish Protection | On |
