@@ -3,49 +3,49 @@ name: Crowdin Action
 on:
   push:
     branches: [ master ]
-
+  workflow_dispatch:
 jobs:
   synchronize-with-crowdin:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
-    - name: Checkout repo
-      uses: actions/checkout@v2
-
-    - name: Sync with Crowdin
-      uses: crowdin/github-action@1.4.8
-      with:
-        upload_sources: true
-        upload_translations: true
-        auto_approve_imported: false
-        import_eq_suggestions: true
-        download_translations: true
-        skip_untranslated_strings: true
-        skip_untranslated_files: true
-        export_only_approved: true
-        push_translations: true
-        commit_message: 'New Crowdin translations'
-        localization_branch_name: l10n_crowdin_action
-        create_pull_request: true
-        pull_request_title: 'New Crowdin translations'
-        pull_request_body: 'New Crowdin pull request with translations (made automatically)'
-        pull_request_labels: 'translations'
-        add_crowdin_branch: master
-        new_branch_title: 'master'
-        new_branch_export_pattern: '/translations/%two_letters_code%/%original_file_name%'
-        new_branch_priority: 'MEDIUM'
-        crowdin_branch_name: l10n_branch
-        config: 'crowdin.yml'
-        dryrun_action: true
-        github_user_name: osfanmuffin-crowdin-bot
-        github_user_email: ${{ secrets.CROWDIN_EMAIL }}
-        gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-        project_id: ${{ secrets.CROWDIN_PROJECT_ID }}
-        token: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-        source: 'data/*'
-        translation: 'translations/'
-        base_url: 'https://crowdin.com'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-        CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+      - name: Sync with Crowdin
+        uses: crowdin/github-action@1.4.8
+        with:
+          upload_sources: true
+          upload_translations: true
+          auto_approve_imported: false
+          import_eq_suggestions: true
+          download_translations: true
+          skip_untranslated_strings: true
+          skip_untranslated_files: true
+          export_only_approved: true
+          push_translations: true
+          commit_message: 'New Crowdin translations'
+          localization_branch_name: l10n_crowdin_action
+          create_pull_request: true
+          pull_request_title: 'New Crowdin translations'
+          pull_request_body: 'New Crowdin pull request with translations (made automatically)'
+          pull_request_labels: 'translations'
+          add_crowdin_branch: master
+          new_branch_title: 'master'
+          new_branch_export_pattern: '/translations/%two_letters_code%/%original_file_name%'
+          new_branch_priority: 'MEDIUM'
+          crowdin_branch_name: l10n_branch
+          config: 'crowdin.yml'
+          dryrun_action: true
+          github_user_name: osfanmuffin-crowdin-bot
+          github_user_email: ${{ secrets.CROWDIN_EMAIL }}
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          project_id: ${{ secrets.CROWDIN_PROJECT_ID }}
+          token: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+          source: 'data/*'
+          translation: 'translations/'
+          base_url: 'https://crowdin.com'
+          base_path: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
