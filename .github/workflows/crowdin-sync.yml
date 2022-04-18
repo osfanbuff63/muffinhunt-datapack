@@ -32,7 +32,7 @@ jobs:
           add_crowdin_branch: master
           new_branch_title: 'master'
           new_branch_export_pattern: '/translations/%two_letters_code%/%original_file_name%'
-          new_branch_priority: 'MEDIUM'
+          new_branch_priority: 'NORMAL'
           crowdin_branch_name: l10n_branch
           config: 'crowdin.yml'
           dryrun_action: true
