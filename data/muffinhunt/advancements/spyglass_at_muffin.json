@@ -12,7 +12,7 @@
   },
   "parent": "muffinhunt:spyglass_at_osfan",
   "criteria": {
-    "spyglass_at_dragon": {
+    "spyglass_at_moofin": {
       "trigger": "minecraft:using_item",
       "conditions": {
         "player": [

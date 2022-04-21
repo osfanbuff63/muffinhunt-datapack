@@ -11,3 +11,6 @@ team empty juggernaut
 team empty dragon_ender
 team remove juggernaut
 team remove dragon_ender
+tag @a[tag=muffinhunt_nether] remove muffinhunt_nether
+tag @a[tag=muffinhunt_enter_end] remove muffinhunt_enter_end
+tag @a[tag=muffinhunt_surface_overworld] remove muffinhunt_surface_overworld 
