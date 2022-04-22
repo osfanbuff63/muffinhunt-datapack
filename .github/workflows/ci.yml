@@ -1,3 +1,8 @@
+# Notice how there is an extra complile and upload step.
+# This is due to how the build-main job checks for errors. Instead of using a script,
+# such as, /gradlew build, with this being a datapack, it checks the source files instead. (see Check commands and Check JSON.)
+# This is completely intentional, please do not create a PR changing it!
+
 name: CI
 on:
   push:
@@ -18,7 +23,16 @@ jobs:
           minecraft: 1.18
       - name: Check JSON
         uses: ocular-d/json-linter@0.0.2
-   
+      - name: Zip files
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -r muffinhunt-datapack-v1.6.0-dev.zip data pack.mcmeta pack.png
+      - name: Upload build
+        uses: actions/upload-artifact@v3
+        with:
+          name: muffinhunt-datapack v1.6.0-dev.zip
+          path: muffinhunt-datapack-v1.6.0-dev.zip
+          if-no-files-found: error
   build-packsquash:
     runs-on: ubuntu-latest
     steps:
