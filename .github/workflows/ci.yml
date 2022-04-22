@@ -1,3 +1,8 @@
+# Notice how there is an extra complile and upload step.
+# This is due to how the build-main job checks for errors. Instead of using a script,
+# such as, /gradlew build, with this being a datapack, it checks the source files instead. (see Check commands and Check JSON.)
+# This is completely intentional, please do not create a PR changing it!
+
 name: CI
 on:
   push:
