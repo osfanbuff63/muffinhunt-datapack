@@ -46,13 +46,10 @@ jobs:
     name: Fetch latest MuffinHunt resource pack changes
     runs-on: ubuntu-latest
     steps:
-     - name: Create folder
-       run: mkdir resourcepack
      - name: Clone muffinhunt resource pack
        uses: actions/checkout@v3
        with: 
         repository: osfanmuffin/muffinhunt-resourcepack
-        path: /resourcepack/
         fetch-depth: 0
      - name: Upload artifact
        uses: actions/upload-artifact@v3
@@ -61,6 +58,7 @@ jobs:
              data/
              pack.mcmeta
              pack.png
+         name: muffinhunt-datapack v1.6.0.zip
    optimize-muffinhunt-resourcepack:
     name: Fetch and optimize MuffinHunt resourcepack
     runs-on: ubuntu-latest
