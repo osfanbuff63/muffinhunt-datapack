@@ -12,4 +12,5 @@ function muffinhunt:dev/add_crystal_bossbar
 function muffinhunt:dev/add_enderdragon_health
 execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHuntLive4 MuffinHuntRunnerLives run scoreboard players set @s MuffinHuntRunnerLives 2
 give @a[tag=muffinhunt] cooked_beef{display:{Name:'[{"text":"Burger","italic":false,"color":"#964B00"}]'}} 64
+tag @s add MHend
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]
