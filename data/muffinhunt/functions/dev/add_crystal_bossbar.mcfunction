@@ -8,4 +8,3 @@ execute store result score EndCrystalBossbarMax EndCrystalBossbar run team list 
 execute store result bossbar end_crystal_bossbar max run scoreboard players get EndCrystalBossbarMax EndCrystalBossbar
 scoreboard players set EndCrysBossMin EndCrystalBossbar 0
 scoreboard players set EndCrysToggle EndCrystalBossbar 1
-
