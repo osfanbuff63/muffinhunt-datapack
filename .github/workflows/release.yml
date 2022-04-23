@@ -30,6 +30,10 @@ jobs:
        with:
          tag: ${{ github.ref }}
          generateReleaseNotes: true
+     - name: Upload artifact
+       uses: actions/upload-artifact@v3
+       with:
+         path: muffinhunt-datapack v1.6.0.zip
    upload-optimized-datapack:
     name: Create and optimize datapack
     runs-on: ubuntu-latest
