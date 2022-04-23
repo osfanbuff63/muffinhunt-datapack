@@ -12,7 +12,7 @@
   },
   "parent": "minecraft:story/enter_the_end",
   "criteria": {
-    "spyglass_at_dragon": {
+    "spyglass_at_osfan": {
       "trigger": "minecraft:using_item",
       "conditions": {
         "player": [

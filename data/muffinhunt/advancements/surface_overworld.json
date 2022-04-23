@@ -28,7 +28,7 @@
     }
   },
   "rewards": {
-    "function": "muffinhunt-dev:surface_overworld_check",
+    "function": "muffinhunt:dev/surface_overworld_check",
     "experience": 50
   }
 }
