@@ -20,6 +20,7 @@ jobs:
              data/
              pack.mcmeta
              pack.png
+         name: muffinhunt-datapack v1.6.0.zip
    upload-optimized-datapack:
     name: Create and optimize datapack
     runs-on: ubuntu-latest
@@ -58,27 +59,21 @@ jobs:
              data/
              pack.mcmeta
              pack.png
-         name: muffinhunt-datapack v1.6.0.zip
+         name: muffinhunt-resourcepack v1.0.0.zip
    optimize-muffinhunt-resourcepack:
     name: Fetch and optimize MuffinHunt resourcepack
     runs-on: ubuntu-latest
     needs: fetch-muffinhunt-resourcepack
     steps:
-     - name: Create folder
-       run: mkdir resourcepack
      - name: Download regular pack
        uses: actions/download-artifact@v3
        with:
-         name: muffinhunt-resourcepack.zip
-         path: ./resourcepack/
+         name: muffinhunt-resourcepack v1.0.0.zip
      - name: Unzip resource pack
-       run: |
-           cd resourcepack
-           unzip muffinhunt-resourcepack.zip
+       run: unzip muffinhunt-resourcepack.zip
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
        with:
-          path: ./resourcepack/
           token: ${{ secrets.GITHUB_TOKEN }}
           minify_json_files: true
           validate_pack_metadata_file: true
