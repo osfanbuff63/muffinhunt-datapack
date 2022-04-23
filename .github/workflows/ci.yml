@@ -27,7 +27,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: muffinhunt-datapack v1.6.0-dev.zip
-          path: data/, pack.mcmeta, pack.png
+          path: |
+               data/*
+               pack.mcmeta
+               pack.png
           if-no-files-found: error
   build-packsquash:
     runs-on: ubuntu-latest
