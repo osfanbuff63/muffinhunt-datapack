@@ -32,7 +32,9 @@ jobs:
          name: muffinhunt-datapack v1.6.0.zip
          path: ./
      - name: Unzip file
-       run: unzip 'muffinhunt-datapack v1.6.0.zip'
+       run: |
+         cd /home/runner/work/muffinhunt-datapack/muffinhunt-datapack
+         unzip 'muffinhunt-datapack v1.6.0.zip'
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
        with:
@@ -71,7 +73,9 @@ jobs:
        with:
          name: muffinhunt-resourcepack v1.0.0.zip
      - name: Unzip resource pack
-       run: unzip muffinhunt-resourcepack.zip
+       run: |
+          cd /home/runner/work/muffinhunt-datapack/muffinhunt-datapack
+          unzip muffinhunt-resourcepack v1.0.0.zip
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
        with:
