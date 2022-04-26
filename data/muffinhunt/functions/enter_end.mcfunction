@@ -8,8 +8,9 @@ item replace entity @a[team=dragon_ender] container.1 with netherite_pickaxe{Unb
 give @a[team=dragon_ender] spyglass{display:{Name:'[{"text":"Aha!","italic":false,"color":"gold"}]',Lore:['[{"text":"Look at the dragon! Just do it!"}]']}} 1
 give @a[team=juggernaut] spyglass{display:{Name:'[{"text":"Aha!","italic":false,"color":"gold"}]',Lore:['[{"text":"Look at the dragon! Just do it!"}]']}} 1
 tag @a[tag=muffinhunt] add muffinhunt_enter_end
-function muffinhunt-dev:add_crystal_bossbar
-function muffinhunt-dev:add_enderdragon_health
+function muffinhunt:dev/add_crystal_bossbar
+function muffinhunt:dev/add_enderdragon_health
 execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHuntLive4 MuffinHuntRunnerLives run scoreboard players set @s MuffinHuntRunnerLives 2
 give @a[tag=muffinhunt] cooked_beef{display:{Name:'[{"text":"Burger","italic":false,"color":"#964B00"}]'}} 64
+tag @s add MHend
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]

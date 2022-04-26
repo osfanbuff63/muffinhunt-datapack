@@ -1,5 +1,5 @@
 {
     "values": [
-		"muffinhunt-dev:add_trigger","muffinhunt-dev:add_lifes","muffinhunt:config/load","muffinhunt:license_notice/load"
+		"muffinhunt:dev/add_trigger","muffinhunt:dev/add_lifes","muffinhunt:config/load","muffinhunt:license_notice/load"
 	]
 }

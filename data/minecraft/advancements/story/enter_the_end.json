@@ -24,7 +24,7 @@
     }
   },
   "rewards": {
-    "function": "muffinhunt-dev:enter_end_check",
+    "function": "muffinhunt:dev/enter_end_check",
     "experience": 50
   }
 }
