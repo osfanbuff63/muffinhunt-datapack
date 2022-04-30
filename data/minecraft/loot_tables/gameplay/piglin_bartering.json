@@ -48,7 +48,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
+          "weight": 4,
           "name": "minecraft:ghast_tear"
         },
         {
@@ -133,7 +133,43 @@
           "functions": [
             {
               "function": "minecraft:set_potion",
-              "id": "minecraft:fire_resistance"
+              "id": "minecraft:strength",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:leaping",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:regeneration",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:fire_resistance",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
             }
           ]
         },
