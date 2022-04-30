@@ -15,8 +15,5 @@ updates:
       prefix: "[Depend] "
       prefix-development: "[Dev depend] "
       include: "scope"
-    labels: 
-      - "github-actions"
-      - "dependencies"
     reviewers:
       - "osfanbuff63"
