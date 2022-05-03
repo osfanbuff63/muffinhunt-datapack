@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:moss_block"
+    },
+    "title": "c a v e",
+    "description": "Find all cave biomes",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "muffinhunt:infinite_amethyst",
+  "criteria": {
+    "lush_caves": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "minecraft:lush_caves"
+        }
+      }
+    },
+    "dripstone_caves": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "minecraft:dripstone_caves"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dripstone_caves",
+      "lush_caves"
+    ]
+  ]
+}
