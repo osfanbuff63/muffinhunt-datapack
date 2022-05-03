@@ -89,24 +89,22 @@ jobs:
          with:
            token: ${{ secrets.GITHUB_TOKEN }}
            dateFormat: '%m/%d/%Y'
-       - name: Download packs
+       - name: Download normal pack
          uses: actions/download-artifact@v3
-       - name: Zip normal datapack
-         uses: montudor/action-zip@v1
          with:
-           args: zip -r 'muffinhunt-datapack v1.6.0.zip' 'muffinhunt-datapack v1.6.0'
-       - name: Zip optimized datapack
-         uses: montudor/action-zip@v1
+           name: muffinhunt-datapack v1.6.0
+       - name: Download optimized pack
+         uses: actions/download-artifact@v3
          with:
-           args: zip -r 'optimized-muffinhunt-datapack v1.6.0.zip' 'optimized-muffinhunt-datapack v1.6.0' 
-       - name: Zip normal resourcepack
-         uses: montudor/action-zip@v1
+           name: optimized-muffinhunt-datapack v1.6.0
+       - name: Download normal resourcepack
+         uses: actions/download-artifact@v3
          with:
-           args: zip -r 'muffinhunt-resourcepack v1.0.0.zip' 'muffinhunt-resourcepack v1.0.0'
-       - name: Zip optimized resourcepack
-         uses: montudor/action-zip@v1
+           name: muffinhunt-resourcepack v1.0.0
+       - name: Download optimized resourcepack
+         uses: actions/download-artifact@v3
          with:
-           args: zip -r 'optimized-muffinhunt-resourcepack v1.6.0.zip' 'optimized-muffinhunt-resourcepack v1.6.0'
+           name: optimized-muffinhunt-resourcepack v1.0.0
        - name: Release
          uses: softprops/action-gh-release@v1
          with:
