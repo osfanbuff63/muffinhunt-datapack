@@ -20,7 +20,7 @@ jobs:
              data/
              pack.mcmeta
              pack.png
-         name: muffinhunt-datapack v1.6.0
+         name: muffinhunt-datapack v1.7.0
    upload-optimized-datapack:
     name: Optimize datapack
     runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
      - name: Download normal pack
        uses: actions/download-artifact@v3
        with:
-         name: muffinhunt-datapack v1.6.0
+         name: muffinhunt-datapack v1.7.0
          path: ./
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
@@ -40,7 +40,7 @@ jobs:
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-datapack v1.6.0'
+          artifact_name: 'optimized-muffinhunt-datapack v1.7.0'
    fetch-muffinhunt-resourcepack:
     name: Fetch latest MuffinHunt resource pack changes
     runs-on: ubuntu-latest
@@ -92,11 +92,11 @@ jobs:
        - name: Download normal pack
          uses: actions/download-artifact@v3
          with:
-           name: muffinhunt-datapack v1.6.0
+           name: muffinhunt-datapack v1.7.0
        - name: Download optimized pack
          uses: actions/download-artifact@v3
          with:
-           name: optimized-muffinhunt-datapack v1.6.0
+           name: optimized-muffinhunt-datapack v1.7.0
        - name: Download normal resourcepack
          uses: actions/download-artifact@v3
          with:
@@ -109,8 +109,8 @@ jobs:
          uses: softprops/action-gh-release@v1
          with:
            files: |
-               muffinhunt-datapack v1.6.0.zip
-               optimized-muffinhunt-datapack v1.6.0.zip
+               muffinhunt-datapack v1.7.0.zip
+               optimized-muffinhunt-datapack v1.7.0.zip
                muffinhunt-resourcepack v1.0.0.zip
                optimized-muffinhunt-resourcepack v1.0.0.zip
            body_path: CHANGELOG.md
