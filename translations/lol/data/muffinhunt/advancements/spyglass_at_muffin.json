@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:spyglass"
+    },
+    "title": "Is it a speedrunner? In full diamond armor?",
+    "description": "Look at a muffin with a spyglass",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "muffinhunt:spyglass_at_osfan",
+  "criteria": {
+    "spyglass_at_moofin": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "looking_at": {
+                  "type": "minecraft:player",
+                  "team": "dragon_ender"
+                }
+              }
+            }
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:spyglass"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}
