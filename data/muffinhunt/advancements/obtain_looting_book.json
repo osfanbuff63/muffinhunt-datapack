@@ -19,7 +19,7 @@
         "items": [
           {
             "items": [
-              "minecraft:enchanted_book"
+              "minecraft:book"
             ],
             "enchantments": [
               {

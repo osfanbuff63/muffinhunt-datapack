@@ -38,7 +38,7 @@ give @a[team=juggernaut] water_bucket{display:{Name:'[{"text":"Water Bucket","co
 give @a[team=juggernaut] acacia_boat{display:{Lore:['{"text": "I should be removed!"}']}}
 give @a[team=juggernaut] compass{display:{Name:'[{"text":"Tracker Compass","color":"dark_aqua","italic": false}]'}} 1
 give @a[tag=muffinhunt] oak_planks{display:{Name:'[{"text":"Oak Planks","color":"gold","italic":false}]'}} 64
-give @a[tag=muffinhunt] coal{display:{Name:'[{"text":"Coal","color":"black","italic":false}]'}} 64
+give @a[team=juggernaut] coal{display:{Name:'[{"text":"Coal","color":"black","italic":false}]'}} 64
 item replace entity @a[team=juggernaut] armor.chest with iron_chestplate{Unbreakable:1,display:{Name:'[{"text":"Emerald Chestplate","italic":false,"color":"green"}]'}} 1
 item replace entity @a[team=juggernaut] armor.legs with iron_leggings{Unbreakable:1,display:{Name:'[{"text":"Emerald Leggings","italic":false,"color":"green"}]'}} 1
 item replace entity @a[team=juggernaut] armor.feet with iron_boots{Unbreakable:1,display:{Name:'[{"text":"Emerald Boots","italic":false,"color":"green"}]'}} 1
@@ -49,4 +49,5 @@ scoreboard players set MuffinHuntLive4 MuffinHuntRunnerLives 2
 scoreboard players set MuffinHuntLive3 MuffinHuntRunnerLives 3
 scoreboard players set MuffinHuntLive5 MuffinHuntRunnerLives 1
 execute as @a[tag=muffinhunt] at @s run spawnpoint @s ~ ~ ~ 
+execute at @a[tag=muffinhunt,sort=random,limit=1] run summon armor_stand ~ ~ ~ {CustomName:'[{"text":"End Portal","color":"light_purple"}]',CustomNameVisible:1}
 tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please begin tracking the ","color":"gold"},{"text":"Dragon Ender","color":"dark_purple"},{"text":"! Once that is complete, the ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]
