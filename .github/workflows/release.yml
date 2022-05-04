@@ -114,4 +114,9 @@ jobs:
                muffinhunt-resourcepack v1.0.0.zip
                optimized-muffinhunt-resourcepack v1.0.0.zip
            body_path: CHANGELOG.md
-       
+       - name: Commit changes
+         run: |
+            git config --local user.name "GitHub Actions"
+            git config --local user.email notifications@github.com
+            git commit -m "Updated CHANGELOG.md for ${{ github.ref }}"
+            git push origin
