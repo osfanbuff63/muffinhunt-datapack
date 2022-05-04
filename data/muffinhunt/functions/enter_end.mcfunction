@@ -7,10 +7,9 @@ item replace entity @a[team=juggernaut] container.2 with netherite_pickaxe{Unbre
 item replace entity @a[team=dragon_ender] container.1 with netherite_pickaxe{Unbreakable:1,display:{Name:'[{"text":"Copper Pickaxe","color":"#FFA500","italic":false}]'},Enchantments:[{id:"efficiency",lvl:2}]}
 give @a[team=dragon_ender] spyglass{display:{Name:'[{"text":"Aha!","italic":false,"color":"gold"}]',Lore:['[{"text":"Look at the dragon! Just do it!"}]']}} 1
 give @a[team=juggernaut] spyglass{display:{Name:'[{"text":"Aha!","italic":false,"color":"gold"}]',Lore:['[{"text":"Look at the dragon! Just do it!"}]']}} 1
-tag @a[tag=muffinhunt] add muffinhunt_enter_end
+tag @a[tag=muffinhunt] add MHend
 schedule function muffinhunt:dev/add_crystal_bossbar 1s
 schedule function muffinhunt:dev/add_enderdragon_health 1s
 execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHuntLive4 MuffinHuntRunnerLives run scoreboard players set @s MuffinHuntRunnerLives 2
 give @a[tag=muffinhunt] cooked_beef{display:{Name:'[{"text":"Burger","italic":false,"color":"#964B00"}]'}} 64
-tag @a add MHend
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]

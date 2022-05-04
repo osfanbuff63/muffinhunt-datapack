@@ -1,19 +1,16 @@
-execute as @a unless entity @s[tag=juggernaut] unless entity @s[tag=dragon_ender] unless entity @s[tag=muffinhunt_ban] unless entity @s[tag=muffinhunt_spectato] run tag @a[tag=usual_juggernaut] add juggernaut
-execute as @a unless entity @s[tag=juggernaut] unless entity @s[tag=dragon_ender] unless entity @s[tag=muffinhunt_ban] unless entity @s[tag=muffinhunt_spectato] run tag @a[tag=usual_dragon_ender] add dragon_ender
+execute as @a[tag=!usual_juggernaut,tag=!usual_dragon_ender,tag=!muffinhunt_ban] run tag @s add muffinhunt_spectato
 team add juggernaut ["",{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"Juggernaut(s)","color":"dark_aqua"}]
-execute as @a[tag=juggernaut] run tag @s add muffinhunt
-execute as @a[tag=dragon_ender] run tag @s add muffinhunt
 team modify juggernaut friendlyFire false
 team modify juggernaut seeFriendlyInvisibles true
 team modify juggernaut color aqua
 team modify juggernaut prefix ["",{"text":"[","color":"aqua"},{"text":"JUGGERNAUT","color":"dark_aqua","bold":true},{"text":"] ","color":"aqua"}]
-team join juggernaut @a[tag=juggernaut]
+team join juggernaut @a[tag=usual_juggernaut,tag=!muffinhunt_ban,tag=!muffinhunt_spectato]
 team add dragon_ender ["",{"text":"Muffin","color":"yellow"},{"text":"Hunt","color":"dark_aqua"},{"text":" Dragon Ender","color":"dark_purple"}]
 team modify dragon_ender color dark_purple
 team modify dragon_ender prefix ["",{"text":"[","color":"dark_purple"},{"text":"DRAGON ENDER","color":"light_purple","bold":true},{"text":"] ","color":"dark_purple"}]
 team join dragon_ender @a[tag=dragon_ender]
-tag @a[team=juggernaut] remove juggernaut
-tag @a[team=dragon_ender] remove dragon_ender
+tag @a[team=juggernaut] add muffinhunt
+tag @a[team=dragon_ender] add muffinhunt
 scoreboard players set @a MuffinHuntRunnerLives 0
 scoreboard objectives setdisplay list MuffinHuntRunnerLives 
 clear @a[tag=muffinhunt] 
