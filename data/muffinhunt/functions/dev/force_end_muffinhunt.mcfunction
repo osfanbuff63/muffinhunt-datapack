@@ -4,13 +4,9 @@ clear @a[tag=dragon_ender]
 effect clear @a[team=juggernaut]
 effect clear @a[team=dragon_ender]
 tag @a[tag=muffinhunt] remove muffinhunt
-tag @a[tag=juggernaut] remove juggernaut
-tag @a[tag=dragon_ender] remove dragon_ender
 tag @a[tag=muffinhunt_spectato] remove muffinhunt_spectato
-team empty juggernaut
-team empty dragon_ender
 team remove juggernaut
 team remove dragon_ender
 tag @a[tag=muffinhunt_nether] remove muffinhunt_nether
-tag @a[tag=muffinhunt_enter_end] remove muffinhunt_enter_end
+tag @a[tag=MHend] remove MHend
 tag @a[tag=muffinhunt_surface_overworld] remove muffinhunt_surface_overworld 
