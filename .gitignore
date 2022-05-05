@@ -1,10 +1,6 @@
+# Created by https://gitignore.io
 
-# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,notepadpp,git
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,notepadpp,git
-
-### Git ###
 # Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
 *.orig
 
 # Created by git when using merge tools for conflicts
@@ -17,11 +13,10 @@
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
-### NotepadPP ###
-# Notepad++ backups #
+# Notepad++ backups
 *.bak
 
-### VisualStudioCode ###
+# VS Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -29,20 +24,16 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
-# Local History for Visual Studio Code
+# Local History for VS Code
 .history/
 
-# Built Visual Studio Code Extensions
+# Built VS Code extensions
 *.vsix
 
-### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 .ionide
 
-# Support for Project snippet scope
-
-### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -68,10 +59,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,notepadpp,git
-
 # Binary files
 *.zip
+*.jar
 
 # Spyglass stuff
 spyglass.json
