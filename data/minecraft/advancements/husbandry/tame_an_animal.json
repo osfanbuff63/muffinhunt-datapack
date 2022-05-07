@@ -11,6 +11,7 @@
       "announce_to_chat": true,
       "hidden": false
     },
+    "parent": "muffinhunt:infinite_amethyst",
     "criteria": {
       "requirement": {
         "trigger": "minecraft:tame_animal",
