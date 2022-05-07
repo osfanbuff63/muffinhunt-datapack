@@ -8,7 +8,7 @@ team join juggernaut @a[tag=usual_juggernaut,tag=!muffinhunt_ban,tag=!muffinhunt
 team add dragon_ender ["",{"text":"Muffin","color":"yellow"},{"text":"Hunt","color":"dark_aqua"},{"text":" Dragon Ender","color":"dark_purple"}]
 team modify dragon_ender color dark_purple
 team modify dragon_ender prefix ["",{"text":"[","color":"dark_purple"},{"text":"DRAGON ENDER","color":"light_purple","bold":true},{"text":"] ","color":"dark_purple"}]
-team join dragon_ender @a[tag=usual_juggernaut,tag=!muffinhunt_ban,tag=!muffinhunt_spectato]
+team join dragon_ender @a[tag=usual_dragon_ender,tag=!muffinhunt_ban,tag=!muffinhunt_spectato]
 tag @a[team=juggernaut] add muffinhunt
 tag @a[team=dragon_ender] add muffinhunt
 # This is not used by this datapack, but serves for api-like purposes (see #101)
