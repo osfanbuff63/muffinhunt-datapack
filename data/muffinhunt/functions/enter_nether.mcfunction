@@ -8,4 +8,5 @@ item replace entity @a[team=juggernaut] container.2 with diamond_pickaxe{Unbreak
 tag @a[tag=muffinhunt] add muffinhunt_nether
 execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHuntLive2 MuffinHuntRunnerLives run scoreboard players set @s MuffinHuntRunnerLives 4
 give @a[team=juggernaut] gold_ingot 64
+item replace entity @a[team=juggernaut] container.4 with iron_axe{Enchantments:[{id:"sharpness",lvl:2},{id:"efficiency",lvl:3}],Unbreakable:1,display:{Name:'{"text":"Emerald Axe","color":"green","italic": false}'}}
 tellraw @a [{"text":"Nether","color":"red"},{"text":" items given!","color":"gold"}]

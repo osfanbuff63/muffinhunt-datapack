@@ -8,7 +8,7 @@ team join juggernaut @a[tag=usual_juggernaut,tag=!muffinhunt_ban,tag=!muffinhunt
 team add dragon_ender ["",{"text":"Muffin","color":"yellow"},{"text":"Hunt","color":"dark_aqua"},{"text":" Dragon Ender","color":"dark_purple"}]
 team modify dragon_ender color dark_purple
 team modify dragon_ender prefix ["",{"text":"[","color":"dark_purple"},{"text":"DRAGON ENDER","color":"light_purple","bold":true},{"text":"] ","color":"dark_purple"}]
-team join dragon_ender @a[tag=usual_juggernaut,tag=!muffinhunt_ban,tag=!muffinhunt_spectato]
+team join dragon_ender @a[tag=usual_dragon_ender,tag=!muffinhunt_ban,tag=!muffinhunt_spectato]
 tag @a[team=juggernaut] add muffinhunt
 tag @a[team=dragon_ender] add muffinhunt
 # This is not used by this datapack, but serves for api-like purposes (see #101)
@@ -20,7 +20,7 @@ advancement revoke @a[tag=muffinhunt] everything
 give @a[team=juggernaut] iron_sword{Unbreakable:1,display:{Name:'[{"text":"Emerald Sword","color":"green","italic":false}]'}} 1
 give @a[team=juggernaut] cobbled_deepslate{display:{Name:'{"text": "Cobbled Deepsteak","color": "dark_gray"}'}} 64
 item replace entity @a[team=juggernaut] hotbar.2 with diamond_pickaxe{Unbreakable:1,display:{Name:'[{"text":"Diamond Pickaxe","color":"dark_aqua","italic":false}]'}} 1
-item replace entity @a[team=juggernaut] hotbar.4 with golden_axe{Unbreakable:1,Enchantments:[{id:"efficiency",lvl:3}],display:{Name:'[{"text":"Power Chopper","italic":false,"color":"gold"}]'},HideFlags:2}
+item replace entity @a[team=juggernaut] hotbar.4 with iron_axe{Unbreakable:1,Enchantments:[{id:"efficiency",lvl:3}],display:{Name:'[{"text":"Power Chopper","italic":false,"color":"gold"}]'},HideFlags:2}
 give @a[team=juggernaut] iron_shovel{Unbreakable:1,display:{Name:'[{"text":"Power Digger","italic":false,"color":"gold"}]'},Enchantments:[{id:"efficiency",lvl:3}],HideFlags:2}
 item replace entity @a[team=dragon_ender] weapon.offhand with shield{Unbreakable:1} 1 
 give @a[team=dragon_ender] stone_sword{Unbreakable:1}

@@ -11,5 +11,6 @@ tag @a[tag=muffinhunt] add MHend
 schedule function muffinhunt:dev/add_crystal_bossbar 1s
 schedule function muffinhunt:dev/add_enderdragon_health 1s
 execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHuntLive4 MuffinHuntRunnerLives run scoreboard players set @s MuffinHuntRunnerLives 2
+item replace entity @a[team=juggernaut] container.4 with diamond_axe{Enchantments:[{id:"sharpness",lvl:3},{id:"efficiency",lvl:3}],Unbreakable:1,display:{Name:'{"text":"Copper Axe","color":"#FFA500","italic": false}'}}
 give @a[tag=muffinhunt] cooked_beef{display:{Name:'[{"text":"Burger","italic":false,"color":"#964B00"}]'}} 64
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]
