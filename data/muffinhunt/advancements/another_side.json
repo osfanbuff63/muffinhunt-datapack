@@ -1,0 +1,29 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:music_disc_otherside"
+      },
+      "title": "Another Side",
+      "description": "Acquire a rare record",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "muffinhunt:infinite_amethyst",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:music_disc_otherside"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+  

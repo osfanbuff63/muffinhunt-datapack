@@ -1,0 +1,26 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:player_head",
+        "nbt": "{SkullOwner:MHF_Wolf}"
+      },
+      "title": "Grant! Come!",
+      "description": "Tame a wolf",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "muffinhunt:infinite_amethyst",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:tame_animal",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:wolf"
+          }
+        }
+      }
+    }
+  }
+  
