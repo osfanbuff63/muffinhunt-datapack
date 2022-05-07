@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:pumpkin"
+      },
+      "title": "Totally Pumped",
+      "description": "Acquire a Pumpkin",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:pumpkin"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+  

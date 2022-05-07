@@ -1,0 +1,32 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:end_crystal"
+      },
+      "title": "Is it Amethyst?",
+      "description": "Acquire an End Crystal",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "muffinhunt:infinite_amethyst",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:end_crystal"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "experience": 50
+    }
+  }
+  
