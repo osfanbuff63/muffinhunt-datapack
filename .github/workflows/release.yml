@@ -1,8 +1,6 @@
 name: Publish release
 on: 
   push:
-    tags:
-     - 'v*'
     tags-ignore:
      - 'v*-beta*'
   workflow_dispatch:
