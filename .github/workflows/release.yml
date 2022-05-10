@@ -116,7 +116,7 @@ jobs:
            body_path: CHANGELOG.md
        - name: Commit changes
          run: |
-            git config --local user.name "GitHub Actions"
-            git config --local user.email notifications@github.com
+            git config user.name "actions-user"
+            git config user.email "action@github.com"
             git commit -m "Updated CHANGELOG.md for ${{ github.ref }}"
             git push origin
