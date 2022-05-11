@@ -1,2 +1,4 @@
 # Normalize text
 * text=auto
+
+*.yml.off linguist-language=yaml
