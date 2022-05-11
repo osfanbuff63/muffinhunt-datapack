@@ -15,3 +15,4 @@ item replace entity @a[team=juggernaut] container.4 with diamond_axe{Enchantment
 tellraw @a ["",{"text":"End","color":"dark_purple"},{"text":" items given!","color":"gold"}]
 give @a[team=juggernaut] cooked_chicken{display:{Name:'[{"text":"Voidchop","italic":false,"color":"#D2B48C"}]'}} 64
 item replace entity @a[team=dragon_ender] hotbar.8 with cooked_chicken{display:{Name:'[{"text":"Voidchop","italic":false,"color":"#D2B48C"}]'}} 64
+give @a[team=juggernaut] ender_pearl{display:{Name:'[{"text": "Void Pearl","color": "dark_purple"}]'}}
