@@ -53,3 +53,6 @@ execute at @a[tag=muffinhunt,sort=random,limit=1] run summon armor_stand ~ ~ ~ {
 tellraw @a ["",{"text":"Overworld ","color":"green"},{"text":"items given! ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":", please begin tracking the ","color":"gold"},{"text":"Dragon Ender","color":"dark_purple"},{"text":"! Once that is complete, the ","color":"gold"},{"text":"Muffin","color":"yellow"},{"text":"Hunt ","color":"dark_aqua"},{"text":"can begin once the ","color":"gold"},{"text":"Dragon Ender ","color":"dark_purple"},{"text":"hits the ","color":"gold"},{"text":"Juggernaut(s)","color":"dark_aqua"},{"text":"!","color":"gold"}]
 # See #101
 tag @a[tag=muffinhunt,tag=MHstart] remove MHstart 
+# Again for API
+scoreboard objectives add MuffinHunt dummy
+scoreboard players set MuffinHunt MuffinHunt 1
