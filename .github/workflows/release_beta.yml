@@ -120,4 +120,5 @@ jobs:
             git config user.email "action@github.com"
             git add CHANGELOG.md
             git commit -m "Updated CHANGELOG.md for ${{ github.ref }}"
+            git checkout master
             git push origin
