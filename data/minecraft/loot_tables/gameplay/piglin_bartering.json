@@ -132,8 +132,8 @@
           "name": "minecraft:potion",
           "functions": [
             {
-              "function": "minecraft:set_potion",
-              "id": "minecraft:strength",
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:5,Duration:800,ShowParticles:0}],Potion:\"strong_strength\"}",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -142,8 +142,8 @@
               ]
             },
             {
-              "function": "minecraft:set_potion",
-              "id": "minecraft:leaping",
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:8,Duration:800,ShowParticles:0,Amplifier:4}],Potion:\"strong_leaping\"}",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -152,8 +152,8 @@
               ]
             },
             {
-              "function": "minecraft:set_potion",
-              "id": "minecraft:regeneration",
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:10,Duration:400,ShowParticles:0,Amplifier:4}],Potion:\"strong_regeneration\"}",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -162,8 +162,8 @@
               ]
             },
             {
-              "function": "minecraft:set_potion",
-              "id": "minecraft:fire_resistance",
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionEffects:[{Id:10,Duration:900,ShowParticles:0}],Potion:\"long_fire_resistance\"}",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",

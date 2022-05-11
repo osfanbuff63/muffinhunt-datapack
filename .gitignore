@@ -1,6 +1,6 @@
 # Created by https://gitignore.io
 
-# Created by git for backups. To disable backups in Git:
+# Created by git for backups
 *.orig
 
 # Created by git when using merge tools for conflicts
@@ -65,3 +65,6 @@ $RECYCLE.BIN/
 
 # Spyglass stuff
 spyglass.json
+
+# Temporary files
+*.tmp
