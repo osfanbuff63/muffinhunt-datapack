@@ -10,3 +10,5 @@ execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHunt
 give @a[team=juggernaut] gold_ingot 64
 item replace entity @a[team=juggernaut] container.4 with iron_axe{Enchantments:[{id:"sharpness",lvl:2},{id:"efficiency",lvl:3}],Unbreakable:1,display:{Name:'{"text":"Emerald Axe","color":"green","italic": false}'}}
 tellraw @a [{"text":"Nether","color":"red"},{"text":" items given!","color":"gold"}]
+give @a[team=juggernaut] cooked_cod{display:{Name:'[{"text":"Cupcake","italic":false,"color":"light_purple"}]'}} 64
+item replace entity @a[team=dragon_ender] hotbar.8 with cooked_cod{display:{Name:'[{"text":"Burger","italic":false,"color":"light_purple"}]'}} 64

@@ -8,3 +8,5 @@ tag @a[tag=muffinhunt] add muffinhunt_surface_overworld
 execute as @a[team=dragon_ender] if score @s MuffinHuntRunnerLives >= MuffinHuntLive3 MuffinHuntRunnerLives run scoreboard players set @s MuffinHuntRunnerLives 3
 item replace entity @a[team=juggernaut] container.4 with diamond_axe{Enchantments:[{id:"efficiency",lvl:3}],Unbreakable:1}
 tellraw @a [{"text":"Surface Overworld ","color":"green"},{"text":"items given! ","color":"gold"}]
+give @a[team=juggernaut] baked_potato{display:{Name:'[{"text":"Avocado","italic":false,"color":"green"}]',Lore:['[{"text": "I am confusion(ing), Eat for confusion"}]']}} 64
+item replace entity @a[team=dragon_ender] hotbar.8 with baked_potato{display:{Name:'[{"text":"Avocado","italic":false,"color":"green"}]',Lore:['[{"text": "I am confusion(ing), Eat for confusion"}]']}} 64
