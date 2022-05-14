@@ -36,7 +36,7 @@ If you find a bug, feel free to create an issue or pull request if you know how 
 
 ## License
 
-```
+```code
     MuffinHunt Datapack
     Copyright (C) 2022 osfanmuffin
 
