@@ -28,6 +28,8 @@ jobs:
              pack.mcmeta
              pack.png
          name: muffinhunt-datapack v1.7.0
+
+         
    upload-optimized-datapack:
     name: Optimize datapack
     runs-on: ubuntu-latest
@@ -48,6 +50,9 @@ jobs:
           allow_optifine_mod: true
           delete_bloat_json_keys: true
           artifact_name: 'optimized-muffinhunt-datapack v1.7.0'
+          never_store_squash_times: true
+
+        
    fetch-muffinhunt-resourcepack:
     name: Fetch latest MuffinHunt resource pack changes
     runs-on: ubuntu-latest
@@ -67,6 +72,8 @@ jobs:
              pack.mcmeta
              pack.png
          name: muffinhunt-resourcepack v1.0.0
+
+
    optimize-muffinhunt-resourcepack:
     name: Fetch and optimize MuffinHunt resourcepack
     runs-on: ubuntu-latest
@@ -85,6 +92,7 @@ jobs:
           allow_optifine_mod: true
           delete_bloat_json_keys: true
           artifact_name: 'optimized-muffinhunt-resourcepack v1.0.0'
+          never_store_squash_times: true
 
    create-release:
      name: Create release

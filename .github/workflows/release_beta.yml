@@ -48,6 +48,7 @@ jobs:
           allow_optifine_mod: true
           delete_bloat_json_keys: true
           artifact_name: 'optimized-muffinhunt-datapack v1.7.0-beta3'
+          never_store_squash_times: true
    fetch-muffinhunt-resourcepack:
     name: Fetch latest MuffinHunt resource pack changes
     runs-on: ubuntu-latest
@@ -85,6 +86,7 @@ jobs:
           allow_optifine_mod: true
           delete_bloat_json_keys: true
           artifact_name: 'optimized-muffinhunt-resourcepack v1.1.0-beta2'
+          never_store_squash_times: true
 
    create-release:
      name: Create release
