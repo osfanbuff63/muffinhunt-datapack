@@ -27,7 +27,7 @@ jobs:
              data/
              pack.mcmeta
              pack.png
-         name: muffinhunt-datapack v1.7.0
+         name: muffinhunt-datapack v2.0.0
 
          
    upload-optimized-datapack:
@@ -38,7 +38,7 @@ jobs:
      - name: Download normal pack
        uses: actions/download-artifact@v3
        with:
-         name: muffinhunt-datapack v1.7.0
+         name: muffinhunt-datapack v2.0.0
          path: ./
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
@@ -49,7 +49,7 @@ jobs:
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-datapack v1.7.0'
+          artifact_name: 'optimized-muffinhunt-datapack v2.0.0'
           never_store_squash_times: true
 
         
@@ -71,7 +71,7 @@ jobs:
              data/
              pack.mcmeta
              pack.png
-         name: muffinhunt-resourcepack v1.0.0
+         name: muffinhunt-resourcepack v2.0.0
 
 
    optimize-muffinhunt-resourcepack:
@@ -82,7 +82,7 @@ jobs:
      - name: Download regular pack
        uses: actions/download-artifact@v3
        with:
-         name: muffinhunt-resourcepack v1.0.0
+         name: muffinhunt-resourcepack v2.0.0
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
        with:
@@ -91,7 +91,7 @@ jobs:
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-resourcepack v1.0.0'
+          artifact_name: 'optimized-muffinhunt-resourcepack v2.0.0'
           never_store_squash_times: true
 
    create-release:
@@ -99,6 +99,7 @@ jobs:
      needs: [fetch-muffinhunt-resourcepack,upload-normal,optimize-muffinhunt-resourcepack,upload-optimized-datapack]
      runs-on: ubuntu-latest
      steps:
+       # To do: rework workflow to auto-zip
        - name: Checkout repo
          uses: actions/checkout@v3
        - name: Generate release changelog
@@ -109,27 +110,28 @@ jobs:
        - name: Download normal pack
          uses: actions/download-artifact@v3
          with:
-           name: muffinhunt-datapack v1.7.0
+           name: muffinhunt-datapack v2.0.0
        - name: Download optimized pack
          uses: actions/download-artifact@v3
          with:
-           name: optimized-muffinhunt-datapack v1.7.0
+           name: optimized-muffinhunt-datapack v2.0.0
        - name: Download normal resourcepack
          uses: actions/download-artifact@v3
          with:
-           name: muffinhunt-resourcepack v1.0.0
+           name: muffinhunt-resourcepack v2.0.0
        - name: Download optimized resourcepack
          uses: actions/download-artifact@v3
          with:
-           name: optimized-muffinhunt-resourcepack v1.0.0
+           name: optimized-muffinhunt-resourcepack v2.0.0
        - name: Release
          uses: softprops/action-gh-release@v1
          with:
-           files: |
-               muffinhunt-datapack v1.7.0.zip
-               optimized-muffinhunt-datapack v1.7.0.zip
-               muffinhunt-resourcepack v1.0.0.zip
-               optimized-muffinhunt-resourcepack v1.0.0.zip
+           # Files commented out as broken
+           #files: |
+               #muffinhunt-datapack v2.0.0.zip
+               #optimized-muffinhunt-datapack v2.0.0.zip
+               #muffinhunt-resourcepack v2.0.0.zip
+               #optimized-muffinhunt-resourcepack v2.0.0.zip
            body_path: CHANGELOG.md
        - name: Commit changes
          run: |

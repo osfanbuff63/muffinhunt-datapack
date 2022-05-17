@@ -24,9 +24,6 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
-# Local History for VS Code
-.history/
-
 # Built VS Code extensions
 *.vsix
 
@@ -49,19 +46,18 @@ ehthumbs_vista.db
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
 # Windows shortcuts
 *.lnk
 
 # Binary files
 *.zip
 *.jar
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.exe
 
 # Spyglass stuff
 spyglass.json
