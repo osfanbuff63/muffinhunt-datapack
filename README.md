@@ -10,6 +10,13 @@
 
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
+## **IMPORTANT NOTICE**
+
+Currently, the `master` branch is being used for the development version of v2.0 - a major rewrite. It is recommended to **only** use this for development. For the stable version (v1.7):
+
+- [GitHub Releases](https://github.com/osfanmuffin/muffinhunt-datapack/releases) for use
+- Branch [v1.7-LTS](https://github.com/osfanmuffin/muffinhunt-datapack/tree/v1.7-LTS) for code.
+
 ## What is a MuffinHunt?
 
 A MuffinHunt, in short, is a variation of a certain Speedrunner vs Hunter series on YouTube, with extra rules. As well, we have starting kits (which are mostly for balancing), automatically increasing kits, etc. You can find a full list of rules and explanations about the series [here](https://osfanmuffin.github.io/muffinhunt-datapack/WhatIsAMuffinHunt).
@@ -36,7 +43,7 @@ If you find a bug, feel free to create an issue or pull request if you know how 
 
 ## License
 
-```
+```code
     MuffinHunt Datapack
     Copyright (C) 2022 osfanmuffin
 
