@@ -151,10 +151,10 @@ jobs:
          uses: softprops/action-gh-release@v1
          with:
            files: |
-               #muffinhunt-datapack v2.0.0.zip
-               #optimized-muffinhunt-datapack v2.0.0.zip
-               #muffinhunt-resourcepack v2.0.0.zip
-               #optimized-muffinhunt-resourcepack v2.0.0.zip
+               muffinhunt-datapack v2.0.0.zip
+               optimized-muffinhunt-datapack v2.0.0.zip
+               muffinhunt-resourcepack v2.0.0.zip
+               optimized-muffinhunt-resourcepack v2.0.0.zip
            body_path: CHANGELOG.md
        - name: Commit changes
          run: |
