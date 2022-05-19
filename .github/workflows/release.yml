@@ -1,4 +1,4 @@
-name: Publish release
+name: Publish release (beta)
 on: 
   push:
     tags-ignore:
@@ -24,6 +24,7 @@ jobs:
        uses: actions/upload-artifact@v3
        with:
          path: |
+             assets/
              data/
              pack.mcmeta
              pack.png
@@ -52,56 +53,15 @@ jobs:
           artifact_name: 'optimized-muffinhunt-datapack v2.0.0'
           never_store_squash_times: true
 
-        
-   fetch-muffinhunt-resourcepack:
-    name: Fetch latest MuffinHunt resource pack changes
-    runs-on: ubuntu-latest
-    steps:
-     - name: Clone muffinhunt resource pack
-       uses: actions/checkout@v3
-       with: 
-        repository: osfanmuffin/muffinhunt-resource-pack
-        fetch-depth: 0
-     - name: Check JSON
-       uses: ocular-d/json-linter@0.0.2
-     - name: Upload artifact
-       uses: actions/upload-artifact@v3
-       with:
-         path: |
-             data/
-             pack.mcmeta
-             pack.png
-         name: muffinhunt-resourcepack v2.0.0
-
-
-   optimize-muffinhunt-resourcepack:
-    name: Fetch and optimize MuffinHunt resourcepack
-    runs-on: ubuntu-latest
-    needs: fetch-muffinhunt-resourcepack
-    steps:
-     - name: Download regular pack
-       uses: actions/download-artifact@v3
-       with:
-         name: muffinhunt-resourcepack v2.0.0
-     - name: Run PackSquash
-       uses: ComunidadAylas/PackSquash-action@e12b951df62760df07b6d7d2fe386cdaafd52272
-       with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          minify_json_files: true
-          validate_pack_metadata_file: true
-          allow_optifine_mod: true
-          delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-resourcepack v2.0.0'
-          never_store_squash_times: true
-
    create-release:
      name: Create release
-     needs: [fetch-muffinhunt-resourcepack,upload-normal,optimize-muffinhunt-resourcepack,upload-optimized-datapack]
+     needs: [upload-normal,upload-optimized-datapack]
      runs-on: ubuntu-latest
      steps:
-       # To do: rework workflow to auto-zip
        - name: Checkout repo
          uses: actions/checkout@v3
+         with:
+           token: ${{ secrets.GH_TOKEN }}
        - name: Generate release changelog
          uses: heinrichreimer/github-changelog-generator-action@v2.3
          with:
@@ -111,32 +71,33 @@ jobs:
          uses: actions/download-artifact@v3
          with:
            name: muffinhunt-datapack v2.0.0
+       - name: Zip pack
+         run: |
+           zip 'muffinhunt-datapack v2.0.0' -r data pack.mcmeta pack.png
+       - name: Delete data folder
+         uses: JesseTG/rm@v1.0.2
+         with:
+           path: data/
        - name: Download optimized pack
          uses: actions/download-artifact@v3
          with:
            name: optimized-muffinhunt-datapack v2.0.0
-       - name: Download normal resourcepack
-         uses: actions/download-artifact@v3
-         with:
-           name: muffinhunt-resourcepack v2.0.0
-       - name: Download optimized resourcepack
-         uses: actions/download-artifact@v3
-         with:
-           name: optimized-muffinhunt-resourcepack v2.0.0
+       - name: Zip pack
+         run: |
+           zip 'optimized-muffinhunt-datapack v2.0.0' -r data pack.mcmeta pack.png
        - name: Release
          uses: softprops/action-gh-release@v1
          with:
-           # Files commented out as broken
-           #files: |
-               #muffinhunt-datapack v2.0.0.zip
-               #optimized-muffinhunt-datapack v2.0.0.zip
-               #muffinhunt-resourcepack v2.0.0.zip
-               #optimized-muffinhunt-resourcepack v2.0.0.zip
+           files: |
+               muffinhunt-datapack v2.0.0.zip
+               optimized-muffinhunt-datapack v2.0.0.zip
+               muffinhunt-resourcepack v2.0.0.zip
+               optimized-muffinhunt-resourcepack v2.0.0.zip
            body_path: CHANGELOG.md
        - name: Commit changes
          run: |
-            git config user.name "actions-user"
-            git config user.email "action@github.com"
+            git config --local user.name "actions-user"
+            git config --local user.email "action@github.com"
             git add CHANGELOG.md
             git commit -m "Updated CHANGELOG.md for ${{ github.ref }}"
             git push origin HEAD:master
