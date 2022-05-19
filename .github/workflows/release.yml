@@ -94,7 +94,7 @@ jobs:
           never_store_squash_times: true
 
    create-release:
-     name: Create release
+     name: Create releases
      needs: [fetch-muffinhunt-resourcepack,upload-normal,optimize-muffinhunt-resourcepack,upload-optimized-datapack]
      runs-on: ubuntu-latest
      steps:

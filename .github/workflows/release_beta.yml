@@ -28,6 +28,8 @@ jobs:
              pack.mcmeta
              pack.png
          name: muffinhunt-datapack v2.0.0-beta1
+
+         
    upload-optimized-datapack:
     name: Optimize datapack
     runs-on: ubuntu-latest
@@ -49,14 +51,15 @@ jobs:
           delete_bloat_json_keys: true
           artifact_name: 'optimized-muffinhunt-datapack v2.0.0-beta1'
           never_store_squash_times: true
+
+        
    fetch-muffinhunt-resourcepack:
     name: Fetch latest MuffinHunt resource pack changes
     runs-on: ubuntu-latest
     steps:
-     - name: Clone muffinhunt resource pack
+     - name: Clone repo
        uses: actions/checkout@v3
-       with: 
-        repository: osfanmuffin/muffinhunt-resource-pack
+       with:
         fetch-depth: 0
      - name: Check JSON
        uses: ocular-d/json-linter@0.0.2
@@ -64,10 +67,12 @@ jobs:
        uses: actions/upload-artifact@v3
        with:
          path: |
-             data/
+             assets/
              pack.mcmeta
              pack.png
-         name: muffinhunt-resourcepack v1.2.0-beta1
+         name: muffinhunt-resourcepack v2.0.0-beta1
+
+
    optimize-muffinhunt-resourcepack:
     name: Fetch and optimize MuffinHunt resourcepack
     runs-on: ubuntu-latest
@@ -76,7 +81,7 @@ jobs:
      - name: Download regular pack
        uses: actions/download-artifact@v3
        with:
-         name: muffinhunt-resourcepack v1.2.0-beta1
+         name: muffinhunt-resourcepack v2.0.0-beta1
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
        with:
@@ -85,17 +90,18 @@ jobs:
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-resourcepack v1.2.0-beta1'
+          artifact_name: 'optimized-muffinhunt-resourcepack v2.0.0-beta1'
           never_store_squash_times: true
 
    create-release:
-     name: Create release
+     name: Create releases
      needs: [fetch-muffinhunt-resourcepack,upload-normal,optimize-muffinhunt-resourcepack,upload-optimized-datapack]
      runs-on: ubuntu-latest
      steps:
-       # to do: rework workflow to auto-zip
        - name: Checkout repo
          uses: actions/checkout@v3
+         with:
+           token: ${{ secrets.GH_TOKEN }}
        - name: Generate release changelog
          uses: heinrichreimer/github-changelog-generator-action@v2.3
          with:
@@ -105,27 +111,50 @@ jobs:
          uses: actions/download-artifact@v3
          with:
            name: muffinhunt-datapack v2.0.0-beta1
+       - name: Zip pack
+         run: |
+           zip 'muffinhunt-datapack v2.0.0-beta1' -r data pack.mcmeta pack.png
+       - name: Delete data folder
+         uses: JesseTG/rm@v1.0.2
+         with:
+           path: data/
        - name: Download optimized pack
          uses: actions/download-artifact@v3
          with:
            name: optimized-muffinhunt-datapack v2.0.0-beta1
+       - name: Zip pack
+         run: |
+           zip 'optimized-muffinhunt-datapack v2.0.0-beta1' -r data pack.mcmeta pack.png
+       - name: Delete data folder
+         uses: JesseTG/rm@v1.0.2
+         with:
+           path: data/
        - name: Download normal resourcepack
          uses: actions/download-artifact@v3
          with:
            name: muffinhunt-resourcepack v2.0.0-beta1
+       - name: Zip pack
+         run: |
+           zip 'muffinhunt-resourcepack v2.0.0-beta1' -r assets pack.mcmeta pack.png
+       - name: Delete assets folder
+         uses: JesseTG/rm@v1.0.2
+         with:
+           path: assets/
        - name: Download optimized resourcepack
          uses: actions/download-artifact@v3
          with:
            name: optimized-muffinhunt-resourcepack v2.0.0-beta1
+       - name: Zip pack
+         run: |
+           zip 'optimized-muffinhunt-resourcepack v2.0.0-beta1' -r data pack.mcmeta pack.png
        - name: Release
          uses: softprops/action-gh-release@v1
          with:
-           # Files commented out as broken
-           #files: |
-               #muffinhunt-datapack v2.0.0-beta1.zip
-               #optimized-muffinhunt-datapack v2.7.0-beta3.zip
-               #muffinhunt-resourcepack v1.1.0-beta2.zip
-               #optimized-muffinhunt-resourcepack v1.1.0-beta2.zip
+           files: |
+               muffinhunt-datapack v2.0.0-beta1.zip
+               optimized-muffinhunt-datapack v2.0.0-beta1.zip
+               muffinhunt-resourcepack v2.0.0-beta1.zip
+               optimized-muffinhunt-resourcepack v2.0.0-beta1.zip
            body_path: CHANGELOG.md
        - name: Commit changes
          run: |

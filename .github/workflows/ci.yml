@@ -31,10 +31,10 @@ jobs:
         with:
           name: muffinhunt-datapack v2.0.0-dev
           path: |
-               assets/*
-               data/*
-               pack.mcmeta
-               pack.png
+            assets/
+            data/
+            pack.mcmeta
+            pack.png
           if-no-files-found: error
   build-packsquash:
     runs-on: ubuntu-latest
