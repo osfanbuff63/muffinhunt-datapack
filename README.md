@@ -19,7 +19,7 @@ Currently, the `master` branch is being used for the development version of v2.0
 
 ## Other notices
 
-With PR #109, we have merged the resource pack into this repo. You can now use the same zip file for the resource pack **and** the datapack. As a result, this is the new repo for the resource pack.
+With PR [#109](https://github.com/osfanmuffin/muffinhunt-datapack/pull/109), we have merged the resource pack into this repo. You can now use the same zip file for the resource pack **and** the datapack. As a result, this is the new repo for the resource pack.
 
 ## What is a MuffinHunt?
 
