@@ -1,3 +1,4 @@
 files:
   - source: /assets/minecraft/lang/base_language_file.json
     translation: /assets/minecraft/lang/%locale_with_underscore%.json
+commit_message: '[ci skip] New Crowdin updates'
