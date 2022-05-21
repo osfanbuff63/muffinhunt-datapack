@@ -1,8 +1,9 @@
-name: Publish release (beta)
+name: Publish release
 on: 
   push:
     tags-ignore:
      - 'v*-beta*'
+     - 'v*-alpha*'
   workflow_dispatch:
 jobs:
    upload-normal:
