@@ -101,6 +101,6 @@ jobs:
             git config --local user.name "actions-user"
             git config --local user.email "action@github.com"
             git add CHANGELOG.md
-            git commit -m "Updated CHANGELOG.md for ${{ github.ref }}"
+            git commit -m "[ci skip] Updated CHANGELOG.md for ${{ github.ref }}"
             git push origin HEAD:master
             
