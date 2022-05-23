@@ -1,4 +1,4 @@
-# Normalize text
+# Normalize text to LF
 * text=auto
 
 *.off linguist-language=yaml
