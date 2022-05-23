@@ -3,6 +3,7 @@ on:
   push:
     tags:
      - 'v*-beta*'
+     - 'v*-alpha*'
   workflow_dispatch:
 jobs:
    upload-normal:
@@ -28,7 +29,7 @@ jobs:
              data/
              pack.mcmeta
              pack.png
-         name: muffinhunt-datapack v2.0.0-beta1
+         name: muffinhunt-datapack v2.0.0-alpha1
 
          
    upload-optimized-datapack:
@@ -39,7 +40,7 @@ jobs:
      - name: Download normal pack
        uses: actions/download-artifact@v3
        with:
-         name: muffinhunt-datapack v2.0.0-beta1
+         name: muffinhunt-datapack v2.0.0-alpha1
          path: ./
      - name: Run PackSquash
        uses: ComunidadAylas/PackSquash-action@master
@@ -50,7 +51,7 @@ jobs:
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-datapack v2.0.0-beta1'
+          artifact_name: 'optimized-muffinhunt-datapack v2.0.0-alpha1'
           never_store_squash_times: true
 
 
@@ -71,10 +72,10 @@ jobs:
        - name: Download normal pack
          uses: actions/download-artifact@v3
          with:
-           name: muffinhunt-datapack v2.0.0-beta1
+           name: muffinhunt-datapack v2.0.0-alpha1
        - name: Zip pack
          run: |
-           zip 'muffinhunt-datapack v2.0.0-beta1' -r data pack.mcmeta pack.png
+           zip 'muffinhunt-datapack v2.0.0-alpha1' -r data pack.mcmeta pack.png
        - name: Delete data folder
          uses: JesseTG/rm@v1.0.2
          with:
@@ -82,19 +83,20 @@ jobs:
        - name: Download optimized pack
          uses: actions/download-artifact@v3
          with:
-           name: optimized-muffinhunt-datapack v2.0.0-beta1
+           name: optimized-muffinhunt-datapack v2.0.0-alpha1
        - name: Zip pack
          run: |
-           zip 'optimized-muffinhunt-datapack v2.0.0-beta1' -r data pack.mcmeta pack.png
+           zip 'optimized-muffinhunt-datapack v2.0.0-alpha1' -r data pack.mcmeta pack.png
        - name: Release
-         uses: softprops/action-gh-release@v1
+         uses: softprops/action-gh-release@v0.1.14
          with:
            files: |
-               muffinhunt-datapack v2.0.0-beta1.zip
-               optimized-muffinhunt-datapack v2.0.0-beta1.zip
-               muffinhunt-resourcepack v2.0.0-beta1.zip
-               optimized-muffinhunt-resourcepack v2.0.0-beta1.zip
+               muffinhunt-datapack v2.0.0-alpha1.zip
+               optimized-muffinhunt-datapack v2.0.0-alpha1.zip
+               muffinhunt-resourcepack v2.0.0-alpha1.zip
+               optimized-muffinhunt-resourcepack v2.0.0-alpha1.zip
            body_path: CHANGELOG.md
+           prerelease: true
        - name: Commit changes
          run: |
             git config --local user.name "actions-user"
