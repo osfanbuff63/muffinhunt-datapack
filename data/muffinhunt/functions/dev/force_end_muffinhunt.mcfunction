@@ -11,3 +11,4 @@ tag @a[tag=muffinhunt_nether] remove muffinhunt_nether
 tag @a[tag=MHend] remove MHend
 tag @a[tag=muffinhunt_surface_overworld] remove muffinhunt_surface_overworld 
 scoreboard players set MuffinHunt MuffinHunt 0
+kill @e[tag=MHendPort]
