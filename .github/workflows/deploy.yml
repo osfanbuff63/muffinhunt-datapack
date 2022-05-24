@@ -1,40 +1,49 @@
-name: Deploy to GitHub pages
+name: Build and deploy Jekyll site to GitHub Pages
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [master]
+    paths:
+      - /docs/**
   pull_request:
-    branches: [ gh-pages ]
-  workflow_dispatch:
+    branches: [master]
+    paths: 
+     - /docs/**
 jobs:
-  deploy-pr:
-    runs-on: ubuntu-latest
-    environment: development
-    if: ${{ github.event_name = 'pull_request' }}
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      # might need setup ruby/jekyll build here
-      - name: Deploy to GitHub Pages (development)
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
-        with:
-          branch: ${{ github.ref_name }}
-          folder: .
-          git-config-name: actions-user
-          git-config-email: action@github.com
-          commit-message: '[ci skip] Deployed to GitHub Pages'
   deploy:
     runs-on: ubuntu-latest
     environment: production
-    if: ${{ github.event_name != 'pull_request' }}
+    if: ${{ github.event_name !== 'pull_request' }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      # might need setup ruby/jekyll build here
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+      - name: Restore cache
+        uses: actions/cache@v2
         with:
-          branch: ${{ github.ref_name }}
-          folder: .
-          git-config-name: actions-user
-          git-config-email: action@github.com
-          commit-message: '[ci skip] Deployed to GitHub Pages'
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Build and deploy
+        uses: helaili/jekyll-action@2.0.5    
+        with:                                
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pre_build_commands: cd docs
+  deploy-pr:
+    runs-on: ubuntu-latest
+    environment: development
+    if: ${{ github.event_name !== 'pull_request' }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Build and deploy
+        uses: helaili/jekyll-action@2.0.5    
+        with:                                
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pre_build_commands: cd docs
