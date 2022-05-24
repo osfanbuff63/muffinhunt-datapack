@@ -1,0 +1,40 @@
+name: Deploy to GitHub pages
+on:
+  push:
+    branches: [ gh-pages ]
+  pull_request:
+    branches: [ gh-pages ]
+  workflow_dispatch:
+jobs:
+  deploy-pr:
+    runs-on: ubuntu-latest
+    environment: development
+    if: ${{ github.event.action == pull_request }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      # might need setup ruby/jekyll build here
+      - name: Deploy to GitHub Pages (development)
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: ${{ github.ref_name }}
+          folder: .
+          git-config-name: actions-user
+          git-config-email: action@github.com
+          commit-message: '[ci skip] Deployed to GitHub Pages'
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    if: ${{ github.event.action !== pull_request }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      # might need setup ruby/jekyll build here
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: ${{ github.ref_name }}
+          folder: .
+          git-config-name: actions-user
+          git-config-email: action@github.com
+          commit-message: '[ci skip] Deployed to GitHub Pages'
