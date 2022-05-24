@@ -9,7 +9,7 @@ jobs:
   deploy-pr:
     runs-on: ubuntu-latest
     environment: development
-    if: ${{ github.event_name = 'pull_request' }}
+    if: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
