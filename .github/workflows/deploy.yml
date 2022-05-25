@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -30,28 +31,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           publish_branch: gh-pages
+          user_name: actions-user
+          user_email: action@github.com
           
-  deploy-pr:
-    runs-on: ubuntu-latest
-    environment: development
-    if: ${{ github.event_name == 'pull_request' }}
-    steps:
-      - name: Clone repo
-        uses: actions/checkout@v3
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1.2
-      - name: Install deps and build
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
-          jekyll_src: docs
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gems-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages       
