@@ -69,3 +69,4 @@ spyglass.json
 /docs/.bundle/
 /docs/vendor/bundle
 /docs/lib/bundler/man/
+/_site/
