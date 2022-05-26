@@ -6,5 +6,5 @@
 *.json linguist-language=jsonc
 
 # Fixes languages listing on GitHub
-*.json linguist-detectable=true
-*.md linguist-detectable=true
+* linguist-detectable=true
+*.yml linguist-detectable=false
