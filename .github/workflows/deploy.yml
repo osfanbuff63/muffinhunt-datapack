@@ -16,6 +16,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.2
+          working-directory: docs
       - name: Install deps and build
         uses: limjh16/jekyll-action-ts@v2
         with:
@@ -28,7 +29,9 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: docs/_site
+          folder: docs
           git-config-name: actions-user
           git-config-email: action@github.com
+          clean: true
+          force: false
           
