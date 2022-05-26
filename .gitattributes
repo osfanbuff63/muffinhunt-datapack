@@ -4,3 +4,6 @@
 *.off linguist-language=yaml
 
 *.json linguist-language=jsonc
+
+# Fixes languages listing on GitHub
+* linguist-detectable=true
