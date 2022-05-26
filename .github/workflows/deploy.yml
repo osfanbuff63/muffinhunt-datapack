@@ -20,15 +20,15 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-          jekyll_src: docs/
+          jekyll_src: docs
+          gem_src: docs
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gems-
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site
-          publish_branch: gh-pages
-          user_name: actions-user
-          user_email: action@github.com
+          branch: gh-pages
+          folder: docs/_site
+          git-config-name: actions-user
+          git-config-email: action@github.com
           
