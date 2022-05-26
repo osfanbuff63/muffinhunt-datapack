@@ -9,8 +9,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production
-    if: ${{ github.event_name != 'pull_request' }}
     steps:
       - name: Clone repo
         uses: actions/checkout@v3
@@ -22,14 +20,14 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-          jekyll_src: docs
+          jekyll_src: docs/
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gems-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: /docs/_site/
           publish_branch: gh-pages
           user_name: actions-user
           user_email: action@github.com
