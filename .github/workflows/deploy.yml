@@ -29,7 +29,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: docs
+          folder: _site
           git-config-name: actions-user
           git-config-email: action@github.com
           clean: true
