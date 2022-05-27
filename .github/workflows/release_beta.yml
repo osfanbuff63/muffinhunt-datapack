@@ -88,7 +88,8 @@ jobs:
        - name: Release
          uses: softprops/action-gh-release@v1
          with:
-           files: *.zip
+           files: |
+             *.zip
            body_path: CHANGELOG.md
        - name: Commit changes
          run: |
