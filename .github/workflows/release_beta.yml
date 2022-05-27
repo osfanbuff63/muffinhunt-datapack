@@ -83,7 +83,7 @@ jobs:
            name: optimized-muffinhunt-datapack v2.0.0-alpha2
        - name: Zip optimized pack
          run: |
-           unzip pack.zip
+           unzip -f pack.zip
            zip 'optimized-muffinhunt-datapack v2.0.0-alpha2' -r data pack.mcmeta pack.png
        - name: Release
          uses: softprops/action-gh-release@v1
