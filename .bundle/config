@@ -1,5 +1,0 @@
----
-BUNDLE_DEPLOYMENT: "true"
-BUNDLE_PATH: "/home/runner/work/muffinhunt-datapack/muffinhunt-datapack/vendor/bundle"
-BUNDLE_RETRY: "3"
-BUNDLE_JOBS: "4"
