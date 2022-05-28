@@ -29,7 +29,7 @@ jobs:
       - name: Compile and upload
         uses: actions/upload-artifact@v3
         with:
-          name: muffinhunt-datapack v2.0.0-dev
+          name: muffinhunt-datapack v2.0.0-SNAPSHOT
           path: |
             assets/
             data/
@@ -52,5 +52,5 @@ jobs:
           validate_pack_metadata_file: true
           allow_optifine_mod: true
           delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-datapack v2.0.0-dev'
+          artifact_name: 'optimized-muffinhunt-datapack v2.0.0-SNAPSHOT'
   
