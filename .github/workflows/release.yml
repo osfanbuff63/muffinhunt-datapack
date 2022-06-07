@@ -73,33 +73,29 @@ jobs:
          with:
            name: muffinhunt-datapack v2.0.0
        - name: Zip pack
-         run: |
-           zip 'muffinhunt-datapack v2.0.0' -r data pack.mcmeta pack.png
-       - name: Delete data folder
-         uses: JesseTG/rm@v1.0.2
-         with:
-           path: data/
+         run: zip 'muffinhunt-datapack v2.0.0' -r data pack.mcmeta pack.png
+       - name: Delete datapack
+         run: rm -r data pack.mcmeta pack.png  
        - name: Download optimized pack
          uses: actions/download-artifact@v3
          with:
            name: optimized-muffinhunt-datapack v2.0.0
-       - name: Zip pack
+       - name: Zip optimized pack
          run: |
-           zip 'optimized-muffinhunt-datapack v2.0.0' -r data pack.mcmeta pack.png
+           unzip -f pack.zip
+           zip -r 'optimized-muffinhunt-datapack v2.0.0-alpha2' . -i data pack.mcmeta pack.png
        - name: Release
          uses: softprops/action-gh-release@v1
          with:
            files: |
-               muffinhunt-datapack v2.0.0.zip
-               optimized-muffinhunt-datapack v2.0.0.zip
-               muffinhunt-resourcepack v2.0.0.zip
-               optimized-muffinhunt-resourcepack v2.0.0.zip
+             *.zip
            body_path: CHANGELOG.md
        - name: Commit changes
          run: |
+            echo ${GITHUB_REF#refs/*/}
             git config --local user.name "actions-user"
             git config --local user.email "action@github.com"
             git add CHANGELOG.md
-            git commit -m "Updated CHANGELOG.md for ${{ github.ref }}"
+            git commit -m "[ci skip] Updated CHANGELOG.md for ${{ github.ref }}"
             git push origin HEAD:master
             

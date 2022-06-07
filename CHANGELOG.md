@@ -1,5 +1,16 @@
 # Changelog
 
+## [v2.0.0-alpha2](https://github.com/osfanmuffin/muffinhunt-datapack/tree/v2.0.0-alpha2) (05/27/2022)
+
+[Full Changelog](https://github.com/osfanmuffin/muffinhunt-datapack/compare/v2.0.0-alpha1...v2.0.0-alpha2)
+
+**Merged pull requests:**
+
+- Update actions/cache action to v3 [\#113](https://github.com/osfanmuffin/muffinhunt-datapack/pull/113) ([renovate[bot]](https://github.com/apps/renovate))
+- Update helaili/jekyll-action action to v2.3.1 [\#112](https://github.com/osfanmuffin/muffinhunt-datapack/pull/112) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency jekyll-timeago to ~\> 0.14.0 [\#111](https://github.com/osfanmuffin/muffinhunt-datapack/pull/111) ([renovate[bot]](https://github.com/apps/renovate))
+- Fix armor stand not glowing [\#110](https://github.com/osfanmuffin/muffinhunt-datapack/pull/110) ([osfanbuff63](https://github.com/osfanbuff63))
+
 ## [v2.0.0-alpha1](https://github.com/osfanmuffin/muffinhunt-datapack/tree/v2.0.0-alpha1) (05/21/2022)
 
 [Full Changelog](https://github.com/osfanmuffin/muffinhunt-datapack/compare/v1.7.0...v2.0.0-alpha1)
