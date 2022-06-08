@@ -5,24 +5,32 @@ on:
      - 'v*-beta*'
      - 'v*-alpha*'
   workflow_dispatch:
+permissions:
+  contents: read
+
 jobs:
    upload-normal:
     name: Create non-optimized datapack
     runs-on: ubuntu-latest
     steps:
+     - name: Harden Runner
+       uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813
+       with:
+         egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
      - name: Clone repository
-       uses: actions/checkout@v3
+       uses: actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
        with:
          fetch-depth: 0
      - name: Check commands
-       uses: mcbeet/check-commands@v1.0.6
+       uses: mcbeet/check-commands@740e5fb3c385a5a5775f9ab6c963745200cb71aa
        with:
           source: .
           minecraft: 1.18
      - name: Check JSON
-       uses: ocular-d/json-linter@0.0.2
+       uses: ocular-d/json-linter@7d3716a34bcd6fcc5b3b38141a21b9e02da6531d
      - name: Upload artifact
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
        with:
          path: |
              assets/
@@ -33,17 +41,24 @@ jobs:
 
          
    upload-optimized-datapack:
+    permissions:
+      actions: read  # for ComunidadAylas/PackSquash-action to get latest artifact
     name: Optimize datapack
     runs-on: ubuntu-latest
     needs: upload-normal
     steps:
+     - name: Harden Runner
+       uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813
+       with:
+         egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
      - name: Download normal pack
-       uses: actions/download-artifact@v3
+       uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
        with:
          name: muffinhunt-datapack v2.0.0-alpha2
          path: ./
      - name: Run PackSquash
-       uses: ComunidadAylas/PackSquash-action@master
+       uses: ComunidadAylas/PackSquash-action@81cb5e16d063527f982f94af93b8c703b206442d
        with:
           path: ./
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -56,21 +71,30 @@ jobs:
 
 
    create-release:
+     permissions:
+       contents: write  # for softprops/action-gh-release to create GitHub release
+       issues: read  # for heinrichreimer/github-changelog-generator-action to fetch issues and labels
+       pull-requests: read  # for heinrichreimer/github-changelog-generator-action to fetch PRs and labels
      name: Create release
      needs: [upload-normal,upload-optimized-datapack]
      runs-on: ubuntu-latest
      steps:
+       - name: Harden Runner
+         uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813
+         with:
+           egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
        - name: Checkout repo
-         uses: actions/checkout@v3
+         uses: actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
          with:
            token: ${{ secrets.GH_TOKEN }}
        - name: Generate release changelog
-         uses: heinrichreimer/github-changelog-generator-action@v2.3
+         uses: heinrichreimer/github-changelog-generator-action@6f5b9494dd265d6fb7243a10c53dc0169c55f247
          with:
            token: ${{ secrets.GITHUB_TOKEN }}
            dateFormat: '%m/%d/%Y'
        - name: Download normal pack
-         uses: actions/download-artifact@v3
+         uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
          with:
            name: muffinhunt-datapack v2.0.0-alpha2
        - name: Zip pack
@@ -78,7 +102,7 @@ jobs:
        - name: Delete datapack
          run: rm -r data pack.mcmeta pack.png  
        - name: Download optimized pack
-         uses: actions/download-artifact@v3
+         uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
          with:
            name: optimized-muffinhunt-datapack v2.0.0-alpha2
        - name: Zip optimized pack
@@ -86,7 +110,7 @@ jobs:
            unzip -f pack.zip
            zip -r 'optimized-muffinhunt-datapack v2.0.0-alpha2' . -i data pack.mcmeta pack.png
        - name: Release
-         uses: softprops/action-gh-release@v1
+         uses: softprops/action-gh-release@4716bde57e0fcda6ce83002e2469b8a90e560573
          with:
            files: |
              *.zip
