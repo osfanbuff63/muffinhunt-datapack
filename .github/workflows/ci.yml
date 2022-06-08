@@ -14,20 +14,25 @@ jobs:
   build-main:
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
       - name: Dependency Review
         if: github.event_name == 'pull_request'
-        uses: actions/dependency-review-action@v1
+        uses: actions/dependency-review-action@310e0dd64f63b1d00101ecd3225d605a74261fb7
       - name: Check commands
-        uses: mcbeet/check-commands@v1.0.6
+        uses: mcbeet/check-commands@740e5fb3c385a5a5775f9ab6c963745200cb71aa
         with:
           source: .
           minecraft: 1.18
       - name: Check JSON
-        uses: ocular-d/json-linter@0.0.2
+        uses: ocular-d/json-linter@7d3716a34bcd6fcc5b3b38141a21b9e02da6531d
       - name: Compile and upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
         with:
           name: muffinhunt-datapack v2.0.0-SNAPSHOT
           path: |
@@ -37,14 +42,22 @@ jobs:
             pack.png
           if-no-files-found: error
   build-packsquash:
+    permissions:
+      actions: read  # for ComunidadAylas/PackSquash-action to get latest artifact
+      contents: read  # for actions/checkout to fetch code
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
         with:
           fetch-depth: 0
       - name: Run PackSquash
-        uses: ComunidadAylas/PackSquash-action@master
+        uses: ComunidadAylas/PackSquash-action@81cb5e16d063527f982f94af93b8c703b206442d
         with:
           path: ./
           token: ${{ secrets.GITHUB_TOKEN }}
