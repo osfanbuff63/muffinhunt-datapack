@@ -15,8 +15,10 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:bastion_remnant"
+        "player": {
+          "location": {
+            "structure": "minecraft:bastion_remnant"
+          }
         }
       }
     }

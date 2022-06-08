@@ -69,7 +69,6 @@ jobs:
           artifact_name: 'optimized-muffinhunt-datapack v2.0.0'
           never_store_squash_times: true
 
-
    create-release:
      permissions:
        contents: write  # for softprops/action-gh-release to create GitHub release
