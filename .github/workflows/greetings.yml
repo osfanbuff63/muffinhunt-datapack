@@ -9,7 +9,12 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
+    - name: Harden Runner
+      uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813
+      with:
+        egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
+    - uses: actions/first-interaction@c69c732f61a61c2c4ee211cd9e16a9242e7db082
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: 'Welcome to the repository! Make sure to read the README.md specifically the Contributing section, before continuing, if you have not already!'
