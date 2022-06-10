@@ -22,11 +22,9 @@
             "predicate": {
               "type_specific": {
                 "type": "player",
-                "player": {
-                  "looking_at": {
-                    "type": "minecraft:player",
-                    "team": "juggernaut"
-                  }
+                "looking_at": {
+                  "type": "minecraft:player",
+                  "team": "juggernaut"
                 }
               }
             }
