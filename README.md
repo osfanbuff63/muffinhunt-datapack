@@ -11,14 +11,14 @@
 This is the MuffinHunt datapack! You'll find features packed for MuffinHunts!
 
 > **Warning**
-> 
+>
 > Currently, the `master` branch is being used for the development version of v2.0 - a major rewrite. It is recommended to **only** use this for development. For the stable version (v1.7):
 >
 >- [GitHub Releases](https://github.com/osfanmuffin/muffinhunt-datapack/releases) for use
 >- Branch [v1.7-LTS](https://github.com/osfanmuffin/muffinhunt-datapack/tree/v1.7-LTS) for code.
 
 > **Note**
-> 
+>
 > With PR [#109](https://github.com/osfanmuffin/muffinhunt-datapack/pull/109), we have merged the resource pack into this repo. You can now use the same zip file for the resource pack **and** the datapack. As a result, this is the new repo for the resource pack.
 
 ## What is a MuffinHunt?
