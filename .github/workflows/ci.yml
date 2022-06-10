@@ -17,8 +17,15 @@ jobs:
       - name: Harden Runner
         uses: step-security/harden-runner@dd5681a7d0c66fb362664d618ef4a90d656f6516
         with:
-          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
-
+         egress-policy: block
+         allowed-endpoints: >
+          artifactcache.actions.githubusercontent.com:443
+          files.pythonhosted.org:443
+          gel7acprodeus1file0.blob.core.windows.net:443
+          github.com:443
+          pipelines.actions.githubusercontent.com:443
+          pypi.org:443
+          api.github.com:443
       - name: Checkout repo
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - name: Dependency Review
@@ -50,8 +57,13 @@ jobs:
       - name: Harden Runner
         uses: step-security/harden-runner@dd5681a7d0c66fb362664d618ef4a90d656f6516
         with:
-          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
-
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            artifactcache.actions.githubusercontent.com:443
+            gel7acprodeus1file0.blob.core.windows.net:443
+            github.com:443
+            objects.githubusercontent.com:443
       - name: Checkout repo
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
