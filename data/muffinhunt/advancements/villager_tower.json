@@ -1,31 +1,30 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:player_head",
-        "nbt": "{SkullOwner:MHF_Villager}"
-      },
-      "title": "The Top of The World",
-      "description": "Climb your way to the top of the villager island",
-      "frame": "task",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:MHF_Villager}"
     },
-    "parent": "muffinhunt:surface_overworld",
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:location",
-        "conditions": {
-          "player": {
-            "location": {
-              "position": {
-                "y": 118
-              },
-              "smokey": true
-            }
+    "title": "The Top of The World",
+    "description": "Climb your way to the top of the villager island",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "muffinhunt:surface_overworld",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "position": {
+              "y": 118
+            },
+            "smokey": true
           }
         }
       }
     }
   }
-  
+}

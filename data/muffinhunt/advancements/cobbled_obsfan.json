@@ -1,31 +1,30 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:obsidian",
-        "nbt": "{display:{Name:'[{\"text\":\"Cobbled Obsfan\"}]'}}"
-      },
-      "title": "Cobbled Obsfan63",
-      "description": "Obtain 63 Cobbled Obsfan",
-      "frame": "task",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:obsidian",
+      "nbt": "{display:{Name:'[{\"text\":\"Cobbled Obsfan\"}]'}}"
     },
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:inventory_changed",
-        "conditions": {
-          "items": [
-            {
-              "tag": "muffinhunt:obsidian",
-              "count": 63
-            }
-          ]
-        }
+    "title": "Cobbled Obsfan63",
+    "description": "Obtain 63 Cobbled Obsfan",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "muffinhunt:obsidian",
+            "count": 63
+          }
+        ]
       }
-    },
-    "rewards": {
-      "experience": 50
     }
+  },
+  "rewards": {
+    "experience": 50
   }
-  
+}

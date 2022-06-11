@@ -14,16 +14,20 @@
     "lush_caves": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "biome": "minecraft:lush_caves"
+        "player": {
+          "location": {
+            "biome": "minecraft:lush_caves"
+          }
         }
       }
     },
     "dripstone_caves": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "biome": "minecraft:dripstone_caves"
+        "player": {
+          "location": {
+            "biome": "minecraft:dripstone_caves"
+          }
         }
       }
     }
