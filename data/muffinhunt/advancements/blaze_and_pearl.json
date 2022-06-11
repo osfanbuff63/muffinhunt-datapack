@@ -1,45 +1,44 @@
 {
-    "display": {
-      "icon": {
-        "item": "minecraft:blaze_powder",
-        "nbt": "{Enchantments:[{}]}"
-      },
-      "title": "Blaze and Pearl",
-      "description": "Two Down, a Dragon to go",
-      "frame": "goal",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+  "display": {
+    "icon": {
+      "item": "minecraft:blaze_powder",
+      "nbt": "{Enchantments:[{}]}"
     },
-    "parent": "minecraft:story/enter_the_nether",
-    "criteria": {
-      "blaze": {
-        "trigger": "minecraft:player_killed_entity",
-        "conditions": {
-          "entity": {
-            "type": "minecraft:blaze"
-          }
-        }
-      },
-      "enderman": {
-        "trigger": "minecraft:player_killed_entity",
-        "conditions": {
-          "entity": {
-            "type": "minecraft:enderman"
-          }
+    "title": "Blaze and Pearl",
+    "description": "Two Down, a Dragon to go",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:story/enter_the_nether",
+  "criteria": {
+    "blaze": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:blaze"
         }
       }
     },
-    "requirements": [
-      [
-        "blaze"
-      ],
-      [
-        "enderman"
-      ]
-    ],
-    "rewards": {
-      "experience": 50
+    "enderman": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:enderman"
+        }
+      }
     }
+  },
+  "requirements": [
+    [
+      "blaze"
+    ],
+    [
+      "enderman"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
   }
-  
+}

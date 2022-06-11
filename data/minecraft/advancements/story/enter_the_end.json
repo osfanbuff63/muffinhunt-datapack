@@ -15,8 +15,10 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "minecraft:the_end"
+        "player": {
+          "location": {
+            "dimension": "minecraft:the_end"
+          }
         }
       }
     }

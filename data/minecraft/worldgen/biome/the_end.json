@@ -3,7 +3,6 @@
 	"downfall": 0.5,
 	"precipitation": "none",
 	"temperature_modifier": "none",
-	"category": "the_end",
 	"effects": {
 		"sky_color": 0,
 		"fog_color": 10518688,
