@@ -1,5 +1,32 @@
 # Changelog
 
+## [v1.7.1](https://github.com/osfanmuffin/muffinhunt-datapack/tree/v1.7.1) (06/11/2022)
+
+[Full Changelog](https://github.com/osfanmuffin/muffinhunt-datapack/compare/v2.0.0-alpha2...v1.7.1)
+
+**Implemented enhancements:**
+
+- Update v1.7 LTS to 1.19 [\#126](https://github.com/osfanmuffin/muffinhunt-datapack/issues/126)
+- Move docs into new repo [\#115](https://github.com/osfanmuffin/muffinhunt-datapack/issues/115)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#73](https://github.com/osfanmuffin/muffinhunt-datapack/issues/73)
+
+**Merged pull requests:**
+
+- deps: Update step-security/harden-runner digest to dd5681a [\#125](https://github.com/osfanmuffin/muffinhunt-datapack/pull/125) ([renovate[bot]](https://github.com/apps/renovate))
+- Harden runner changes [\#124](https://github.com/osfanmuffin/muffinhunt-datapack/pull/124) ([osfanbuff63](https://github.com/osfanbuff63))
+- deps: Update softprops/action-gh-release digest to 50195ba [\#123](https://github.com/osfanmuffin/muffinhunt-datapack/pull/123) ([renovate[bot]](https://github.com/apps/renovate))
+- deps: Update heinrichreimer/github-changelog-generator-action digest to 6653241 [\#122](https://github.com/osfanmuffin/muffinhunt-datapack/pull/122) ([renovate[bot]](https://github.com/apps/renovate))
+- deps: Update actions/first-interaction digest to dafa9ae [\#121](https://github.com/osfanmuffin/muffinhunt-datapack/pull/121) ([renovate[bot]](https://github.com/apps/renovate))
+- deps: Update actions/download-artifact digest to 076f0f7 [\#120](https://github.com/osfanmuffin/muffinhunt-datapack/pull/120) ([renovate[bot]](https://github.com/apps/renovate))
+- deps: Update actions/dependency-review-action digest to 1a7225b [\#119](https://github.com/osfanmuffin/muffinhunt-datapack/pull/119) ([renovate[bot]](https://github.com/apps/renovate))
+- deps: Update actions/checkout digest to 2541b12 [\#118](https://github.com/osfanmuffin/muffinhunt-datapack/pull/118) ([renovate[bot]](https://github.com/apps/renovate))
+- Secure workflows [\#117](https://github.com/osfanmuffin/muffinhunt-datapack/pull/117) ([osfanbuff63](https://github.com/osfanbuff63))
+- Change docs to use another repo [\#116](https://github.com/osfanmuffin/muffinhunt-datapack/pull/116) ([osfanbuff63](https://github.com/osfanbuff63))
+- Update to 1.19 [\#81](https://github.com/osfanmuffin/muffinhunt-datapack/pull/81) ([osfanbuff63](https://github.com/osfanbuff63))
+
 ## [v2.0.0-alpha2](https://github.com/osfanmuffin/muffinhunt-datapack/tree/v2.0.0-alpha2) (05/27/2022)
 
 [Full Changelog](https://github.com/osfanmuffin/muffinhunt-datapack/compare/v2.0.0-alpha1...v2.0.0-alpha2)
