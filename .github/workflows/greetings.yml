@@ -14,6 +14,7 @@ jobs:
       with:
         egress-policy: block
         allowed-endpoints: >
+          api.github.com:443
 
     - uses: actions/first-interaction@dafa9ae191faeec3f6b68445495727a43143b42a
       with:
