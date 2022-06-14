@@ -4,8 +4,7 @@
     "type": "minecraft:noise",
     "settings": "muffinhunt:end_with_caves",
     "biome_source": {
-      "type": "minecraft:the_end",
-      "seed": -767523286
+      "type": "minecraft:the_end"
     }
   }
 }
