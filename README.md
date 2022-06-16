@@ -49,7 +49,7 @@ If you find a bug, feel free to create an issue or pull request if you know how 
 
 ```text
     MuffinHunt Datapack
-    Copyright (C) 2022 osfanmuffin
+    Copyright (C) 2022 osfanbuff63
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
