@@ -8,6 +8,7 @@
     "on monday-friday after 9am"
   ],
   "labels": ["dependencies"],
-  "commitMessagePrefix": "deps: ",
+  "commitMessagePrefix": "chore: deps: ",
   "rebaseWhen": "conflicted"
+  "bumpVersion": "patch"
 }
