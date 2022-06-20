@@ -12,6 +12,22 @@
       "profile": "https://allcontributors.org",
       "contributions": [
         "maintenance"
+      },
+      {
+      "login": "AlexTMjugador",
+      "name": "Alejandro González",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7822554?v=4",
+      "profile": "https://github.com/AlexTMjugador",
+      "contributions": [
+        "infra"
+        },  
+     {
+      "login": "M3FF1N",
+      "name": "M3FF1N",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99350806?v=4",
+      "profile": "https://github.com/M3FF1N",
+      "contributions": [
+        "code"
       ]
     }
   ],
