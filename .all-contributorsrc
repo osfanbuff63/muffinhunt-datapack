@@ -28,13 +28,13 @@
       "profile": "https://github.com/M3FF1N",
       "contributions": [
         "code"
-      ]
-    }
+       ]
+     }
   ],
   "contributorsPerLine": 7,
   "projectName": "muffinhunt-datapack",
   "projectOwner": "osfanbuff63",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": false // this breaks prs
 }
