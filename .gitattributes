@@ -4,3 +4,5 @@
 *.off linguist-language=yaml
 
 *.json linguist-language=jsonc
+
+*.all-contributorsrc linguist-language=jsonc
