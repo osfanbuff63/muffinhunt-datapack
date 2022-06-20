@@ -6,13 +6,21 @@
   "commit": false,
   "contributors": [
     {
+      "login": "all-contributors",
+      "name": "All Contributors",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
+      "profile": "https://allcontributors.org",
+      "contributions": [
+        "maintenance"
+      },
+      {
       "login": "AlexTMjugador",
       "name": "Alejandro González",
       "avatar_url": "https://avatars.githubusercontent.com/u/7822554?v=4",
       "profile": "https://github.com/AlexTMjugador",
       "contributions": [
         "infra"
-        }  
+        },  
      {
       "login": "M3FF1N",
       "name": "M3FF1N",
