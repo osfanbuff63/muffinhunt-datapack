@@ -38,5 +38,5 @@
   "projectOwner": "osfanbuff63",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": false // this breaks prs
+  "skipCi": false 
 }
