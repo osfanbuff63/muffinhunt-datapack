@@ -1,6 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack?color=green)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Language: mcfunction](https://img.shields.io/badge/language-mcfunction-red)
 ![Language: JSON](https://img.shields.io/badge/language-JSON-lightgray)
@@ -78,10 +78,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="#maintenance-all-contributors" title="Maintenance">🚧</a></td>
-
     <td align="center"><a href="https://github.com/AlexTMjugador"><img src="https://avatars.githubusercontent.com/u/7822554?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alejandro González</b></sub></a><br /><a href="#infra-AlexTMjugador" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
-
     <td align="center"><a href="https://github.com/M3FF1N"><img src="https://avatars.githubusercontent.com/u/99350806?v=4?s=100" width="100px;" alt=""/><br /><sub><b>M3FF1N</b></sub></a><br /><a href="https://github.com/osfanbuff63/muffinhunt-datapack/commits?author=M3FF1N" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/osfanbuff63-crowdin-bot"><img src="https://avatars.githubusercontent.com/u/102379670?v=4?s=100" width="100px;" alt=""/><br /><sub><b>osfanbuff63-crowdin-bot</b></sub></a><br /><a href="#translation-osfanbuff63-crowdin-bot" title="Translation">🌍</a></td>
   </tr>
 </table>
 

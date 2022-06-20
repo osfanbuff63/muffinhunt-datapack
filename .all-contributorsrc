@@ -13,8 +13,8 @@
       "contributions": [
         "maintenance"
       ]
-     },
-     {
+    },
+    {
       "login": "AlexTMjugador",
       "name": "Alejandro González",
       "avatar_url": "https://avatars.githubusercontent.com/u/7822554?v=4",
@@ -22,21 +22,30 @@
       "contributions": [
         "infra"
       ]
-     },  
-     {
+    },
+    {
       "login": "M3FF1N",
       "name": "M3FF1N",
       "avatar_url": "https://avatars.githubusercontent.com/u/99350806?v=4",
       "profile": "https://github.com/M3FF1N",
       "contributions": [
         "code"
-       ]
-     }
+      ]
+    },
+    {
+      "login": "osfanbuff63-crowdin-bot",
+      "name": "osfanbuff63-crowdin-bot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102379670?v=4",
+      "profile": "https://github.com/osfanbuff63-crowdin-bot",
+      "contributions": [
+        "translation"
+      ]
+    }
   ],
   "contributorsPerLine": 7,
   "projectName": "muffinhunt-datapack",
   "projectOwner": "osfanbuff63",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": false 
+  "skipCi": false
 }
