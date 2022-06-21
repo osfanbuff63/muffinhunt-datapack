@@ -49,6 +49,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "ocular-d",
+      "name": "ocular-d",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51355349?v=4",
+      "profile": "https://ocular-d.tech",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
