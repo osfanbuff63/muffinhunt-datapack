@@ -1,6 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/osfanmuffin/muffinhunt-datapack?color=green)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Language: mcfunction](https://img.shields.io/badge/language-mcfunction-red)
 ![Language: JSON](https://img.shields.io/badge/language-JSON-lightgray)
@@ -82,6 +82,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/M3FF1N"><img src="https://avatars.githubusercontent.com/u/99350806?v=4?s=100" width="100px;" alt=""/><br /><sub><b>M3FF1N</b></sub></a><br /><a href="https://github.com/osfanbuff63/muffinhunt-datapack/commits?author=M3FF1N" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/osfanbuff63-crowdin-bot"><img src="https://avatars.githubusercontent.com/u/102379670?v=4?s=100" width="100px;" alt=""/><br /><sub><b>osfanbuff63-crowdin-bot</b></sub></a><br /><a href="#translation-osfanbuff63-crowdin-bot" title="Translation">🌍</a></td>
     <td align="center"><a href="http://s7a.dev"><img src="https://avatars.githubusercontent.com/u/34268371?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sya-ri</b></sub></a><br /><a href="#infra-sya-ri" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://ocular-d.tech"><img src="https://avatars.githubusercontent.com/u/51355349?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ocular-d</b></sub></a><br /><a href="#infra-ocular-d" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
