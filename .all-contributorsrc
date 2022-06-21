@@ -40,6 +40,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "sya-ri",
+      "name": "sya-ri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34268371?v=4",
+      "profile": "http://s7a.dev",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
