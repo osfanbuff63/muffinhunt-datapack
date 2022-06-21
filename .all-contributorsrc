@@ -51,6 +51,14 @@
       ]
     },
     {
+      "login": "ocular-d",
+      "name": "ocular-d",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51355349?v=4",
+      "profile": "https://ocular-d.tech",
+      "contributions": [
+        "infra"
+    },
+    {
       "login": "svx",
       "name": "sven",
       "avatar_url": "https://avatars.githubusercontent.com/u/358860?v=4",
@@ -68,6 +76,7 @@
        "infra"
        ]
     },
+    {
       "login": "vberlier",
       "name": "Valentin Berlier",
       "avatar_url": "https://avatars.githubusercontent.com/u/24430071?v=4",
