@@ -83,6 +83,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/osfanbuff63-crowdin-bot"><img src="https://avatars.githubusercontent.com/u/102379670?v=4?s=100" width="100px;" alt=""/><br /><sub><b>osfanbuff63-crowdin-bot</b></sub></a><br /><a href="#translation-osfanbuff63-crowdin-bot" title="Translation">🌍</a></td>
     <td align="center"><a href="http://s7a.dev"><img src="https://avatars.githubusercontent.com/u/34268371?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sya-ri</b></sub></a><br /><a href="#infra-sya-ri" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://github.com/svx"><img src="https://avatars.githubusercontent.com/u/358860?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sven</b></sub></a><br /><a href="#infra-svx" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://github.com/peternewman"><img src="https://avatars.githubusercontent.com/u/6216436?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Peter Newman</b></sub></a><br /><a href="#infra-peternewman" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://github.com/vberlier"><img src="https://avatars.githubusercontent.com/u/24430071?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Valentin Berlier</b></sub></a><br /><a href="#infra-vberlier" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 

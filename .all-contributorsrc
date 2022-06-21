@@ -57,6 +57,23 @@
       "profile": "https://github.com/svx",
       "contributions": [
         "infra"
+       ]
+    },
+    {
+      "login": "peternewman",
+      "name": "Peter Newman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6216436?v=4",
+      "profile": "https://github.com/peternewman",
+      "contributions": [
+       "infra"
+       ]
+    },
+      "login": "vberlier",
+      "name": "Valentin Berlier",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24430071?v=4",
+      "profile": "https://github.com/vberlier",
+      "contributions": [
+        "infra"
       ]
     }
   ],
