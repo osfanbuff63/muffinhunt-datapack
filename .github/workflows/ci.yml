@@ -69,7 +69,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run PackSquash
-        uses: ComunidadAylas/PackSquash-action@c3641c92cc0e4ff6ee88db9a34b6a2d48fcfcc71
+        uses: ComunidadAylas/PackSquash-action@2d515f0bfc4445c338df46efe2348ef9c13e6c43
         with:
           path: ./
           token: ${{ secrets.GITHUB_TOKEN }}
