@@ -1,0 +1,3 @@
+{
+  "extends": ["github>osfanbuff63/renovate-config:default.json5"]
+}
