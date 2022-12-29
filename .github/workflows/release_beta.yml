@@ -53,7 +53,7 @@ jobs:
          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
 
      - name: Download normal pack
-       uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
+       uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
        with:
          name: muffinhunt-datapack v2.0.0-alpha2
          path: ./
@@ -94,7 +94,7 @@ jobs:
            token: ${{ secrets.GITHUB_TOKEN }}
            dateFormat: '%m/%d/%Y'
        - name: Download normal pack
-         uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
+         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
          with:
            name: muffinhunt-datapack v2.0.0-alpha2
        - name: Zip pack
@@ -102,7 +102,7 @@ jobs:
        - name: Delete datapack
          run: rm -r data pack.mcmeta pack.png  
        - name: Download optimized pack
-         uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
+         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
          with:
            name: optimized-muffinhunt-datapack v2.0.0-alpha2
        - name: Zip optimized pack
