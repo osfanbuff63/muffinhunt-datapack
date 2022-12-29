@@ -52,7 +52,7 @@ jobs:
          name: muffinhunt-datapack v1.7.1
          path: ./
      - name: Run PackSquash
-       uses: ComunidadAylas/PackSquash-action@81cb5e16d063527f982f94af93b8c703b206442d
+       uses: ComunidadAylas/PackSquash-action@5e0e65b4a8d89735b64e0f20564179ed3dc7855f
        with:
           path: ./
           token: ${{ secrets.GITHUB_TOKEN }}
