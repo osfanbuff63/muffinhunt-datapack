@@ -16,7 +16,7 @@ jobs:
         allowed-endpoints: >
           api.github.com:443
 
-    - uses: actions/first-interaction@bd33205aa5c96838e10fd65df0d01efd613677c1
+    - uses: actions/first-interaction@1d8459ca65b335265f1285568221e229d45a995e
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: 'Welcome to the repository! Make sure to read the README.md specifically the Contributing section, before continuing, if you have not already!'
