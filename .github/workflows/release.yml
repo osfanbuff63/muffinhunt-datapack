@@ -85,25 +85,25 @@ jobs:
          name: muffinhunt-resourcepack v1.0.0
 
 
-   optimize-muffinhunt-resourcepack:
-    name: Fetch and optimize MuffinHunt resourcepack
-    runs-on: ubuntu-latest
-    needs: fetch-muffinhunt-resourcepack
-    steps:
-     - name: Download regular pack
-       uses: actions/download-artifact@v3
-       with:
-         name: muffinhunt-resourcepack v1.0.0
-     - name: Run PackSquash
-       uses: ComunidadAylas/PackSquash-action@master
-       with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          minify_json_files: true
-          validate_pack_metadata_file: true
-          allow_optifine_mod: true
-          delete_bloat_json_keys: true
-          artifact_name: 'optimized-muffinhunt-resourcepack v1.0.0'
-          never_store_squash_times: true
+   # optimize-muffinhunt-resourcepack:
+    # name: Fetch and optimize MuffinHunt resourcepack
+    # runs-on: ubuntu-latest
+    # needs: fetch-muffinhunt-resourcepack
+    # steps:
+     # - name: Download regular pack
+       # uses: actions/download-artifact@v3
+       # with:
+         # name: muffinhunt-resourcepack v1.0.0
+     #- name: Run PackSquash
+       # uses: ComunidadAylas/PackSquash-action@master
+       # with:
+          # token: ${{ secrets.GITHUB_TOKEN }}
+          # minify_json_files: true
+          # validate_pack_metadata_file: true
+          # allow_optifine_mod: true
+          # delete_bloat_json_keys: true
+          # artifact_name: 'optimized-muffinhunt-resourcepack v1.0.0'
+          # never_store_squash_times: true
 
    create-release:
      permissions:
@@ -111,7 +111,7 @@ jobs:
        issues: read  # for heinrichreimer/github-changelog-generator-action to fetch issues and labels
        pull-requests: read  # for heinrichreimer/github-changelog-generator-action to fetch PRs and labels
      name: Create release
-     needs: [upload-normal,upload-optimized-datapack]
+     needs: [upload-normal]
      runs-on: ubuntu-latest
      steps:
        - name: Harden Runner
