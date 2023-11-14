@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - name: Dependency Review
         if: github.event_name == 'pull_request'
-        uses: actions/dependency-review-action@0ff3da6f81b812d4ec3cf37a04e2308c7a723730
+        uses: actions/dependency-review-action@7bbfa034e752445ea40215fff1c3bf9597993d3f
       - name: Check commands
         uses: mcbeet/check-commands@03cff79228a0a50fe6856becd7972112e326e922
         with:
