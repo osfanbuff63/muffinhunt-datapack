@@ -124,7 +124,7 @@ jobs:
          with:
            token: ${{ secrets.GH_TOKEN }}
        - name: Generate release changelog
-         uses: heinrichreimer/github-changelog-generator-action@6f5b9494dd265d6fb7243a10c53dc0169c55f247
+         uses: heinrichreimer/github-changelog-generator-action@e60b5a2bd9fcd88dadf6345ff8327863fb8b490f
          with:
            token: ${{ secrets.GITHUB_TOKEN }}
            dateFormat: '%m/%d/%Y'
