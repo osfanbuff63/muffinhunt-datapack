@@ -27,7 +27,7 @@ jobs:
      - name: Check JSON
        uses: ocular-d/json-linter@0.0.2
      - name: Upload artifact
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with:
          path: |
              data/
@@ -76,7 +76,7 @@ jobs:
      - name: Check JSON
        uses: ocular-d/json-linter@0.0.2
      - name: Upload artifact
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with:
          path: |
              data/

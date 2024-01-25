@@ -30,7 +30,7 @@ jobs:
      - name: Check JSON
        uses: ocular-d/json-linter@7d3716a34bcd6fcc5b3b38141a21b9e02da6531d
      - name: Upload artifact
-       uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
+       uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8
        with:
          path: |
              assets/
