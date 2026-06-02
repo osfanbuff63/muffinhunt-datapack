@@ -145,7 +145,7 @@ jobs:
            unzip -f pack.zip
            zip -r 'optimized-muffinhunt-datapack v1.7.1' . -i data pack.mcmeta pack.png
        - name: Release
-         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
+         uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda
          with:
            files: |
              *.zip
